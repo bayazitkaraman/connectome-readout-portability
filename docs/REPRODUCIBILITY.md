@@ -48,4 +48,6 @@ The full replay also fits the source-augmentation strategies, estimates retentio
 
 To reproduce the descriptive ages, obtain the official public imaging index from the data guide. In the prepared replay directory run `python scripts/reviewer_context.py --nki-age-index /path/to/aws_links.csv`. The script verifies the provider hash and cross-checks baseline diffusion and T1 ages. Only cohort aggregates are exported. [Age sources and checksum](../results/density-controls/age_sources.md) · [Cohort and donor checks](../results/reviewer-context/README.md)
 
+Version 0.2.1 adds `python scripts/summarize_map_portability.py` after the native CLI evaluations. The script uses the archived participant and penalty tables to reproduce the ten-map estimate, retention and spatial shares, the original-map rankings and the reverse-visit check. It writes `results/headline-robustness/map_portability.csv` and `reporting_checks.json`.
+
 The snapshot carries versioned creator, citation and license metadata. The distributed manifest identifies the bytes in this version. [Citation](../CITATION.cff) · [Metadata](../.zenodo.json) · [Checksums](../manifest-sha256.json)

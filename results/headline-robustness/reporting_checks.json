@@ -1,0 +1,136 @@
+{
+  "bootstrap_seed": 20261120,
+  "draws": 10000,
+  "input_maps": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "unit": "Participant; map-averaged summaries condition on the tested signed input maps.",
+  "spatial_fraction": "(mean projected loss - mean isotropic loss) / mean excess R2",
+  "retention": "mean measured repeat R2 / mean source R2",
+  "cohorts": {
+    "nki": {
+      "n_people": 25,
+      "original_map_rank_1_is_highest": {
+        "excess_r2": 1,
+        "repeat_r2": 10,
+        "shift_pct": 1,
+        "retention_pct": 10
+      },
+      "spatial_share_pct_min": 37.56095530286866,
+      "spatial_share_pct_max": 55.71871864247227,
+      "arithmetic_mean_map_spatial_shares_pct": 45.536252545260666,
+      "n_positive_native_map_means": 10,
+      "n_positive_graph_variant_means": 5,
+      "reverse_original_map": {
+        "cohort": "nki",
+        "source_visit": "other",
+        "target_visit": "BAS1",
+        "n": 25,
+        "penalty_counts": {
+          "10.0": 25
+        },
+        "excess_r2": 0.12366264648416925,
+        "low": 0.09864562162678546,
+        "high": 0.14901655716762152
+      },
+      "correction_penalty_counts_by_budget": {
+        "8": {
+          "none": 25
+        },
+        "16": {
+          "1": 24,
+          "10": 1
+        },
+        "32": {
+          "0.0001": 25
+        },
+        "64": {
+          "1e-08": 25
+        },
+        "128": {
+          "1e-14": 25
+        },
+        "256": {
+          "1e-14": 25
+        },
+        "512": {
+          "1e-14": 25
+        },
+        "1024": {
+          "1e-14": 25
+        },
+        "2352": {
+          "1e-14": 25
+        }
+      }
+    },
+    "bnu1": {
+      "n_people": 57,
+      "original_map_rank_1_is_highest": {
+        "excess_r2": 3,
+        "repeat_r2": 2,
+        "shift_pct": 10,
+        "retention_pct": 6
+      },
+      "spatial_share_pct_min": 62.29726473161912,
+      "spatial_share_pct_max": 87.95434947917938,
+      "arithmetic_mean_map_spatial_shares_pct": 77.15988686078022,
+      "n_positive_native_map_means": 10,
+      "n_positive_graph_variant_means": 5,
+      "reverse_original_map": {
+        "cohort": "bnu1",
+        "source_visit": "2",
+        "target_visit": "1",
+        "n": 57,
+        "penalty_counts": {
+          "1.0": 7,
+          "10.0": 50
+        },
+        "excess_r2": 0.059325949288275226,
+        "low": 0.026611203883897844,
+        "high": 0.10155211628232014
+      },
+      "correction_penalty_counts_by_budget": {
+        "8": {
+          "100": 47,
+          "1000": 10
+        },
+        "16": {
+          "100": 57
+        },
+        "32": {
+          "0.0001": 56,
+          "1e-05": 1
+        },
+        "64": {
+          "1e-08": 56,
+          "1e-09": 1
+        },
+        "128": {
+          "1e-14": 57
+        },
+        "256": {
+          "1e-14": 57
+        },
+        "512": {
+          "1e-14": 57
+        },
+        "1024": {
+          "1e-14": 57
+        },
+        "2352": {
+          "1e-14": 57
+        }
+      }
+    }
+  }
+}

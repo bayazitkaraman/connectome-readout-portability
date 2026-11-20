@@ -247,7 +247,7 @@
       16,
       16
     ],
-    "verified_output": "Six documented CSV/JSON outputs and both visit directions; each matrix contained finite R\u00b2 scores for 5 sources \u00d7 5 targets \u00d7 3 penalties.",
+    "verified_output": "Six documented CSV/JSON outputs and both visit directions; each matrix contained finite R² scores for 5 sources × 5 targets × 3 penalties.",
     "generic_unit_tests_passed": 3
   },
   "unlabeled_parcel_alignment": {
@@ -297,7 +297,7 @@
       },
       "scope": "Both public preparation and local replay were checked. The NITRC public crosswalk's HTTP endpoint was used with the pinned SHA-256."
     },
-    "isolated_extension_scope": "Recomputed source-augmentation, alignment intervals, Figures 2\u20134, the multi-map and graph settings, all target-state budgets, nongraphic cohort summaries, and both native CLI state comparisons from verified source matrices and the previous replay's required base analyses. The optional aggregate age check uses its separately verified imaging-index hash.",
+    "isolated_extension_scope": "Recomputed source-augmentation, alignment intervals, Figures 2–4, the multi-map and graph settings, all target-state budgets, nongraphic cohort summaries, and both native CLI state comparisons from verified source matrices and the previous replay's required base analyses. The optional aggregate age check uses its separately verified imaging-index hash.",
     "native_cli_state_comparisons": {
       "nki": {
         "people": 25,
@@ -369,6 +369,15 @@
       "results/portability-path/Figure_3.pdf": true,
       "results/portability-path/Figure_3.png": true,
       "results/portability-baseline/retention_intervals.csv": true
+    }
+  },
+  "revision_v021": {
+    "version": "0.2.1",
+    "validation_date": "2026-11-20",
+    "independent_replay": "Reran scripts/summarize_map_portability.py against the isolated 0.2.0 replay of the participant and calibration tables, including both native command-line visit directions. Both revised numerical outputs were byte-identical to the canonical exports.",
+    "sha256": {
+      "results/headline-robustness/map_portability.csv": "2d769f90fb20ed94632c4c180fd3b8b7b2fdcad7f633f60995b9c53b257fd904",
+      "results/headline-robustness/reporting_checks.json": "4b3e6b81e0115ad735257f474584c2da1aaaf55c622a70895a994e07cb9b855f"
     }
   }
 }

@@ -133,6 +133,7 @@ def replay_extensions(out):
     execute(out, "-m", "benchmark", "data/replication_candidates/corr/bnu1_dkt_retest.npz",
             "results/cli-state-beijing", "--state-comparisons")
     execute(out, "scripts/verify_cli_state_comparisons.py")
+    execute(out, "scripts/summarize_map_portability.py")
 
 
 def verify(out):
@@ -142,6 +143,8 @@ def verify(out):
               "results/source-augmentation/summary.csv":["source_r2","repeat_r2","gain_r2","gain_r2_lo","gain_r2_hi"],
               "results/portability-baseline/retention_intervals.csv":["untouched_pct","aligned_pct","gain_pp_low","gain_pp_high"],
               "results/headline-robustness/summary.csv":["noise_r2","repeat_r2","excess_r2","excess_r2_low","excess_r2_high"],
+              "results/headline-robustness/map_portability.csv":["excess_r2","excess_r2_low","excess_r2_high",
+                    "retention_pct","spatial_share_pct","spatial_share_pct_low","spatial_share_pct_high"],
               "results/calibration-budget-curve/summary.csv":["frozen_r2","aligned_r2","labeled_r2","labeled_minus_aligned_lo","labeled_minus_aligned_hi"],
               "results/reviewer-context/donor_context.csv":["people","closest_is_own","target_aware_gain","restricted_target_aware_gain"],
               "results/reviewer-context/spatial_decomposition.csv":["estimate","lo","hi"],

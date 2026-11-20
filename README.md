@@ -4,9 +4,9 @@ How much of a decoder’s accuracy survives when the same person’s structural 
 
 ## Study results
 
-Independent state noise matched to the size of the repeat-scan displacement overestimated linear recall on the measured repeat scan in both cohorts. The comparison holds the input, decoder weights and cohort transfer penalty fixed. R² measures recall of ten previous simulated inputs. [Full analysis](results/portability-path/README.md) · [Estimates and paired intervals](results/portability-path/shift_summary.csv)
+Across ten signed input maps, size-matched isotropic noise overestimated mean repeat-scan recall by 0.103 R² in NKI (95% interval 0.084 to 0.122) and 0.065 in Beijing (0.054 to 0.078). The measured repeats retained 42.7% and 63.0% of mean source accuracy. The original NKI map had the largest excess and displacement and the lowest repeat score. [Ten-map and individual-map estimates](results/headline-robustness/map_portability.csv) The comparison holds the input, decoder weights and cohort transfer penalty fixed. R² measures recall of ten previous simulated inputs. [Full analysis](results/portability-path/README.md) · [Estimates and paired intervals](results/portability-path/shift_summary.csv)
 
-| First visit to second visit | NKI | Beijing |
+| Original input map, first visit to second visit | NKI | Beijing |
 |---|---:|---:|
 | Mean state displacement, % of source training RMS | 132.3% | 56.9% |
 | Source R² | 0.191 | 0.237 |
@@ -57,6 +57,6 @@ The source providers and their data-use terms are listed with the numerical envi
 
 ## Citation and reuse
 
-Version 0.2.0. Please cite Bayazit Karaman, *Readout transfer across repeat structural connectomes*, and acknowledge each source dataset you use. [Machine-readable citation](CITATION.cff) · [Source datasets and software](benchmark/SOURCES.md)
+Version 0.2.1. Please cite Bayazit Karaman, *Readout transfer across repeat structural connectomes*, and acknowledge each source dataset you use. [Machine-readable citation](CITATION.cff) · [Source datasets and software](benchmark/SOURCES.md)
 
 Copyright © 2026 Bayazit Karaman. The MIT License covers the author's original software and its documentation. CC BY 4.0 covers the author's original derived tables and figures. The vendored conn2res files retain their BSD license. The providers' terms govern the upstream matrices, manifests and public visit crosswalk. [MIT License](LICENSE) · [CC BY 4.0 legal code](LICENSE-data.txt) · [conn2res license](vendor/LICENSE)

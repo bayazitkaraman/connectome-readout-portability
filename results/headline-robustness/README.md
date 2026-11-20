@@ -4,6 +4,7 @@ For each participant, the first and repeat graphs received the same four fresh i
 
 | Setting | NKI difference [95% interval] | Beijing difference [95% interval] |
 | --- | --- | --- |
+| All ten maps averaged within each person | 0.103 [0.084, 0.122] | 0.065 [0.054, 0.078] |
 | Original eight driven regions | 0.138 [0.092, 0.192] | 0.069 [0.053, 0.088] |
 | Nine other maps averaged within each person | 0.100 [0.082, 0.116] | 0.065 [0.054, 0.078] |
 | Radius 0.70 | 0.093 [0.065, 0.122] | 0.048 [0.038, 0.058] |
@@ -22,3 +23,7 @@ From the staged study directory with native inputs and archived reference tables
 - `validation.csv.gz` records validation MSE for each participant, penalty and setting. Average over all other participants to recover an evaluated participant's ridge choice. `penalties.csv` counts the selected penalties.
 - `people.csv` and `summary.csv` give absolute scores, excess loss, and the terms of its exactly verified decomposition. `projected_loss` is the mean of the squared projected shifts divided by output variance. `residual_cross_term` is twice their mean product with the source prediction error divided by output variance. The expected isotropic loss is `noise_loss`. Their combination gives `excess_r2 = projected_loss + residual_cross_term - noise_loss`.
 - `checks.json` records both numerical identities and comparisons with the archived results. Original person-level R² values and shift statistics agreed with their archived values to within 9 × 10⁻¹⁴. Repeat R² values in the fixed-penalty graph/radius conditions agreed with the independently implemented earlier donor comparison to within 8 × 10⁻¹⁵.
+
+Across the ten maps, measured repeats retained 42.7% of source recall in NKI and 63.0% in Beijing. The original NKI map gave the largest mean noise error and state displacement and the lowest mean repeat R² among those ten. The fraction of excess loss accounted for by preserving the displacement’s spatial second moment was 45.8% in NKI and 78.7% in Beijing across maps, computed by dividing the mean additional spatial loss by the mean excess loss. The same fraction calculated separately for each map ranged from 37.6% to 55.7% and from 62.3% to 88.0%, respectively.
+
+The [map summaries](map_portability.csv) include the original map, the nine others, and all ten. Their percentile intervals resample participants after averaging the fixed input maps within each person. The [verification record](reporting_checks.json) includes the original-map ranks, the reverse-direction comparison on that map and the penalty choices for labeled correction. Run `python scripts/summarize_map_portability.py` after generating the native CLI state comparisons and calibration-budget outputs to reproduce both files.

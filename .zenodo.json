@@ -9,7 +9,7 @@
       "orcid": "0000-0001-5175-5671"
     }
   ],
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "mit",
   "keywords": ["structural connectomes", "reservoir computing", "repeat scans", "decoder transfer"]
 }

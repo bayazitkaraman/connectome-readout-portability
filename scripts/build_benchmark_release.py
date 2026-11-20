@@ -39,6 +39,8 @@ REQUIRED = (
     "scripts/verify_cli_state_comparisons.py","scripts/plot_calibration_budget.py",
     "results/source-augmentation/summary.csv","results/portability-baseline/retention_intervals.csv",
     "results/headline-robustness/checks.json","results/headline-robustness/summary.csv",
+    "scripts/summarize_map_portability.py", "results/headline-robustness/map_portability.csv",
+    "results/headline-robustness/reporting_checks.json",
     "results/calibration-budget-curve/checks.json","results/calibration-budget-curve/summary.csv",
     "results/reviewer-context/age_aggregate.csv","results/reviewer-context/spatial_decomposition.csv",
     "results/anatomy-advantage/statistics.csv",
