@@ -1,0 +1,62 @@
+{
+  "archive_title": "Numerically Perturbed Structural Connectomes from 100 individuals in the NKI Rockland Dataset",
+  "depositor": "Gregory Kiar",
+  "source": "https://zenodo.org/records/4041549/files/impactofinstability_connect_dset25x2x2x20_inputs.h5?download=1",
+  "record_doi": "10.5281/zenodo.4041549",
+  "updated_record_doi": "10.5281/zenodo.4287624",
+  "license": "CC BY 4.0",
+  "filename": "impactofinstability_connect_dset25x2x2x20_inputs.h5",
+  "bytes": 233049104,
+  "md5": "f457d4a860d79654672143c1ace95ee1",
+  "source_sha256": "9e084ace6509de76e35adba79319ce5aa2b53f299e1d9898fb6e7fd84ec28e8f",
+  "graph_code": "https://github.com/gkpapers/2020ImpactOfInstability/blob/9f8345846ad9ef66c3e270bec44f4cf55b72b92d/code/processing/tractography/dipy_tracking.py",
+  "authors_retest_code": "https://github.com/gkpapers/2020ImpactOfInstability/blob/9f8345846ad9ef66c3e270bec44f4cf55b72b92d/code/analysis/tab1_discriminability/trt_testing.py",
+  "crosswalk_url": "https://fcon_1000.projects.nitrc.org/indi/enhanced/public_crosswalk_ids_08242023.csv",
+  "crosswalk_sha256": "f9181517bac7dc899dc5aeeda050158396dbcbecc1fd2c04716fa5ae987cdd25",
+  "code_definitions": "https://rocklandsample.org/for-researchers-rockland-sample-i-2011-2022-documentation-study-codes",
+  "selector": "graphs key of HDF, simulation == 'ref' and pipeline == 'det'",
+  "atlas": "DKT parcellation in native deposited 83 x 83 order. Background index removed by authors.",
+  "units": "Counts of deterministic streamlines connecting region endpoints. Native diagonals retained in this extraction.",
+  "axes": [
+    "direction half (odd, even)",
+    "visit (BAS1, other)",
+    "subject (ascending source ID)",
+    "native region",
+    "native region"
+  ],
+  "sessions": "Visit 0 is the individually verified first baseline (BAS1). Visit 1 is the other independently acquired scan. Scan intervals differ or are unavailable. The released matrices differ between visits for all people in each half.",
+  "pairing": "Both direction halves occur once for every subject and legacy visit code. Odd and even are subsamples of the same diffusion acquisition, not distinct visits.",
+  "second_visit_counts": {
+    "BAS2": 9,
+    "FLU1": 5,
+    "TRT": 10,
+    "unmapped": 1
+  },
+  "unmatched": [
+    [
+      "A00034854",
+      "NFB2R"
+    ]
+  ],
+  "unmatched_note": "For A00034854 the archive gives DS2 and NFB2R. The public crosswalk matches DS2 to BAS1 and lists only NFBAR for BAS2. The second acquisition is retained under the original code without assigning BAS2 to it.",
+  "shape": [
+    2,
+    2,
+    25,
+    83,
+    83
+  ],
+  "people": 25,
+  "matrix_count": 100,
+  "source_table_rows": 4200,
+  "nonzero_undirected_edges_range": [
+    177,
+    630
+  ],
+  "isolated_nodes_after_diagonal_removal_range": [
+    0,
+    37
+  ],
+  "weights_sha256": "af0a4e46a1f60348250dc0b683cde30cdb28c7e2b18b23da717b9368e1c53510",
+  "npz_sha256": "47625de2e0f2c430b7236b8dcc0c69bf36c039ad5be04a949b4e2f91336e880e"
+}

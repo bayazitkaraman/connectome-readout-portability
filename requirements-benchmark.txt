@@ -1,0 +1,6 @@
+# Tested on Python 3.10.19. conn2res is already bundled under vendor/.
+numpy==2.2.6
+scipy==1.15.2
+scikit-learn==1.7.2
+joblib==1.5.2
+threadpoolctl==3.6.0

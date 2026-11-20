@@ -1,0 +1,30 @@
+{
+  "archive_bytes": 233049104,
+  "archive_md5": "f457d4a860d79654672143c1ace95ee1",
+  "source_url": "https://zenodo.org/records/4041549",
+  "condition_order": [
+    "reference",
+    "input_mca",
+    "direction_half",
+    "other_visit"
+  ],
+  "source_graphs": 100,
+  "replicate_graphs": 2000,
+  "participants": 25,
+  "relative_penalty": 10.0,
+  "fixed_input_map": 10,
+  "relative_gain": 0.9,
+  "source_fit_steps": 2352,
+  "test_streams": 4,
+  "scored_steps_per_stream": 512,
+  "external_library": "vendored conn2res",
+  "score": "mean of 10 delaywise R2",
+  "checked_reference_to_half_pairs": 100,
+  "max_archive_error": 2.0816681711721685e-16,
+  "independent_target_checks": 30,
+  "independent_donors_per_graph": 25,
+  "max_independent_error": 2.1996293675385914e-15,
+  "max_independent_similarity_error": 1.1657341758564144e-14,
+  "identical_matrix_replays": 986,
+  "elapsed_seconds": 61.8675035999986
+}

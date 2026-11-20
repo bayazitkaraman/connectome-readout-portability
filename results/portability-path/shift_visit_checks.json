@@ -1,0 +1,15 @@
+{
+  "pairs": 82,
+  "rows": 328,
+  "archive_max_abs_difference": {
+    "source_r2": 3.756760527662273e-15,
+    "target_r2": 3.979039320256561e-13,
+    "isotropic_loss": 2.2737367544323206e-13
+  },
+  "injection": "Four fixed participants, both tasks and penalties, 16 independent Gaussian realizations per participant at their measured repeat-scan RMS, with sign-reversed partners.",
+  "injection_max_relative_error_in_loss": 0.008899779529608855,
+  "inputs": "Same four independent role-61 streams on the original and repeat graph of each participant.",
+  "units": "RMS of raw difference on observed readout states divided by training-state RMS (square root of mean centered feature variance).",
+  "matched_isotropic": "Zero-mean independent noise on each source readout coordinate/time point with expected mean square equal to the observed graph displacement mean square.",
+  "decomposition": "target_r2 = source_r2 - actual_output_shift - error_cross_term; isotropic_r2 = source_r2 - expected_isotropic_loss. Normalize per output by test label variance before averaging delays."
+}

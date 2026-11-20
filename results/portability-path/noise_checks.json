@@ -1,0 +1,264 @@
+{
+  "fractions": [
+    0.0,
+    1e-08,
+    1e-07,
+    1e-06,
+    1e-05,
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "calibration": "Per-scan state RMS is sqrt(mean variance across readout features on the source training sequence). Absolute Gaussian noise SD is fraction times this RMS.",
+  "insertion": "Zero-mean independent noise is added to each readout feature at test time, after the recurrence. Training and decoder weights remain fixed. No scan noise estimate is assumed.",
+  "quantity": "Exact expectation of per-output test MSE = clean MSE + noise_variance times squared slope norm; convert separately to each output R2 with its unchanged test variance, then average delays.",
+  "envelope": "Descriptive maximum of cohort mean expected fresh-source score over common tested penalties at each noise level. No noisy test fitting or tuning used for individual decoders.",
+  "spectrum": "Training covariance eigenvalues below 1e-08 times their across-feature mean. Energy fractions use squared slope per output divided by its test target variance, then pool over outputs. Fitted-score variance additionally weights squared slope by the corresponding eigenvalue.",
+  "absent_values": "For the zero-slope constant model, slope-energy and fitted-variance fractions are undefined.",
+  "clean_archive_max_abs_error": 1.1102230246251565e-16,
+  "n_clean_checks": 3936,
+  "injection_method": "Four deterministic source scans, 3 penalties, 8 independent Gaussian realizations on 2,048 steps plus sign-reversed copies, compared with the analytic MSE increment.",
+  "injection_max_relative_error": 0.03664983031703528,
+  "injection_checks": [
+    {
+      "cohort": "nki",
+      "subject": "A00032875",
+      "alpha": 1e-14,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 374075.7246451679,
+      "expected_loss": 371871.11657042644,
+      "relative_error": 0.005928419757558423
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00032875",
+      "alpha": 1e-14,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 1806402.3238305212,
+      "expected_loss": 1804732.5574761345,
+      "relative_error": 0.0009252153996277546
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00032875",
+      "alpha": 0.01,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 3.6113629236327964e-06,
+      "expected_loss": 3.569683813205057e-06,
+      "relative_error": 0.011675854952071463
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00032875",
+      "alpha": 0.01,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 5.723203731636154e-09,
+      "expected_loss": 5.733678593435871e-09,
+      "relative_error": 0.0018269007634486023
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00032875",
+      "alpha": 1.0,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 4.6011253144941894e-08,
+      "expected_loss": 4.5248523290439684e-08,
+      "relative_error": 0.016856458488300863
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00032875",
+      "alpha": 1.0,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 1.3406604039334857e-10,
+      "expected_loss": 1.3316159743110934e-10,
+      "relative_error": 0.006792070534503258
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00058952",
+      "alpha": 1e-14,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 199107.11542210288,
+      "expected_loss": 198935.11447739624,
+      "relative_error": 0.0008646082676679878
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00058952",
+      "alpha": 1e-14,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 514031.25097956386,
+      "expected_loss": 508313.345263812,
+      "relative_error": 0.011248781423954801
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00058952",
+      "alpha": 0.01,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 3.5789342320400382e-06,
+      "expected_loss": 3.622970973898095e-06,
+      "relative_error": 0.01215487018121919
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00058952",
+      "alpha": 0.01,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 1.0386014109889378e-07,
+      "expected_loss": 1.0214029267691465e-07,
+      "relative_error": 0.01683809960697169
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00058952",
+      "alpha": 1.0,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 5.8322875325686116e-08,
+      "expected_loss": 5.851253384212728e-08,
+      "relative_error": 0.0032413314547765637
+    },
+    {
+      "cohort": "nki",
+      "subject": "A00058952",
+      "alpha": 1.0,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 2.2826171193694669e-10,
+      "expected_loss": 2.280508109951141e-10,
+      "relative_error": 0.0009247980347550921
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025864",
+      "alpha": 1e-14,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 1016048.7140498351,
+      "expected_loss": 1008892.1820476652,
+      "relative_error": 0.007093455702714246
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025864",
+      "alpha": 1e-14,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 644835.6449346812,
+      "expected_loss": 622038.0557410339,
+      "relative_error": 0.03664983031703528
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025864",
+      "alpha": 0.01,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 2.4602039630084752e-06,
+      "expected_loss": 2.4466245213772154e-06,
+      "relative_error": 0.005550276110048991
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025864",
+      "alpha": 0.01,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 1.526431608008298e-08,
+      "expected_loss": 1.5195356606484394e-08,
+      "relative_error": 0.004538193830157189
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025864",
+      "alpha": 1.0,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 5.3833862985133655e-08,
+      "expected_loss": 5.384305727196008e-08,
+      "relative_error": 0.00017076086114475864
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025864",
+      "alpha": 1.0,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 6.55621548414327e-11,
+      "expected_loss": 6.554538619760957e-11,
+      "relative_error": 0.0002558325581083487
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025892",
+      "alpha": 1e-14,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 713101.8872007492,
+      "expected_loss": 703974.0355208314,
+      "relative_error": 0.012966176619233938
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025892",
+      "alpha": 1e-14,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 840367.7724875968,
+      "expected_loss": 843689.6605784154,
+      "relative_error": 0.003937334124186287
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025892",
+      "alpha": 0.01,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 2.2451952195841946e-06,
+      "expected_loss": 2.2100432261969207e-06,
+      "relative_error": 0.015905568257940317
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025892",
+      "alpha": 0.01,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 1.8522547361085966e-07,
+      "expected_loss": 1.834104711761144e-07,
+      "relative_error": 0.009895849583214211
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025892",
+      "alpha": 1.0,
+      "task": "linear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 5.266385624377205e-08,
+      "expected_loss": 5.22082554255237e-08,
+      "relative_error": 0.008726604912096203
+    },
+    {
+      "cohort": "bnu1",
+      "subject": "0025892",
+      "alpha": 1.0,
+      "task": "nonlinear",
+      "noise_fraction": 0.001,
+      "empirical_loss": 7.820902211219907e-10,
+      "expected_loss": 7.674449835710634e-10,
+      "relative_error": 0.01908311066518431
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "n_changed_pair_alphas": 6,
+  "n_affected_own_targets_conditions": 4,
+  "nki_max_own_score_change_after_deduplication": 0.04942147036093712,
+  "nki_max_donor_score_change": 0.6141337627200694,
+  "own_same_acquisition_whole_participant_bootstrap": [
+    -0.031944177068080545,
+    0.019451577092684975
+  ],
+  "own_same_vs_cross_within_absolute_similarity_gap": {
+    "0.025": {
+      "cells": 0,
+      "of_cells": 100,
+      "people": 0,
+      "of_people": 25,
+      "mean_gain": null
+    },
+    "0.05": {
+      "cells": 1,
+      "of_cells": 100,
+      "people": 1,
+      "of_people": 25,
+      "mean_gain": 0.008211507270168492
+    },
+    "0.1": {
+      "cells": 10,
+      "of_cells": 100,
+      "people": 5,
+      "of_people": 25,
+      "mean_gain": 0.011848155757335738
+    }
+  },
+  "nki_matched_gain_leave_one_out_range": [
+    -0.0075952003814298615,
+    0.000370574101272308
+  ],
+  "nki_own_similarity_quartiles": {
+    "0.0": 0.0012548987937308,
+    "0.25": 0.41581288988583537,
+    "0.5": 0.755149550028573,
+    "0.75": 0.8953928838512745,
+    "1.0": 0.9740081190277486
+  },
+  "bnu1_matched_gain_leave_one_out_range": [
+    -0.008110853670431966,
+    0.006090715192154094
+  ],
+  "bnu1_own_similarity_quartiles": {
+    "0.0": 0.2790015234510997,
+    "0.25": 0.8407850681267004,
+    "0.5": 0.8618954591220438,
+    "0.75": 0.8813873715791789,
+    "1.0": 0.9245883392357488
+  },
+  "bnu1_own_count_084_088": 26,
+  "bnu1_own_count_085_092": 33,
+  "matched_target_even_from_odd": {
+    "1": {
+      "same": 0.15257200429868045,
+      "different": 0.05858675472260944,
+      "people_same_higher": 25
+    },
+    "2": {
+      "same": 0.17629899873176724,
+      "different": 0.04751092093920228,
+      "people_same_higher": 24
+    }
+  }
+}

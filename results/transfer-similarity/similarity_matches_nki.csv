@@ -1,0 +1,7 @@
+source_type,rule,eligible_cells,matched_cells,eligible_people,matched_people,mean_gain,lo,hi,median_gap
+own_cross_visit,interpolation,200,107,25,16,-0.003804434726103423,-0.020285730574933696,0.011512590966000442,0.018402560343915908
+own_cross_visit,nearest_0.025,200,110,25,17,-0.0031768216766990503,-0.019097440203124847,0.011677388549882014,0.0041975199032005805
+own_cross_visit,nearest_0.05,200,119,25,18,0.001290510474558676,-0.015424599323119249,0.01702253955248526,0.0044378546203354685
+own_same_acquisition,interpolation,100,0,25,0,,,,
+own_same_acquisition,nearest_0.025,100,0,25,0,,,,
+own_same_acquisition,nearest_0.05,100,0,25,0,,,,

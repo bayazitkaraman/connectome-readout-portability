@@ -1,0 +1,11 @@
+{
+  "source_rows": 2352,
+  "local_validation_rows": 1176,
+  "target_training_labels": 0,
+  "test_role": 61,
+  "test_steps": 2048,
+  "personal_decoder": "For each target person and held-out other identity, use the original pair-specific transfer penalty on the person's first-scan training data.",
+  "signals": "Drive the source and target graphs with exactly the same four fresh target-visit signals. Source training and validation use separate streams.",
+  "confirm": "Every target transfer score checked against the previous frozen output; paired source-to-target drop calculated without changing readout weights.",
+  "bootstrap": "10,000 paired target-subject resamples, conditional on fitted readouts and donor bank"
+}

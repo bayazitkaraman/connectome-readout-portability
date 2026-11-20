@@ -1,0 +1,213 @@
+{
+  "study_replay_source": "Local copies of checksum-verified public inputs. The online download route was not rerun for this release check.",
+  "generic_cli_forward_comparison": [
+    {
+      "cohort": "nki",
+      "task": "recall",
+      "pairs": 600,
+      "max_absolute_r2_error": 1.4849232954361469e-15
+    },
+    {
+      "cohort": "bnu1",
+      "task": "recall",
+      "pairs": 3192,
+      "max_absolute_r2_error": 2.3314683517128287e-15
+    }
+  ],
+  "maximum_absolute_errors_in_replayed_summary_columns": {
+    "results/portability-path/path_summary.csv": {
+      "source_r2": 0.0,
+      "target_r2": 0.0,
+      "gap_r2": 0.0
+    },
+    "results/portability-path/shares_summary.csv": {
+      "own_share_pct": 0.0,
+      "stranger_share_pct": 0.0,
+      "own_minus_stranger_pp": 0.0,
+      "own_minus_stranger_pp_lo": 0.0,
+      "own_minus_stranger_pp_hi": 0.0
+    },
+    "results/portability-path/shift_summary.csv": {
+      "shift_pct": 0.0,
+      "target_r2": 0.0,
+      "isotropic_r2": 0.0,
+      "graph_minus_iso": 0.0,
+      "graph_minus_iso_lo": 0.0,
+      "graph_minus_iso_hi": 0.0,
+      "n_isotropic_positive": 0.0,
+      "n_graph_positive": 0.0
+    },
+    "results/portability-path/matched_retention_summary.csv": {
+      "source_r2": 0.0,
+      "target_r2": 0.0,
+      "ratio_of_means": 0.0,
+      "ratio_lo": 0.0,
+      "ratio_hi": 0.0
+    },
+    "results/portability-path/robust_participant_summary.csv": {
+      "target_r2_median": 0.0,
+      "n_people_positive": 0.0,
+      "n_omit_two_means_peaking_here": 0.0
+    },
+    "results/portability-path/robust_numerical_matrices.csv": {
+      "median_matrix_r2": 0.0,
+      "n_matrices_positive": 0.0
+    },
+    "results/portability-path/noise_summary.csv": {
+      "mean_r2": 0.0,
+      "median_r2": 0.0,
+      "n_positive": 0.0
+    },
+    "results/portability-path/noise_envelope.csv": {
+      "mean_r2": 0.0
+    },
+    "results/portability-path/noise_modes.csv": {
+      "median_low_slope_energy_share": 0.0,
+      "median_low_fitted_variance_share": 0.0
+    },
+    "results/portability-path/nearest_vs_own.csv": {
+      "nearest_minus_own": 0.0,
+      "lo": 0.0,
+      "hi": 0.0
+    },
+    "results/nonlinear-recall/summary.csv": {
+      "mean": 0.0
+    },
+    "results/numerical-repeat/summary.csv": {
+      "mean": 0.0
+    },
+    "results/transfer-similarity/grid_summary.csv": {
+      "dense_own": 0.0,
+      "coarse_own": 0.0
+    },
+    "results/pipeline-robustness/task_comparison_summary.csv": {
+      "mean": 0.0
+    },
+    "results/pipeline-robustness/fitted_score_reliability.csv": {
+      "spearman": 0.0,
+      "icc_absolute_single": 0.0
+    },
+    "results/pipeline-robustness/summary.csv": {
+      "gain": 4.413136522884997e-15
+    },
+    "results/pipeline-robustness/retuned_summary.csv": {
+      "mean": 1.1324274851176597e-14
+    },
+    "results/nonlinear-recall/boundary_summary.csv": {
+      "mean": 0.0
+    },
+    "results/portability-path/trajectory_summary.csv": {
+      "displacement_pct": 0.0,
+      "pattern_r": 0.0,
+      "amplitude_ratio": 0.0,
+      "mean_shift_pct": 0.0,
+      "people": 0.0,
+      "pairs": 0.0
+    },
+    "results/portability-path/trajectory_contrasts.csv": {
+      "targets": 0.0,
+      "own_minus_stranger": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "results/portability-baseline/summary.csv": {
+      "n_people": 0.0,
+      "source_r2": 0.0,
+      "untouched_r2": 0.0,
+      "aligned_r2": 0.0,
+      "delta_r2": 0.0,
+      "delta_lo": 0.0,
+      "delta_hi": 0.0,
+      "untouched_retention": 0.0,
+      "aligned_retention": 0.0,
+      "n_untouched_positive": 0.0,
+      "n_aligned_positive": 0.0,
+      "n_improved": 0.0
+    }
+  },
+  "matched_penalty_follow_up": {
+    "replay_scope": "Repeated both path simulations, figure/summary generation and an independent recurrence/SVD audit in the earlier isolated study replay. Used checksum-verified local inputs.",
+    "byte_identical_outputs": {
+      "visit_pairs.csv.gz": true,
+      "rung_pairs.csv.gz": true,
+      "path_summary.csv": true,
+      "nearest_vs_own.csv": true
+    },
+    "independent_scores": 1344,
+    "independent_record": "results/portability-path/checks.json"
+  },
+  "participant_and_state_noise_follow_up": {
+    "replay_scope": "Recomputed both native cohorts' source-state sensitivity, participant-distribution and NKI common-source retention checks in the isolated local study replay.",
+    "byte_identical_outputs": {
+      "matched_retention_people.csv": true,
+      "matched_retention_summary.csv": true,
+      "noise_checks.json": true,
+      "noise_envelope.csv": true,
+      "noise_modes.csv": true,
+      "noise_modes_people.csv.gz": true,
+      "noise_people.csv.gz": true,
+      "noise_summary.csv": true,
+      "robust_numerical_matrices.csv": true,
+      "robust_participant_summary.csv": true
+    },
+    "noise_injection_checks": "results/portability-path/noise_checks.json"
+  },
+  "size_matched_noise_and_retention": {
+    "replay_scope": "Recomputed individual repeat-scan state changes, the technical rungs, matched isotropic comparisons and participant bootstrap retention contrasts in the isolated replay with verified local inputs.",
+    "byte_identical_outputs": {
+      "shares_summary.csv": true,
+      "shift_people.csv": true,
+      "shift_summary.csv": true,
+      "shift_technical_checks.json": true,
+      "shift_technical_pairs.csv.gz": true,
+      "shift_visit_checks.json": true,
+      "shift_visit_pairs.csv.gz": true
+    }
+  },
+  "readout_state_trajectories": {
+    "replay_scope": "Recomputed the descriptive state-trajectory step in the isolated offline study replay. Checked the source matrices, crosswalk, numerical-reconstruction HDF and the three archived comparison tables before the run. Compared all five new outputs byte for byte with the study archive.",
+    "byte_identical_outputs": {
+      "trajectory_pairs.csv.gz": true,
+      "trajectory_people.csv": true,
+      "trajectory_summary.csv": true,
+      "trajectory_contrasts.csv": true,
+      "trajectory_checks.json": true
+    },
+    "pair_rows_replayed": 4399,
+    "ordered_visit_pairs_checked": 3874,
+    "previous_displacements_checked": 607,
+    "maximum_difference_from_previous_displacements_percentage_points": 8.526512829121202e-14,
+    "definitions_and_checks": "results/portability-path/trajectory_checks.json"
+  },
+  "quick_start_demo": {
+    "entry_points": [
+      "python -m benchmark.example demo.npz",
+      "python -m benchmark demo.npz demo-results --penalties 0.01 1 10"
+    ],
+    "timing_scope": "Single local run of the two documented commands from an extracted release ZIP, excluding dependency installation and tests.",
+    "execution_environment": "Windows AMD64, Python 3.10.19",
+    "fixture_creation_seconds": 0.27,
+    "cli_seconds": 2.24,
+    "total_seconds": 2.51,
+    "synthetic_shape": [
+      2,
+      5,
+      16,
+      16
+    ],
+    "verified_output": "Six documented CSV/JSON outputs and both visit directions; each matrix contained finite R\u00b2 scores for 5 sources \u00d7 5 targets \u00d7 3 penalties.",
+    "generic_unit_tests_passed": 3
+  },
+  "unlabeled_parcel_alignment": {
+    "replay_scope": "Ran the prespecified parcelwise alignment using the verified local study inputs and archived forward-visit comparisons in the isolated offline replay.",
+    "byte_identical_outputs": {
+      "people.csv": true,
+      "summary.csv": true,
+      "checks.json": true
+    },
+    "participants": 82,
+    "target_calibration_rows_per_participant": 2352,
+    "previous_source_max_abs_r2_error": 1.0547118733938987e-15,
+    "previous_untouched_max_abs_r2_error": 9.749145934989656e-16
+  }
+}

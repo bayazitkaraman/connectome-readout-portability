@@ -1,0 +1,10 @@
+{
+  "linear": {
+    "original_stranger_pairs": 3792,
+    "max_absolute_difference": 2.886579864025407e-15
+  },
+  "nonlinear": {
+    "original_stranger_pairs": 3792,
+    "max_absolute_difference": 3.819861094100929e-15
+  }
+}

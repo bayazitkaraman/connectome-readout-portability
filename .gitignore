@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+output/
+replay/
+demo*.npz
+demo-results/
+demo-product/
+data/**/*.npz
+data/**/*.h5
+data/**/crosswalk.csv
+data/**/raw/
+data/**/listing.xml
+data/**/atlas.json

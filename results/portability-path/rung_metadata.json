@@ -1,0 +1,19 @@
+{
+  "people": 25,
+  "source_scans": 100,
+  "split_half_pairs": 100,
+  "perturbation_pairs": 2000,
+  "rows": 100800,
+  "hdf_md5": "f457d4a860d79654672143c1ace95ee1",
+  "identical_perturbations": 986,
+  "penalty_path": "All 19 original decades 1e-14..1e4, 1e5..1e8, and an exact source-training-mean intercept.",
+  "test": "Source and replacement receive identical four fresh role-61 signals for each participant and visit.",
+  "seeds": "pilot.rng(11, 10000+25*zero_based_visit+subject_index, role, repeat), map key 10",
+  "fit_steps": 2352,
+  "test_steps": 2048,
+  "linear": "Unweighted mean over ten separately scored delay predictions.",
+  "nonlinear": "Scalar product of three input lags 1, 2, 3.",
+  "aggregation": "Both visit and half directions for each person; 20 numerical replicates per cell.",
+  "checked_against": "results/numerical-repeat/runs.csv, 2100 paired linear scores at penalty 10",
+  "max_abs_error_against_archive": 1.6653345369377348e-16
+}

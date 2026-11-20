@@ -1,0 +1,42 @@
+{
+  "nki": {
+    "n_targets": 25,
+    "selected_mean_r2": 0.11411730907466767,
+    "mean_other_r2": 0.023755057637978333,
+    "mean_selection_gain": 0.09036225143668934,
+    "gain_ci": [
+      0.06804065677972894,
+      0.112857254034897
+    ],
+    "target_blind_r2": 0.04404962337384624,
+    "target_aware_minus_blind": 0.07006768570082145,
+    "target_aware_minus_blind_ci": [
+      0.055347490528442435,
+      0.08453560289759318
+    ],
+    "targets_improved": 24,
+    "unique_selected_donors": 8,
+    "mean_within_target_rank_correlation": 0.36716521739130437,
+    "n_tied_targets": 0
+  },
+  "bnu1": {
+    "n_targets": 57,
+    "selected_mean_r2": 0.16672483197583515,
+    "mean_other_r2": 0.10345613135572153,
+    "mean_selection_gain": 0.06326870062011365,
+    "gain_ci": [
+      0.04840370552248854,
+      0.07877226936831162
+    ],
+    "target_blind_r2": 0.11898263908842252,
+    "target_aware_minus_blind": 0.04774219288741265,
+    "target_aware_minus_blind_ci": [
+      0.03444679557679105,
+      0.06157754230128538
+    ],
+    "targets_improved": 52,
+    "unique_selected_donors": 31,
+    "mean_within_target_rank_correlation": 0.4399503543547865,
+    "n_tied_targets": 0
+  }
+}

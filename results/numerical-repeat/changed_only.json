@@ -1,0 +1,13 @@
+{
+  "changed_runs": 1014,
+  "represented_cells": 100,
+  "mean_loss": 0.0009166889754829863,
+  "ci": [
+    -0.00025529314507414006,
+    0.002019536919826823
+  ],
+  "unique_offdiag_per_cell_min": 2,
+  "unique_offdiag_per_cell_median": 4.0,
+  "unique_offdiag_per_cell_max": 10,
+  "unique_definition": "among the 20 perturbation runs within each acquisition half, excluding the separate reference"
+}

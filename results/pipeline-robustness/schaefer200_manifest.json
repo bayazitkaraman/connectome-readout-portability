@@ -1,0 +1,693 @@
+{
+  "atlas": "Schaefer200_space-MNI152NLin6_res-2x2x2",
+  "atlas_url": "https://raw.githubusercontent.com/neurodata/neuroparc/master/atlases/label/Human/Metadata-json/Schaefer200_space-MNI152NLin6_res-2x2x2.json",
+  "atlas_sha256": "4fbc2f52f6431c56497ba89f7bb9be0484628173f58e560b9fc66ad8e2179c96",
+  "listing": "https://open-neurodata.s3.amazonaws.com/?list-type=2&prefix=m2g%2FDiffusion%2FBNU1-8-27-20-m2g-native-csa-det%2FConnectomes%2FSchaefer200_space-MNI152NLin6_res-2x2x2%2F",
+  "weights_sha256": "01a7c281ba04f204fc3f03ff6af76918f634c7fb3a2caf249ba83540cdb25069",
+  "files": [
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025864_ses-1_connectome.csv",
+      "bytes": 55499,
+      "md5": "09d81042988b0c24a368e69e361fe0b9",
+      "sha256": "0ffb0effd37ef9e15412e0f067348c4d3a51c9c2b8f1d7b1e219469b3cf2dcb0"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025864_ses-2_connectome.csv",
+      "bytes": 56684,
+      "md5": "c171481e1b6cbce37b18ddc7bf49c2d4",
+      "sha256": "85d869db153c1d3b04e91d819b689fb630b2aecf65c86fcd1d07e5a46e8d0073"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025865_ses-1_connectome.csv",
+      "bytes": 59064,
+      "md5": "902bcf6d18c164c9f5ac2096ad1bfc82",
+      "sha256": "aa723488700e317367e3fa352fff3f5742eb57ffb191c8e84e5578e311bfc542"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025865_ses-2_connectome.csv",
+      "bytes": 54632,
+      "md5": "a83285b3392e6d67b8143cd771c6c9c4",
+      "sha256": "8908e3b7b0b7d68116c7d1f69c2bc8d4e8dea499feef5c8277f701f5f1c3960c"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025866_ses-1_connectome.csv",
+      "bytes": 56025,
+      "md5": "045f808a329f43ddf23d8432eeddc154",
+      "sha256": "6fc2862db408cde6688699568eb83f0bd4e5ad3eafb05b1953f48b0b9f983072"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025866_ses-2_connectome.csv",
+      "bytes": 53144,
+      "md5": "6bdba26385bab0677536be58c966ac60",
+      "sha256": "e8bd6d332f3017f23a31defe40cf43aabe892fe4b507cbf9dc92737445449f43"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025867_ses-1_connectome.csv",
+      "bytes": 56396,
+      "md5": "7e0d2a95b72dac0494eefb62eafd6ab6",
+      "sha256": "fa784b51997ea55f837a9b4f5f812afada7d532d68d3fb5ac1b4c36be2e1ad6d"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025867_ses-2_connectome.csv",
+      "bytes": 55289,
+      "md5": "df0ca03a4db574bf2c43dc5c8e816453",
+      "sha256": "2511203c2340ccc6110ff28959d2166edf0aabb2e2f9c77ae59b0605dd5268c8"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025868_ses-1_connectome.csv",
+      "bytes": 54292,
+      "md5": "0089fa5cb0108a45634f10644402e068",
+      "sha256": "c47744ee65b4d42d39a9349f36b642e61d4764a81942f2cdc5af89f9c12e6084"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025868_ses-2_connectome.csv",
+      "bytes": 59167,
+      "md5": "52ab6c252d0561c0de885e7c56c7574b",
+      "sha256": "6e44665e791eb3de0566c54fb63d8e55ae779149c2fc9975ab74b37fdec7dbf7"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025869_ses-1_connectome.csv",
+      "bytes": 56179,
+      "md5": "d5d90c8daf5e92c143dc7e49f3905f56",
+      "sha256": "5539afb044d82b252420e12e592d413b7b455ae455ebee38603344436bb92da9"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025869_ses-2_connectome.csv",
+      "bytes": 54083,
+      "md5": "535b5398ba1c10b084d8164ca2d1ec83",
+      "sha256": "174de1c42683408827455025d47f9688cdcba653a931c68598191fd8120f57f8"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025870_ses-1_connectome.csv",
+      "bytes": 79995,
+      "md5": "c1778a35a238d6056f7627182e3820a3",
+      "sha256": "1a882fe6e5bb7d44f0869415bb7446e952750f76363f01062f6d3d3924aea5b0"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025870_ses-2_connectome.csv",
+      "bytes": 73172,
+      "md5": "738f1765e293ad51fda78b192c746a51",
+      "sha256": "cba0df9bb3533711b2d14bfc25e3197acebf79ccbc6064c2f18280077ce69bcc"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025871_ses-1_connectome.csv",
+      "bytes": 56603,
+      "md5": "d0960b9b88f963ad8413a6f662435be1",
+      "sha256": "657d0e0e54d3f6f865f2ab886d73ef25692a04cd2233a670d62a13dde4cddd41"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025871_ses-2_connectome.csv",
+      "bytes": 59595,
+      "md5": "7565b5d0e2e0e5789bcbfdf444ca0362",
+      "sha256": "6817164bffa2bdd570f7f24256405c543a10d0d297ca27b90df23e3ddf716327"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025872_ses-1_connectome.csv",
+      "bytes": 49025,
+      "md5": "7ea272ed48e224642cac4a1ef83162f2",
+      "sha256": "19557db433f86f6452edd44340620d8b721ab920efbb05969f06345771f56877"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025872_ses-2_connectome.csv",
+      "bytes": 52537,
+      "md5": "849146504c9ee12174ba5a10bdd9b27d",
+      "sha256": "1b72566cba47d3432669ce3e20511a7927fd266d9e41792d8fe3852a86104553"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025873_ses-1_connectome.csv",
+      "bytes": 55655,
+      "md5": "4a0d865a244a5714d79bd5f326c83484",
+      "sha256": "376667cd8581a8c61210d6e4b81cd2d96d4962addfdccccfc69eb746ed9c0653"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025873_ses-2_connectome.csv",
+      "bytes": 52310,
+      "md5": "2a01974346625e2d4aaa679436616217",
+      "sha256": "962f7da037cf9a79cdf6360c46602cb8d464466c2482bf97ba702841916df316"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025874_ses-1_connectome.csv",
+      "bytes": 55629,
+      "md5": "e59aa3374ca70d4618aff1b60b84795e",
+      "sha256": "5008baa9a1baa0c2406d1632bd21c79154e13e7a26341b844e4cd5ca0d5d3039"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025874_ses-2_connectome.csv",
+      "bytes": 56188,
+      "md5": "fc4c9f32aac2806cf79d89f039c57449",
+      "sha256": "3079bb327149505d50c41d1eb6a5d15dd930daf3432eb4d7aaa60f962ba4e1af"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025875_ses-1_connectome.csv",
+      "bytes": 80666,
+      "md5": "06c558796789f413c105a0c36185ed5c",
+      "sha256": "53686e91dbdb73ab551ba6d02f62e23aebc10f8b5752df64c52fe2fc127731d1"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025875_ses-2_connectome.csv",
+      "bytes": 67551,
+      "md5": "d06c6f392dbfc6bec2116a5c6f51e330",
+      "sha256": "ee1e08f82a051e1a260810853ae6c35e0c80fc796d04bd64a28936451c4efd42"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025876_ses-1_connectome.csv",
+      "bytes": 53282,
+      "md5": "5f848d5235c24ad6ccf965560cc13994",
+      "sha256": "8ea009c4697a7c10d7fb7cb8cff9021c44404c4ae91160f13e940a81a9b1d0ec"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025876_ses-2_connectome.csv",
+      "bytes": 55786,
+      "md5": "808ea3ce31032743a21e6c292cdf91c9",
+      "sha256": "a2243d1908f448cbc4964d2ebd6f60e23f5eb314e46a0b9f08b5fd3b2ea50d82"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025877_ses-1_connectome.csv",
+      "bytes": 57044,
+      "md5": "71eaebdebfaadd9a27dee973ff0f549e",
+      "sha256": "f644310c943efe95fc43f2c1ece5f8cc027f264d5e2e766fc1023598f772ff91"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025877_ses-2_connectome.csv",
+      "bytes": 57460,
+      "md5": "3f7db7d11729b2ca7ac49678a91629f7",
+      "sha256": "14e43f8227005b015f24691620a780e6b9f59c43339acaed69bfd5da4ed45517"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025878_ses-1_connectome.csv",
+      "bytes": 57601,
+      "md5": "b227548b277b3967d9938398fd956372",
+      "sha256": "ac79c2b07234436270ef2410e4fdfdd4d2fe06fc15443b823471cbe0d83ba239"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025878_ses-2_connectome.csv",
+      "bytes": 57375,
+      "md5": "2d7958c04a304131014500423f4f4f86",
+      "sha256": "a511e36e4006c679d98a052d949cae7bc3ce484b2f765b81c6e980894c0ffc3f"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025879_ses-1_connectome.csv",
+      "bytes": 56782,
+      "md5": "ad7dab00c91015aa9b00129dc5f740f1",
+      "sha256": "6bc3d9bcaa0d27ca5ae5013d55a2b3ae746c2abdc0d6dc1efa765d1225f8d11c"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025879_ses-2_connectome.csv",
+      "bytes": 58406,
+      "md5": "397dd44d84c1488c008a575ac13001fc",
+      "sha256": "eaf19b2e1f23d679d8267146bb5a8c04b95c0fb6ce68b2528adb5097668bd076"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025880_ses-1_connectome.csv",
+      "bytes": 55794,
+      "md5": "a7c4d3e3c8e14db331e5565b8bf41076",
+      "sha256": "babd417cdbde5e16a60563a48f6013e5e4015ddf3b5d3ad24493aa6cfe59efcf"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025880_ses-2_connectome.csv",
+      "bytes": 56421,
+      "md5": "d20d8be160d4159e94ccaae80180a5f2",
+      "sha256": "b0f4a5c1679f11e71cefb63657891e643922244134a734b70f95a1b7880c723f"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025881_ses-1_connectome.csv",
+      "bytes": 51633,
+      "md5": "adf9a10d8f74e2ca7c0cade71e35c74d",
+      "sha256": "5b009d897fa64e5a9c25e0051315a966a3dfe7705f1f562c93e6aa5c33311032"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025881_ses-2_connectome.csv",
+      "bytes": 55093,
+      "md5": "ae1049d0172f09ef176fe59d545d3ff5",
+      "sha256": "dbc028d05caf06d7298d21fabee98e95254ddfaa9a689261ecc73f13cbd738d2"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025882_ses-1_connectome.csv",
+      "bytes": 48089,
+      "md5": "0c3230915b81e85726efac6d9e30dcf4",
+      "sha256": "a9207f14b275688972b1be883faa4f5c46af4fe3da20bddd14da746867c872e8"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025882_ses-2_connectome.csv",
+      "bytes": 50597,
+      "md5": "021a6ab9150bffe4cf5811ed352dc16a",
+      "sha256": "99facddebb935677b23df1b277ddc0abef7c76bc5c4104cfb6ca7874063cf26c"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025883_ses-1_connectome.csv",
+      "bytes": 51788,
+      "md5": "9fc757687828f742f4514c306aa21034",
+      "sha256": "169998d9872f6ac49cd18773dca9b0692cca8abb60e6219779b7831a9d242f32"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025883_ses-2_connectome.csv",
+      "bytes": 68506,
+      "md5": "5deaed3f9d96c8ff6e427c0c40162281",
+      "sha256": "eb244b801ed922c6a8d974913ab968e81ee678137922e1cf7aa891b11a967d0c"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025884_ses-1_connectome.csv",
+      "bytes": 56516,
+      "md5": "a20727979374587aa980fc0d7edb0bca",
+      "sha256": "4d899c1cdb8c3b3143fa9432a84a78140aba17250c2e55409cb44ede6f9ff435"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025884_ses-2_connectome.csv",
+      "bytes": 52523,
+      "md5": "22b27662fba672c75308c88f97e8de14",
+      "sha256": "5c9d788a6e3a360339ca3aea6e6d9499edc340b51b4239f29c406b105f8011ca"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025885_ses-1_connectome.csv",
+      "bytes": 52140,
+      "md5": "0dcd1ee6424c4227485f675623f4e4db",
+      "sha256": "cf3e0a112adcd81a75e8ef7003355f297b0b9f35f7ac83006c113aea14f91c9f"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025885_ses-2_connectome.csv",
+      "bytes": 52815,
+      "md5": "78d7d3af3f850c18bacda5b33f784bd8",
+      "sha256": "ae36d8b29a6b21c5c24e791069bd97a3989485d5cf6f15f36d77b0e0718684a9"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025886_ses-1_connectome.csv",
+      "bytes": 53500,
+      "md5": "1758ee05006194bbebeffbcc71411002",
+      "sha256": "6ffb7267971408df2c0c8899378f49e99c21aafbde0fec6a421aed00bcaea723"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025886_ses-2_connectome.csv",
+      "bytes": 58344,
+      "md5": "93ed9a727926aff6f7117947c6922e86",
+      "sha256": "0701cf7a0601897bc5bdbb2ba77ec6419de7e20b9fbbab81c1d8278f1c0ab330"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025887_ses-1_connectome.csv",
+      "bytes": 55290,
+      "md5": "d8e2c568e8593ce47ffcd2a988db2c2f",
+      "sha256": "c3a2d62aa924192604f75f1dde116297e764f3c2a62b4f0c77e17a493b384281"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025887_ses-2_connectome.csv",
+      "bytes": 60612,
+      "md5": "e9a60d34bfde05c40679672e913425a9",
+      "sha256": "cdac3bf9e3f303f2b08704f37b29d4f3bf44cf96f6829328a603659e1a284cbe"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025888_ses-1_connectome.csv",
+      "bytes": 58895,
+      "md5": "9ef164d45964dc9aa71b1292f17b6d4c",
+      "sha256": "8828c0cf648fce59622b025b5ad8e1f053f3949c5b185a8bd60f080040a41c5c"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025888_ses-2_connectome.csv",
+      "bytes": 54875,
+      "md5": "d99f88f9918a4899dbee27a6970081a0",
+      "sha256": "c0eb49713b3d436b8518fd1edcd2e30ec74547a56b804fc25ea0b3ad27f80f05"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025889_ses-1_connectome.csv",
+      "bytes": 57462,
+      "md5": "c0ac451effad1a5dc8ff1b20513d03a3",
+      "sha256": "e21020d7bcba1b63c615fc49a6a4dc060db98c7557bdb07b990a41fb5a5f98bb"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025889_ses-2_connectome.csv",
+      "bytes": 52191,
+      "md5": "017c4d21d0cfc14fa1eea7f3dd853c32",
+      "sha256": "219c3a040efda853d156b74bee0818ed62f8205dae5ec6da85dbd8f8b2a5c3d7"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025890_ses-1_connectome.csv",
+      "bytes": 54155,
+      "md5": "4a965cca1953c57607eb651920bd7078",
+      "sha256": "57fb32066ce5f64c04cd25198bbd979dbda59c7d687f2b6115e989b1f0d1e1a5"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025890_ses-2_connectome.csv",
+      "bytes": 59353,
+      "md5": "e25a01eb0e8e4b53d17d9f650b9cbb15",
+      "sha256": "db61a80db9a5290feedfae943474f924021de6a3f120b2329c20585e11c21297"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025891_ses-1_connectome.csv",
+      "bytes": 54899,
+      "md5": "2f36d2385f5ce170963e1ccd26eb28dd",
+      "sha256": "57ffd42c215a6eb12064c5afa52bbbaca53df476c31674e58a5ab5e476fe5a8a"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025891_ses-2_connectome.csv",
+      "bytes": 55587,
+      "md5": "f3c8e2e8aefd3ee62567ef9853efbb57",
+      "sha256": "1075e6191cb0d56e7499ce554a18b0bc461dff6e36c46fa8fe0f3d65caf05c93"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025892_ses-1_connectome.csv",
+      "bytes": 55337,
+      "md5": "64578f4d9cb594b051590de7e423df29",
+      "sha256": "8d4b619b1fc6d7ca00935a65d08b6751f4816c419e8a9eda1cc8bf0e2e0bd7b9"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025892_ses-2_connectome.csv",
+      "bytes": 58153,
+      "md5": "693d73fb12d42b53507c5da8231ce912",
+      "sha256": "5e7fce11b86f3664ef363e8bffb2171c628beab2bc351a42ad29a9a23b14f814"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025893_ses-1_connectome.csv",
+      "bytes": 55406,
+      "md5": "f6d608871b183445210518b51d2738de",
+      "sha256": "cdb26b5b829b4f4eb3120d0ed2f6f65c63cb5e8b40750e42e5066a3db33bedda"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025893_ses-2_connectome.csv",
+      "bytes": 55528,
+      "md5": "18a60bfca5b03d8e08f2f732595f5f1f",
+      "sha256": "cfc64094dbc36479e35e39711e856978d037b6f85554fca63a31e55603fff659"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025894_ses-1_connectome.csv",
+      "bytes": 47145,
+      "md5": "552aaf4cd82c16b5423106921266e82b",
+      "sha256": "5b12bdd41b7afefe87b889f96c90e995d188f8cd824e7a02be018f17c8f4bc47"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025894_ses-2_connectome.csv",
+      "bytes": 49602,
+      "md5": "c9685e56bac8dde56537d245c4e2edc7",
+      "sha256": "620f3cae46ffac88c6d09b326fa05a56bd55a37468023c71e323a2de9cb9b0bf"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025895_ses-1_connectome.csv",
+      "bytes": 73363,
+      "md5": "be4057d34c7d611f7bbffb3fe2e10606",
+      "sha256": "848679b4ba6c4064c5aa61113fbb1616fcfc148979d350e14fbb91fdb8d36107"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025895_ses-2_connectome.csv",
+      "bytes": 51378,
+      "md5": "0ad5323b011f91a880a22d8272c021fe",
+      "sha256": "c09e2cec2c2774e7b3499ef6aa79cd0cb7cab3a9b4addbe3d9d6e412343480db"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025896_ses-1_connectome.csv",
+      "bytes": 54110,
+      "md5": "cd00471747db9c1f2a5c37d8d7923ad6",
+      "sha256": "65cc2997e747fa74e753484a7ba877ba473949ced6f18d1607b5a9c5c510d453"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025896_ses-2_connectome.csv",
+      "bytes": 66829,
+      "md5": "5f74fdc1c7833ab29cfefdf55d89cccd",
+      "sha256": "32dbf5e6ff349f7ba69e77416255a507b332b9fa99d60443de539e0f7f0d834e"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025897_ses-1_connectome.csv",
+      "bytes": 50318,
+      "md5": "27f786e4c45edbd2a26c34bb9e217354",
+      "sha256": "4ee97337fee8ea4aae62e246dff6596df0eaba43fb43fac95f2737f8bc4eb1ed"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025897_ses-2_connectome.csv",
+      "bytes": 46215,
+      "md5": "cbed7645362d05490c3ffd87ec00c083",
+      "sha256": "3c06a957ef254596b4a4fb7be10e2022914770f681ccea524ec08d00b3e0d089"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025898_ses-1_connectome.csv",
+      "bytes": 45069,
+      "md5": "07cbc8267c585dcd054b3f773958312d",
+      "sha256": "aa1c48a5d0ae303a2e74d3f8e261b8f727b5df29c269ee55765e472dcd0cbb4b"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025898_ses-2_connectome.csv",
+      "bytes": 49181,
+      "md5": "324288a88e4c84f8fd50ab025679b5b7",
+      "sha256": "334a83d4ff20449c7b658e80bfbda2ff0bd158364515d4449b90ca13dee2f2b0"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025899_ses-1_connectome.csv",
+      "bytes": 51356,
+      "md5": "7c60cba556eac261345c520a90d50c6b",
+      "sha256": "bb5bf14c217b24c10aa31eea41861dc478d9c34002c24adec4a6e1d83f897f44"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025899_ses-2_connectome.csv",
+      "bytes": 59623,
+      "md5": "41ea377ced57edf4d98539d94a447d4f",
+      "sha256": "e7d5b2b24e8c397c9d5d2ee55b53fed30a37285cc8f5d7da7d8cb7ed9dde9cde"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025900_ses-1_connectome.csv",
+      "bytes": 43999,
+      "md5": "1341f46ffbc97bd9ad1611727ee60445",
+      "sha256": "e476014ee3729bb07accfdab02817161d9c73db2cf5f51775db647d78302c940"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025900_ses-2_connectome.csv",
+      "bytes": 47831,
+      "md5": "5c2b15a6af719d118b077f6289b27553",
+      "sha256": "87a52a94d09213c72537b39c41089a94909ade30c09a48e3039f142f669ae2c4"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025901_ses-1_connectome.csv",
+      "bytes": 61316,
+      "md5": "fce23405562b98f5ce070458cc9cea69",
+      "sha256": "620084f7a41cd5a5ce48abe19bd81fc3b6ed77211d372dfe407270df3a1c7f90"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025901_ses-2_connectome.csv",
+      "bytes": 79030,
+      "md5": "b7ded2f608349c656c8189eb72428e6c",
+      "sha256": "581e3ed49164f3fe182efdbd349d40fd3d56be54582479af97684747ed9bd5e4"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025902_ses-1_connectome.csv",
+      "bytes": 55437,
+      "md5": "0f8fea7cc9cb06fc313cf47672afdc73",
+      "sha256": "ad773bebb7fad205fab646b477f0a79fb73a80007c6a0e27c300b53a6a24a75d"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025902_ses-2_connectome.csv",
+      "bytes": 52878,
+      "md5": "381b3cc3c96fb6509955e993c9fb1b3f",
+      "sha256": "e8fcdabf5d1997364e2494b0801af4090495173683b7d899667b010fcc9c4e87"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025903_ses-1_connectome.csv",
+      "bytes": 55341,
+      "md5": "b9244dce3d47f7dd5f0c7af8723e4793",
+      "sha256": "ca5764147c3855a6b1a2915c8efa69cfb428f050dd6b83543faf5ac57274b8f0"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025903_ses-2_connectome.csv",
+      "bytes": 64202,
+      "md5": "d7927ca2e8738c2cf354edee4bbe35ef",
+      "sha256": "81c4a0938bdf200042a7db337513da77dc95f78ab8cc5901d7c8456cd6990e9e"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025904_ses-1_connectome.csv",
+      "bytes": 61441,
+      "md5": "280685339d22707df53f01c6c61b2bcc",
+      "sha256": "1a17c8b9d75cd493d5afe9f2176c3efa2d9f0ae2047df393fd4d1ce52fec0bf4"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025904_ses-2_connectome.csv",
+      "bytes": 58168,
+      "md5": "10755308711d9099ec6e6a69eb95ee4b",
+      "sha256": "727200b63508731d89639de2312125f75346bf7fcf73e251ff26de649e8e9463"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025905_ses-1_connectome.csv",
+      "bytes": 54701,
+      "md5": "c86be0236de9a1e5be82594d73153f83",
+      "sha256": "b138f0e1b48aa70c798f2c20e2f7fa67252b19f809d1d8e4206af3925ed042cc"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025905_ses-2_connectome.csv",
+      "bytes": 56221,
+      "md5": "b28008e5b9c91e65155853020823ce21",
+      "sha256": "8787d7648aea01e29311e466b7a2edb773318e829a8b82a75935aa63e5a6aa3d"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025906_ses-1_connectome.csv",
+      "bytes": 60837,
+      "md5": "e568d27da8caac40a23a644398bb6371",
+      "sha256": "a3d310ccb9d59ac1e0dc552031db572b663f139219a6803577129987d7011d04"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025906_ses-2_connectome.csv",
+      "bytes": 55556,
+      "md5": "6b32660ab838159619e4d8f0ae6538d0",
+      "sha256": "d8dc8ee749ff6b70b3305f10501212c0f5c86aea5665e1a59fd00baa72aa45de"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025907_ses-1_connectome.csv",
+      "bytes": 56571,
+      "md5": "8b7c056f9bec2a37efecc399f2c474d9",
+      "sha256": "f490b81e0ffc8f33baed17493ab4c95427b7a6f44183410407f402b027cc9e0c"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025907_ses-2_connectome.csv",
+      "bytes": 60121,
+      "md5": "3d1475107e5fed39e597d22bb9bc10c6",
+      "sha256": "724e3d7042f0a5088d79f3ff2472301e9ff160184f6bedef7390c10b16572685"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025908_ses-1_connectome.csv",
+      "bytes": 63989,
+      "md5": "a5bfd6d088161cb55a9ff2909d0f0256",
+      "sha256": "3f969c772113eb7332c1c0aeb804b01a4ed8bb9c561a54e236e97c5734ce0de1"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025908_ses-2_connectome.csv",
+      "bytes": 67381,
+      "md5": "14436e04ed5268a88518f1b6e2faad7b",
+      "sha256": "76a740747b26932b83d0e9c08f3e52f69a6502af80976eb4a3be3e1f89214e24"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025909_ses-1_connectome.csv",
+      "bytes": 56171,
+      "md5": "9f1e3016762ae7bc3483d4c98f5daef7",
+      "sha256": "f5b2b3ef81a993fdabc46bdee6570b8a8697f3d38d30c97cc75d7f351e913227"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025909_ses-2_connectome.csv",
+      "bytes": 57556,
+      "md5": "7b0b24bac60d265d1edeb8c0cd8cc2fe",
+      "sha256": "f1ece3d760bf0c0ef002fc6ee4eb18bf3cfecdeb4eec6c3b7bfe3a90f1ac4407"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025910_ses-1_connectome.csv",
+      "bytes": 55722,
+      "md5": "1a00e2cef2b3c6d12cc9af0494e75674",
+      "sha256": "50d825d12204c94f7a7d2bc4f8fb30db8bb37d8d37716d6e2a48f24502a178c6"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025910_ses-2_connectome.csv",
+      "bytes": 52540,
+      "md5": "302878202ff10f4eb69e56a179f27404",
+      "sha256": "867be51b54c6e4cf50ef6c5dc8353f40916fc07becdf90acc3d5b47fc6e2e08f"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025911_ses-1_connectome.csv",
+      "bytes": 59582,
+      "md5": "0a47267c51a948234565bcbe85b11f88",
+      "sha256": "8e3b1f4b37c5c973e9aba6e24f997760eff3b9f463baa5393522a92f51a8479c"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025911_ses-2_connectome.csv",
+      "bytes": 56863,
+      "md5": "45f44df8f495d7ec6e190383e43ca70a",
+      "sha256": "de15874606cad0a714fbe8c4a60cc7c44caca4d7aff1cb3270285bc3959b225b"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025912_ses-1_connectome.csv",
+      "bytes": 55794,
+      "md5": "92aa52ee48c05834e8968d52be9e5485",
+      "sha256": "45a7b72482aa5282ce3f5ee0dbae85cf93492dead31aca77b40f535099f46e2e"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025912_ses-2_connectome.csv",
+      "bytes": 51483,
+      "md5": "ab5da12ea2a17e77d9d7fbdee223a0da",
+      "sha256": "2d755cd167c0bb57e4c0311ede0b191176568f08531cd425ab6385c6779f8262"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025913_ses-1_connectome.csv",
+      "bytes": 54418,
+      "md5": "9f51229b1f4a431b2da48b232d0dde0b",
+      "sha256": "84c4cdb906e355e2da4e03ce75a96b431be0cbf0c6bc87aeebca84d407e3661a"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025913_ses-2_connectome.csv",
+      "bytes": 32607,
+      "md5": "a3054901f5c0b0ce14a88848782b6a4f",
+      "sha256": "1c6ff4bccc638068661ff9ccac255341d9a94a21ae65befa50cede738549be78"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025914_ses-1_connectome.csv",
+      "bytes": 69426,
+      "md5": "a4fa63fd4078b9914a2e50282da66ca9",
+      "sha256": "145ce37c96b949258196a71d607f954be6443669aba911319717def4282df0a2"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025914_ses-2_connectome.csv",
+      "bytes": 81020,
+      "md5": "ac7b3520169ce1f72898db25e895003f",
+      "sha256": "837eea87b049c93bcf941697e75398dd7d72e8a3fdb22ebb977afe4ffa5b2cfa"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025915_ses-1_connectome.csv",
+      "bytes": 53324,
+      "md5": "b43f536cd197933d1671d66215aecbae",
+      "sha256": "8166226ad29bfe3d11f18bf0fb1c4bc0258c7094e3019fdb9e8fab6d0b785488"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025915_ses-2_connectome.csv",
+      "bytes": 52334,
+      "md5": "fdc00190ad30453f224243e711cb3709",
+      "sha256": "81d5ac83da916fe22e291aaaba7cba7d0afe711f92a2fa2c226b478fe0f469f8"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025916_ses-1_connectome.csv",
+      "bytes": 63167,
+      "md5": "8798b1dc82ceb1cfe116eab27df7263c",
+      "sha256": "a576ed26773b6bd7732d2fe8bc501333daeb960e0934cc21947a5fc380cbaa8e"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025916_ses-2_connectome.csv",
+      "bytes": 63296,
+      "md5": "18932727c2bad111a952a5223d6015ed",
+      "sha256": "e42dcb8351d8705c80770f1c8c05ce938448f0b7f5793c1837241b8bd3b90dc5"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025917_ses-1_connectome.csv",
+      "bytes": 72473,
+      "md5": "84ba4d968ec495bbf4bbbfad25f6b8bb",
+      "sha256": "4a34250f172a3faae590935eb2a4ba2534e1d73eef71368639f5e8e1f209320a"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025917_ses-2_connectome.csv",
+      "bytes": 75520,
+      "md5": "6a5a0a2c6098e5398fce7668031427ad",
+      "sha256": "e0806d12b6c0631f3dd00e96db5da9547c724c77b76e8aaccc6d6b8470cd44f2"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025918_ses-1_connectome.csv",
+      "bytes": 57489,
+      "md5": "90320c7fc0ed7b2074eeb9477f263fdb",
+      "sha256": "ef193f49d4becdac957936d594a3351904e321bdd09384a66efea1aab0e652e4"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025918_ses-2_connectome.csv",
+      "bytes": 56200,
+      "md5": "f5b23a3ccfd5204920e9316d4ae017ad",
+      "sha256": "25ed4509fc7e533f8a9ef134f7fe61761464b0cedba84ef044f1305c5005bca4"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025919_ses-1_connectome.csv",
+      "bytes": 54721,
+      "md5": "8d7723a3a62222c613e62a9119fdf248",
+      "sha256": "0d408e1e4173934e92a59da803e599cac51e986b7a4b3693ccb958d2bdc8e5c7"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025919_ses-2_connectome.csv",
+      "bytes": 54246,
+      "md5": "403357a3149e2c4738e40fb025b06d89",
+      "sha256": "53c7074cc423febc2abf1f7ef65770c29c476bf7f4d72b8022f79092b47e663a"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025920_ses-1_connectome.csv",
+      "bytes": 54229,
+      "md5": "64dd024dabf2f74d858175ba5bb895bd",
+      "sha256": "066276ca48654e0372ccd5c69eed9106dffd0721c2aef7e4e537ae3f997510c6"
+    },
+    {
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/Schaefer200_space-MNI152NLin6_res-2x2x2/sub-0025920_ses-2_connectome.csv",
+      "bytes": 54653,
+      "md5": "d43761500600528ecb6d5d880806082b",
+      "sha256": "5bb240f70bed364fa665881f03fb4e5828a299711b15dee59199a9b550879e6f"
+    }
+  ]
+}

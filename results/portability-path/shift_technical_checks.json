@@ -1,0 +1,10 @@
+{
+  "source_count": 100,
+  "numerical_graph_pairs": 2000,
+  "split_half_graph_pairs": 100,
+  "checked_rows": 8400,
+  "exact_numerical_graphs": 986,
+  "held_out_stream_role": 61,
+  "max_source_r2_discrepancy": 1.1501216645726231e-15,
+  "max_target_r2_discrepancy": 2.842170943040401e-14
+}

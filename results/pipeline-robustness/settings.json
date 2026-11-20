@@ -1,0 +1,23 @@
+{
+  "simulation_seed": 20261119,
+  "input_map_key": 10,
+  "train_role": 0,
+  "test_role": 61,
+  "train_stream": "10000+source_index",
+  "test_stream": "10000+n+target_index",
+  "test_repeats": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "epochs_fit": 2352,
+  "test_rows_per_stream": 512,
+  "warmup": 200,
+  "delay_range": [
+    1,
+    10
+  ],
+  "archived_native_stranger_scores_checked": 3792,
+  "max_abs_r2_difference": 1.176836406102666e-14
+}

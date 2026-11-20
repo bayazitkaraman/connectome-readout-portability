@@ -1,0 +1,82 @@
+[
+  {
+    "injection": 0,
+    "source_rule": "equal_donor",
+    "crossings": {
+      "own_r2": 0,
+      "other_r2": 0,
+      "bank_r2": 0
+    },
+    "gain_R2_at_0": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "gain_R2_at_8": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "oracle_R2_observed": 0.940842776055081
+  },
+  {
+    "injection": 0,
+    "source_rule": "fixed_025",
+    "crossings": {
+      "own_r2": 0,
+      "other_r2": 0,
+      "bank_r2": 0
+    },
+    "gain_R2_at_0": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "gain_R2_at_8": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "oracle_R2_observed": 0.940842776055081
+  },
+  {
+    "injection": 1,
+    "source_rule": "equal_donor",
+    "crossings": {
+      "own_r2": 8,
+      "other_r2": 8,
+      "bank_r2": 8
+    },
+    "gain_R2_at_0": [
+      0.05538167468520392,
+      0.05254013290090519,
+      0.058074555163799196
+    ],
+    "gain_R2_at_8": [
+      0.02322553747027639,
+      0.020365402174279294,
+      0.02591929304679971
+    ],
+    "oracle_R2_observed": 0.940842776055081
+  },
+  {
+    "injection": 1,
+    "source_rule": "fixed_025",
+    "crossings": {
+      "own_r2": 0,
+      "other_r2": 8,
+      "bank_r2": 8
+    },
+    "gain_R2_at_0": [
+      0.33047946415679735,
+      0.3136376209795837,
+      0.34642896741490686
+    ],
+    "gain_R2_at_8": [
+      0.14491772740276415,
+      0.13415148282079828,
+      0.15571875074624647
+    ],
+    "oracle_R2_observed": 0.940842776055081
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "cohort": "nki",
+    "n": 25,
+    "ordered_pairs": 600,
+    "budget": 32,
+    "own_r2": 0.4369354904474669,
+    "other_r2": 0.4384461941450564,
+    "gain": -0.0015107036975894632,
+    "ci": [
+      -0.003524975920658136,
+      4.086988011567748e-05
+    ],
+    "max_subject_mean_absolute_gain": 0.017167042626057366,
+    "max_frozen_discrepancy": 2.0122792321330962e-16,
+    "max_scratch_discrepancy": 9.71445146547012e-17
+  },
+  {
+    "cohort": "bnu1",
+    "n": 57,
+    "ordered_pairs": 3192,
+    "budget": 32,
+    "own_r2": 0.296504675314168,
+    "other_r2": 0.3004271938183455,
+    "gain": -0.003922518504177453,
+    "ci": [
+      -0.0071863964876657345,
+      -0.0007186780897610722
+    ],
+    "max_subject_mean_absolute_gain": 0.03590832433228504,
+    "max_frozen_discrepancy": 5.551115123125783e-16,
+    "max_scratch_discrepancy": 4.440892098500626e-16
+  }
+]

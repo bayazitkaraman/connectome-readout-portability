@@ -1,0 +1,1168 @@
+{
+  "cohort": "CoRR BNU1 / Beijing Normal University C-BIRD",
+  "acquisition": "https://helab.bnu.edu.cn/DOWNLOADS/Data/index.htm",
+  "paper": "https://doi.org/10.1038/sdata.2015.56",
+  "consortium_paper": "https://doi.org/10.1038/sdata.2014.49",
+  "processing": "https://docs.neurodata.io/m2g/paper/data.html",
+  "bucket": "https://open-neurodata.s3.amazonaws.com/",
+  "listing": "https://open-neurodata.s3.amazonaws.com/?list-type=2&prefix=m2g%2FDiffusion%2FBNU1-8-27-20-m2g-native-csa-det%2FConnectomes%2FDKT_space-MNI152NLin6_res-2x2x2%2F",
+  "listing_sha256": "0e61bc52cb7bbaa292d256e1481e8056df5779e8a09c59661bcfed6deaad65bf",
+  "atlas": "https://raw.githubusercontent.com/neurodata/neuroparc/master/atlases/label/Human/Metadata-json/DKT_space-MNI152NLin6_res-2x2x2.json",
+  "atlas_sha256": "8a5b9ebc1ea6f846751e4f8d1a0c8938addbbf617a35b302b954eae1b228e706",
+  "axes": [
+    "visit",
+    "participant",
+    "source region",
+    "target region"
+  ],
+  "weights": "Released undirected weighted edges, mirrored; unlisted pairs are zero. All 83 nonbackground atlas regions retained, including isolates.",
+  "data_sha256": "5da9aebacf192f379baa974c824454e569d9e32a6df252e1647f8d5daa882d0e",
+  "shape": [
+    2,
+    57,
+    83,
+    83
+  ],
+  "files": [
+    {
+      "subject": "0025864",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025864_ses-1_connectome.csv",
+      "bytes": 17967,
+      "md5": "23847c01d0f213463b509e85a03eda3a",
+      "sha256": "f6090eec46a9fd8a3e7c8c89921e33bdf69d1f8fba14ebc3af9a045d5f9982d6",
+      "edges": 1600,
+      "isolates": 0
+    },
+    {
+      "subject": "0025864",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025864_ses-2_connectome.csv",
+      "bytes": 18228,
+      "md5": "65f1c675f4b52be0167916eb86cbc865",
+      "sha256": "550b37c95a6d05d6a452d41e77c6c7fe55da54a6f7a514d467c03c1d3adcde62",
+      "edges": 1606,
+      "isolates": 0
+    },
+    {
+      "subject": "0025865",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025865_ses-1_connectome.csv",
+      "bytes": 17393,
+      "md5": "6475c8435a3a7de1ad175a709054930c",
+      "sha256": "a620707db5b862d5178bf9c07f84f3c26a6056a1f2b8e183f7625c372f15ab78",
+      "edges": 1537,
+      "isolates": 2
+    },
+    {
+      "subject": "0025865",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025865_ses-2_connectome.csv",
+      "bytes": 17484,
+      "md5": "9442e674f85afa81dd0b36a1c361a8a6",
+      "sha256": "bd6c726e6cbdb45f652d0a193552f1133400305cd93e4e3d79de540e2d8fe54e",
+      "edges": 1552,
+      "isolates": 0
+    },
+    {
+      "subject": "0025866",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025866_ses-1_connectome.csv",
+      "bytes": 17404,
+      "md5": "30b129db91aa267cdf1c8ceddc22ac5b",
+      "sha256": "489671c4360c2d819df90a035e4088cec385b52b3230c3ea5467a0baa2c90d72",
+      "edges": 1554,
+      "isolates": 0
+    },
+    {
+      "subject": "0025866",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025866_ses-2_connectome.csv",
+      "bytes": 15815,
+      "md5": "ccc955a9432412a6f4b4b24bb5f65986",
+      "sha256": "1cab523adaa893cecf08f298a770d437a9e5e0ff3d33615ddac75349b9174ef2",
+      "edges": 1409,
+      "isolates": 0
+    },
+    {
+      "subject": "0025867",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025867_ses-1_connectome.csv",
+      "bytes": 17752,
+      "md5": "a5ca0655079efad24c5dae388ee3db94",
+      "sha256": "aa25b9cd1eacb93b2713162a82cd7e991b6bc851908e34c33356756a2b04f4f1",
+      "edges": 1578,
+      "isolates": 0
+    },
+    {
+      "subject": "0025867",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025867_ses-2_connectome.csv",
+      "bytes": 16639,
+      "md5": "61095c0e7c4f8abc4e02fbd42eb0bf55",
+      "sha256": "263abe8c734e93318c21877f66919fa11201ad9cb446102306374d8f869b3516",
+      "edges": 1472,
+      "isolates": 0
+    },
+    {
+      "subject": "0025868",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025868_ses-1_connectome.csv",
+      "bytes": 16890,
+      "md5": "cfc50477b1d0a3b6d3d719ce73eb2bc3",
+      "sha256": "1508263460913abf92c5eb6b4c7b010b18ffacd3f6cfb406c56115ad8159a13d",
+      "edges": 1486,
+      "isolates": 0
+    },
+    {
+      "subject": "0025868",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025868_ses-2_connectome.csv",
+      "bytes": 17568,
+      "md5": "05d65e2b40904ec0503c986749329023",
+      "sha256": "304aab99c127fec2ad940d7efa11116d7d9b3bc839dd6a407c59523b11204794",
+      "edges": 1569,
+      "isolates": 0
+    },
+    {
+      "subject": "0025869",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025869_ses-1_connectome.csv",
+      "bytes": 17120,
+      "md5": "0c2de3e78411816863193aea1d565f5b",
+      "sha256": "9593dc97ea49a9ddb425b829e37875d2c23badc8263e12f18c2b11fffb51e979",
+      "edges": 1537,
+      "isolates": 0
+    },
+    {
+      "subject": "0025869",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025869_ses-2_connectome.csv",
+      "bytes": 17243,
+      "md5": "12c60bdb157ac3fe6dedcdc1a76febc8",
+      "sha256": "5928d93a9e540823577e1017c7f40f17416aea4477a6c7436534fa513c9dbf48",
+      "edges": 1546,
+      "isolates": 0
+    },
+    {
+      "subject": "0025870",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025870_ses-1_connectome.csv",
+      "bytes": 24522,
+      "md5": "789f59b0d29e79fa751626b0342f433e",
+      "sha256": "797fe040032dd6aca1100151c34a3425e4021e56e3e8ff4cdb4f3eba9931e849",
+      "edges": 2155,
+      "isolates": 0
+    },
+    {
+      "subject": "0025870",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025870_ses-2_connectome.csv",
+      "bytes": 22837,
+      "md5": "9423bc8eeee78b6a55d0a49cf210322d",
+      "sha256": "0c8ea2bd58f2cfc073e3f431091642f5c739582d33d6d1319c4a1c66266a45f8",
+      "edges": 2014,
+      "isolates": 0
+    },
+    {
+      "subject": "0025871",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025871_ses-1_connectome.csv",
+      "bytes": 16768,
+      "md5": "cbeee794542c31ec764425fa2f183571",
+      "sha256": "1651f214c25ed29b2ee6f5a98e99a0d5197c6798dcb10c1617e5a0d60bacf21d",
+      "edges": 1491,
+      "isolates": 0
+    },
+    {
+      "subject": "0025871",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025871_ses-2_connectome.csv",
+      "bytes": 17574,
+      "md5": "7892cbd9ef145167f1eaeab58c8a5e92",
+      "sha256": "afa7a9e61bea08f09089a55172a62b7506a8de1ff00582b6912bd821ca4548ab",
+      "edges": 1552,
+      "isolates": 0
+    },
+    {
+      "subject": "0025872",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025872_ses-1_connectome.csv",
+      "bytes": 16329,
+      "md5": "1ec9aab86d536622547d9b2d29b196ad",
+      "sha256": "01491568d0e9ea10e0832878b997994a8916b314b84a05d11ace931c3db44d68",
+      "edges": 1444,
+      "isolates": 1
+    },
+    {
+      "subject": "0025872",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025872_ses-2_connectome.csv",
+      "bytes": 18376,
+      "md5": "31617da87ecce2cf5d164b4d116dfa34",
+      "sha256": "b2b57041c061b56a44408bddf81bfa3b1e48c1876696c92f29167800e5482211",
+      "edges": 1638,
+      "isolates": 0
+    },
+    {
+      "subject": "0025873",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025873_ses-1_connectome.csv",
+      "bytes": 17061,
+      "md5": "2defa7c1082c06384c6a635964c6fe29",
+      "sha256": "c489c734fbc6b1d7defcad64c410f7ac5c2f76f6c1306082b61188230e2aa6a2",
+      "edges": 1520,
+      "isolates": 0
+    },
+    {
+      "subject": "0025873",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025873_ses-2_connectome.csv",
+      "bytes": 18777,
+      "md5": "c1b0f6be78dd81813f11883792663d28",
+      "sha256": "8d04a8e05971d5ec5ba46d9a38a0dc38a84b8980bf74b8b195c1aa6ca742ab20",
+      "edges": 1676,
+      "isolates": 0
+    },
+    {
+      "subject": "0025874",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025874_ses-1_connectome.csv",
+      "bytes": 17434,
+      "md5": "5cfef876d8525d11ca7dc092ba7f451d",
+      "sha256": "727a259e54e155aeaddbd6751d9c066fb77f7bad773cacd4ae2ca8037d84c98e",
+      "edges": 1552,
+      "isolates": 0
+    },
+    {
+      "subject": "0025874",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025874_ses-2_connectome.csv",
+      "bytes": 17017,
+      "md5": "a3bd04e78adc350a1766d3ea53c2bb33",
+      "sha256": "df009b5ecd5b7afc801f80e4445727b13e7cfe582b342c7c0e309b64eedadf2d",
+      "edges": 1515,
+      "isolates": 0
+    },
+    {
+      "subject": "0025875",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025875_ses-1_connectome.csv",
+      "bytes": 23897,
+      "md5": "044d17997ae3b007535e17570b3ac1fb",
+      "sha256": "98b832f3f75edfecd0fd67e89e1e4993db5d0643b283b780620d4558b949e258",
+      "edges": 2115,
+      "isolates": 0
+    },
+    {
+      "subject": "0025875",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025875_ses-2_connectome.csv",
+      "bytes": 19842,
+      "md5": "4ee7597139edbd9a7a79ad86208775d0",
+      "sha256": "93eee02e8bf9127047b46c326b226aec17fc4b8088da8938c6d38153078bc9ab",
+      "edges": 1762,
+      "isolates": 0
+    },
+    {
+      "subject": "0025876",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025876_ses-1_connectome.csv",
+      "bytes": 17878,
+      "md5": "8aa6c921f22495b32ef324c78872df90",
+      "sha256": "24052ddb8f16d057010b8e5c4caef26f5ff0e5777fa0afa9b0a05dbc90eb6cc0",
+      "edges": 1583,
+      "isolates": 0
+    },
+    {
+      "subject": "0025876",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025876_ses-2_connectome.csv",
+      "bytes": 17810,
+      "md5": "5f23a9a87207b9c84a169a6624fa8329",
+      "sha256": "ca3584bfe5bac6c5d47c566e7dd326ea349402fca68cc9e7670f665f06ac7ea0",
+      "edges": 1565,
+      "isolates": 1
+    },
+    {
+      "subject": "0025877",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025877_ses-1_connectome.csv",
+      "bytes": 17343,
+      "md5": "dce814d4ed4fc3c77778aa94bb45a7d5",
+      "sha256": "5773e0af6c8c52d7f495ab90683c92ad145a923cb64ecae800a6a37ad7b2ba0b",
+      "edges": 1532,
+      "isolates": 0
+    },
+    {
+      "subject": "0025877",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025877_ses-2_connectome.csv",
+      "bytes": 18383,
+      "md5": "b7fe5ca27cc927a7c8badf6734822dc2",
+      "sha256": "7fefd92d6fec7dae432e0b347d07e72895d535243fa67d6b2f736df2926502e0",
+      "edges": 1633,
+      "isolates": 0
+    },
+    {
+      "subject": "0025878",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025878_ses-1_connectome.csv",
+      "bytes": 16623,
+      "md5": "1735d974b9bb47fd34b2590b6c1b979e",
+      "sha256": "d7bb08078091d77803f46450705571de827036c89d19891fa7ad70559a9532a8",
+      "edges": 1476,
+      "isolates": 0
+    },
+    {
+      "subject": "0025878",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025878_ses-2_connectome.csv",
+      "bytes": 17063,
+      "md5": "71fb5389ed800e1bcaaeb35186829641",
+      "sha256": "990ac6cf07ca9185ee47c313d8ea10d45c35d00a5488babd7be39ffe5f9ed972",
+      "edges": 1507,
+      "isolates": 0
+    },
+    {
+      "subject": "0025879",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025879_ses-1_connectome.csv",
+      "bytes": 18014,
+      "md5": "e6946b0055be1e6476052eea02a55bb1",
+      "sha256": "24f9e69671aa194c1d5fdbf049a6cf43b28a0dd22807c398fab870352a4da8b1",
+      "edges": 1595,
+      "isolates": 1
+    },
+    {
+      "subject": "0025879",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025879_ses-2_connectome.csv",
+      "bytes": 18315,
+      "md5": "82c52fede078ffcde29cc7393e66b305",
+      "sha256": "ff2635839b1223a5640f608d73da2d8600daf75adda0afd188fdf64220d692a4",
+      "edges": 1629,
+      "isolates": 1
+    },
+    {
+      "subject": "0025880",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025880_ses-1_connectome.csv",
+      "bytes": 19344,
+      "md5": "2bdbcc9f9d7d16e68ecbf1b2835af9cd",
+      "sha256": "73242ff6ec2f99225d2eeb9b65f76b296e1ac67cfde45056dad0d1d4ea8f8ce3",
+      "edges": 1716,
+      "isolates": 0
+    },
+    {
+      "subject": "0025880",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025880_ses-2_connectome.csv",
+      "bytes": 18760,
+      "md5": "8b2f9d998631d2c0b8d1c1135dbf3913",
+      "sha256": "2429b33300eab6c1c9c0bec36db03ba1edb5ac8c1acf483ab9df6009d010403c",
+      "edges": 1676,
+      "isolates": 1
+    },
+    {
+      "subject": "0025881",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025881_ses-1_connectome.csv",
+      "bytes": 17820,
+      "md5": "9bdd8e0b9b95cba3f87f3c433c5930da",
+      "sha256": "ca68da3137d2d1b902bf0468fd267728caf00269788a1e013b00f2952c58599c",
+      "edges": 1577,
+      "isolates": 0
+    },
+    {
+      "subject": "0025881",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025881_ses-2_connectome.csv",
+      "bytes": 18985,
+      "md5": "e621df7decd9d48a91101e9143fc6310",
+      "sha256": "34155b919d0c00e23ee8c6b172cf829ad2792d875ee3415b6761eed044c07611",
+      "edges": 1677,
+      "isolates": 0
+    },
+    {
+      "subject": "0025882",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025882_ses-1_connectome.csv",
+      "bytes": 16172,
+      "md5": "00cd25aa2bc721c9b43bbfd80d34eb30",
+      "sha256": "d1bfc4c52897fec20f5985aea9458a0529b1d606ea2339c6d51892bc14e9a4d9",
+      "edges": 1447,
+      "isolates": 0
+    },
+    {
+      "subject": "0025882",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025882_ses-2_connectome.csv",
+      "bytes": 16343,
+      "md5": "cdc612dd9029fa6bdd1763d4a45d32ae",
+      "sha256": "e327297c25e5ac429c506db29baf7fe21df63727c43cea80bc324aef4d55ee9c",
+      "edges": 1469,
+      "isolates": 3
+    },
+    {
+      "subject": "0025883",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025883_ses-1_connectome.csv",
+      "bytes": 16976,
+      "md5": "10d90c90731298fd7660333b661f9d33",
+      "sha256": "a0be26449399eae9d096677952023d15b453062214f575d0f8a068fbcbf055b4",
+      "edges": 1504,
+      "isolates": 0
+    },
+    {
+      "subject": "0025883",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025883_ses-2_connectome.csv",
+      "bytes": 20969,
+      "md5": "f4fcd71bf7dfe3544f58a2dddc312f74",
+      "sha256": "a1abd8ee4e6f18532bf91c209d07c1b3015ca1e603eadfc2765e0bc2fdbb55b3",
+      "edges": 1853,
+      "isolates": 0
+    },
+    {
+      "subject": "0025884",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025884_ses-1_connectome.csv",
+      "bytes": 18000,
+      "md5": "d077ca6fc8e222139386d48bcb44f795",
+      "sha256": "733699d6ceae2fa3c4c35cb1f26cdd2f2c2ddf5700a57f463649004cedabafb6",
+      "edges": 1590,
+      "isolates": 0
+    },
+    {
+      "subject": "0025884",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025884_ses-2_connectome.csv",
+      "bytes": 17092,
+      "md5": "811fd87dacd644051f04725b7c950344",
+      "sha256": "10adcf64c5bf7a691d9af1dcb481ba561e0dc2f6c3faef384173de95f470b929",
+      "edges": 1517,
+      "isolates": 1
+    },
+    {
+      "subject": "0025885",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025885_ses-1_connectome.csv",
+      "bytes": 16356,
+      "md5": "e7b89d693c98cc758f956e84117aac77",
+      "sha256": "a0d93bd556a57b07e0b460eaf72fa141337c96f19f1d171415d4d59bc8312f3a",
+      "edges": 1450,
+      "isolates": 0
+    },
+    {
+      "subject": "0025885",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025885_ses-2_connectome.csv",
+      "bytes": 16403,
+      "md5": "67d6dc5ade9587819609a590964b8b20",
+      "sha256": "a370cde18b19261c8d1e70e15ece9e9ebb1a776e17d9e9fe774e0a8412844ba2",
+      "edges": 1461,
+      "isolates": 1
+    },
+    {
+      "subject": "0025886",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025886_ses-1_connectome.csv",
+      "bytes": 16592,
+      "md5": "e193ea7149460787a7310c0a2dadd6f5",
+      "sha256": "ddf6c2444baa78181eb40d4c3a340498526c71327b3cd492d45f91dbc31b1d89",
+      "edges": 1475,
+      "isolates": 0
+    },
+    {
+      "subject": "0025886",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025886_ses-2_connectome.csv",
+      "bytes": 19726,
+      "md5": "a842f2bcd696fd4903ab54e97badb997",
+      "sha256": "bae0a2332c0db08a86a24461bf56d55aeca70bc72b628a1978ed9fbcdbbfc29f",
+      "edges": 1753,
+      "isolates": 0
+    },
+    {
+      "subject": "0025887",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025887_ses-1_connectome.csv",
+      "bytes": 16376,
+      "md5": "f7fc520b531db3783dde5c83f11de9c7",
+      "sha256": "8a43161f7669315e4845d591bcdbd9605c6e4752e1963b2e9ab94d38d74424b8",
+      "edges": 1452,
+      "isolates": 0
+    },
+    {
+      "subject": "0025887",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025887_ses-2_connectome.csv",
+      "bytes": 17345,
+      "md5": "fd334c8dd06ae3ab1baf52afe8a5b553",
+      "sha256": "5119ea6f8de9309ecd1177191ade48ff24beed0906008f74f182b2faa46e99b5",
+      "edges": 1529,
+      "isolates": 1
+    },
+    {
+      "subject": "0025888",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025888_ses-1_connectome.csv",
+      "bytes": 17473,
+      "md5": "46d00c091cfe1afd9244f261e3b53398",
+      "sha256": "887f2300fb0a95ab7f667a2025fb31e9625fb17a5b1280c428db3375f0af4a16",
+      "edges": 1551,
+      "isolates": 0
+    },
+    {
+      "subject": "0025888",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025888_ses-2_connectome.csv",
+      "bytes": 16576,
+      "md5": "bc9966d78468dca5029664b672360d70",
+      "sha256": "1a5b043ead79640e55eb00111e95cd3766616aba1595a6856e83500388d93add",
+      "edges": 1474,
+      "isolates": 1
+    },
+    {
+      "subject": "0025889",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025889_ses-1_connectome.csv",
+      "bytes": 17260,
+      "md5": "33545f2bcaa07f0c5ccc84ae9b459ff3",
+      "sha256": "139f6be6fa812521fa0bd96954d662c90a7718e73afae2935f2dc8fea8cc9985",
+      "edges": 1538,
+      "isolates": 1
+    },
+    {
+      "subject": "0025889",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025889_ses-2_connectome.csv",
+      "bytes": 17393,
+      "md5": "59e807b396ebf0cfcbaf9d7972132f00",
+      "sha256": "13a704bacd50a0a1bc97a4bf78e8e5761e8b75d0ed7af6efca8e0ddde7d78868",
+      "edges": 1541,
+      "isolates": 2
+    },
+    {
+      "subject": "0025890",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025890_ses-1_connectome.csv",
+      "bytes": 18099,
+      "md5": "960ec0eca40ffdfc0ffefb609f8f1398",
+      "sha256": "37cfa5ae6c90db223245ad4ab719eb3f79e566ccd64c22133122ae9a27a8d1ca",
+      "edges": 1625,
+      "isolates": 0
+    },
+    {
+      "subject": "0025890",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025890_ses-2_connectome.csv",
+      "bytes": 18845,
+      "md5": "2d59e7411269e99c4641bba879410a4a",
+      "sha256": "51632f8f71bce8f3fa3dc88c6d4927bcae3f653544ac93dae90d347c1d6085ac",
+      "edges": 1672,
+      "isolates": 1
+    },
+    {
+      "subject": "0025891",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025891_ses-1_connectome.csv",
+      "bytes": 18595,
+      "md5": "c3a76d6c2b4151e6db45659a5b5c336a",
+      "sha256": "c7f78a97da3bc8b41e763e6fd1e4af47c8fb6e9ea0ffaae82d7debd089c05f50",
+      "edges": 1658,
+      "isolates": 0
+    },
+    {
+      "subject": "0025891",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025891_ses-2_connectome.csv",
+      "bytes": 18038,
+      "md5": "3444b0383182d74d031d58f5e0fc68cd",
+      "sha256": "d3c6e7f376811d1a4d13828918cf0cbfff7e4a481e0d9ca17d5cd87894d6db9a",
+      "edges": 1613,
+      "isolates": 0
+    },
+    {
+      "subject": "0025892",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025892_ses-1_connectome.csv",
+      "bytes": 17410,
+      "md5": "9e6fee92b36455d7a208ad7e2001780e",
+      "sha256": "980c16e4fc043a2787a516c189e1da422c1b1f7656a4a7f86cf24af06b771790",
+      "edges": 1546,
+      "isolates": 0
+    },
+    {
+      "subject": "0025892",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025892_ses-2_connectome.csv",
+      "bytes": 18373,
+      "md5": "27c373d6003aa037ec9b79f090e384e8",
+      "sha256": "b7c1fa2133e946b3b0fb56ba51e96cc735ea732d03e3e0b6b46ed67b55a6dc4e",
+      "edges": 1635,
+      "isolates": 0
+    },
+    {
+      "subject": "0025893",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025893_ses-1_connectome.csv",
+      "bytes": 17513,
+      "md5": "3176ab93e4408cdc934007ac63d6649c",
+      "sha256": "0b570ed6aeaced508090d42a40e69ac5cba42547a82e2947395ce0a98c6acc81",
+      "edges": 1560,
+      "isolates": 0
+    },
+    {
+      "subject": "0025893",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025893_ses-2_connectome.csv",
+      "bytes": 18707,
+      "md5": "ca1dfbc35155295662760740f91c353e",
+      "sha256": "1eb656cdc7db43cd303af38d27ca5d5c7f05157c1fc4c2e6f73c2b38c68d64e0",
+      "edges": 1664,
+      "isolates": 1
+    },
+    {
+      "subject": "0025894",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025894_ses-1_connectome.csv",
+      "bytes": 16528,
+      "md5": "8d32de4b25c6d9ed20bf1d1194aad90e",
+      "sha256": "6a4b505a9776bcf4f99e65ebd9d4abb20ef75d8c5ff75f415e79bf7228934b09",
+      "edges": 1476,
+      "isolates": 0
+    },
+    {
+      "subject": "0025894",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025894_ses-2_connectome.csv",
+      "bytes": 16769,
+      "md5": "019e54472838fb20e6aa08ecdf379393",
+      "sha256": "b1da3bb50cc0619a9a934ae58d67a9195d538cc8c016b1b88a6e2ffc06795554",
+      "edges": 1500,
+      "isolates": 0
+    },
+    {
+      "subject": "0025895",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025895_ses-1_connectome.csv",
+      "bytes": 23340,
+      "md5": "ca4b59456fdba379fae585d20acab11c",
+      "sha256": "747438fa3b49f5bf01ca74c36884a07c3d20ca93ec17cd79de529c7553ab7d07",
+      "edges": 2070,
+      "isolates": 0
+    },
+    {
+      "subject": "0025895",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025895_ses-2_connectome.csv",
+      "bytes": 16822,
+      "md5": "72df5b92f1615d40ac81a19c900290c2",
+      "sha256": "60a1d21cfae5d41449b90e9c5e66604c3794d2ceb967a516d41039ebda514d14",
+      "edges": 1508,
+      "isolates": 0
+    },
+    {
+      "subject": "0025896",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025896_ses-1_connectome.csv",
+      "bytes": 18530,
+      "md5": "318e787fc16399e2a42f3af677347576",
+      "sha256": "ca2b3d74747dcd2fb8f05633021338f46817f8b0feef632c149054de04b9af35",
+      "edges": 1646,
+      "isolates": 0
+    },
+    {
+      "subject": "0025896",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025896_ses-2_connectome.csv",
+      "bytes": 23244,
+      "md5": "100d959d9a83f6ea3fd9ae7d6a965381",
+      "sha256": "5ca88e6a22e63f8363f583bfa645e151f60607ac1afc8d10988f0abd3584f28a",
+      "edges": 2044,
+      "isolates": 0
+    },
+    {
+      "subject": "0025897",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025897_ses-1_connectome.csv",
+      "bytes": 17590,
+      "md5": "82ef44a1025df94884750c5c30b3a0d6",
+      "sha256": "2e00022e3b563c69f9989829ee03ec2c7d788bd5677d3214e0258cc04d0c7c2b",
+      "edges": 1575,
+      "isolates": 0
+    },
+    {
+      "subject": "0025897",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025897_ses-2_connectome.csv",
+      "bytes": 16396,
+      "md5": "d916e776f73d6b9920044185bc9bb084",
+      "sha256": "5d665be34aa6d0fa8df1f98fe851897690f5a9920fd7a07987d817dd01c37df1",
+      "edges": 1470,
+      "isolates": 0
+    },
+    {
+      "subject": "0025898",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025898_ses-1_connectome.csv",
+      "bytes": 16817,
+      "md5": "3d8370f503092259bc305b42912fa4b1",
+      "sha256": "134df5265dea846be6b52abc4142a6a9f284c9cc51c3baac50a29d02dc3bf1df",
+      "edges": 1496,
+      "isolates": 2
+    },
+    {
+      "subject": "0025898",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025898_ses-2_connectome.csv",
+      "bytes": 17443,
+      "md5": "f4457cf7b87bbff6237f903afb3e0105",
+      "sha256": "8ebe23c9382957b1a0409be09ded924fb23795b4e5f90d3df64a1c6e064b034d",
+      "edges": 1566,
+      "isolates": 0
+    },
+    {
+      "subject": "0025899",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025899_ses-1_connectome.csv",
+      "bytes": 16411,
+      "md5": "69488cd6055625ca0d1138c9c7b18e5e",
+      "sha256": "db3e8d16500ddb8fe910a237f963bd5e8306a3c022a79024f105de448747723a",
+      "edges": 1475,
+      "isolates": 0
+    },
+    {
+      "subject": "0025899",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025899_ses-2_connectome.csv",
+      "bytes": 17903,
+      "md5": "00650753150640f617552205eff0e404",
+      "sha256": "cd4eb8cdd5d042e2a0bb644021c798934b6b37cf54506b8a05fcbcc14551656e",
+      "edges": 1583,
+      "isolates": 0
+    },
+    {
+      "subject": "0025900",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025900_ses-1_connectome.csv",
+      "bytes": 14437,
+      "md5": "9ecf5fc07b9da09c1d87416c0b9121b3",
+      "sha256": "87e8722acbdbbf7b5442ab87bbeee812709f4faa7031774cd9218a5438e4a73f",
+      "edges": 1291,
+      "isolates": 0
+    },
+    {
+      "subject": "0025900",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025900_ses-2_connectome.csv",
+      "bytes": 16274,
+      "md5": "877265d372369186bbcc885e5f51ef8b",
+      "sha256": "b809836210485fac94e741f0270e0aa166b463d48bb627ff07b14761477b5348",
+      "edges": 1448,
+      "isolates": 0
+    },
+    {
+      "subject": "0025901",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025901_ses-1_connectome.csv",
+      "bytes": 19583,
+      "md5": "9a0935cf7d7beaeae3608bee52273bc0",
+      "sha256": "b313c237aa8ff81d4530d008f2edb304098fc395f533210fdca9721f42c7032f",
+      "edges": 1758,
+      "isolates": 0
+    },
+    {
+      "subject": "0025901",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025901_ses-2_connectome.csv",
+      "bytes": 22582,
+      "md5": "f1fcdba90b53f5386f6b33a25435ff48",
+      "sha256": "6e1e3f947b23fc1c19688dfdc9299aa3c8cf06d601ef6039ce10f4f471a8a4a0",
+      "edges": 2006,
+      "isolates": 0
+    },
+    {
+      "subject": "0025902",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025902_ses-1_connectome.csv",
+      "bytes": 18766,
+      "md5": "35a1341f760a492e515fcd61b134a717",
+      "sha256": "f32c74f30c05e0168192c6ff9392a5983462c529c31b41edf37f5489b868909b",
+      "edges": 1677,
+      "isolates": 1
+    },
+    {
+      "subject": "0025902",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025902_ses-2_connectome.csv",
+      "bytes": 18058,
+      "md5": "88425a6dbf7866e00bd53463710876f2",
+      "sha256": "f20571a4c1c8a49ef7584e2b56857323156814b6dc7a15f74ee11e7ea8e20008",
+      "edges": 1617,
+      "isolates": 1
+    },
+    {
+      "subject": "0025903",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025903_ses-1_connectome.csv",
+      "bytes": 19443,
+      "md5": "f979b1558b67ab4e5aa6729c8b0fe19e",
+      "sha256": "c3536fcbde28557920fd22e7b0ce458f24ba1c507253919804a5398403cd9e03",
+      "edges": 1711,
+      "isolates": 0
+    },
+    {
+      "subject": "0025903",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025903_ses-2_connectome.csv",
+      "bytes": 19663,
+      "md5": "d8b505987cd84f92d7d2db624ac72c60",
+      "sha256": "97d84fbd2c9cd65052e281467d51c7b1192482c981d8eab5d3334e0ae2f353fd",
+      "edges": 1738,
+      "isolates": 1
+    },
+    {
+      "subject": "0025904",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025904_ses-1_connectome.csv",
+      "bytes": 18490,
+      "md5": "d6f42aaa36d156fc8a54c81089dfe718",
+      "sha256": "e8c066f6e820dd02887c7f8cba949d6a0d1b5a307e668783043d0938aebc22ef",
+      "edges": 1639,
+      "isolates": 0
+    },
+    {
+      "subject": "0025904",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025904_ses-2_connectome.csv",
+      "bytes": 18733,
+      "md5": "514da728f787909a150c0dd3a0f5804a",
+      "sha256": "09db301627a977aa8c12058645d876f166d880e15876225d99c0abcbc130682f",
+      "edges": 1662,
+      "isolates": 0
+    },
+    {
+      "subject": "0025905",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025905_ses-1_connectome.csv",
+      "bytes": 18388,
+      "md5": "a9f08b9dfe806eecf28a47a253609d44",
+      "sha256": "5cb2990b4326e45470bab2d3c9d4f640555f2f0643620977f6ce8e3d3acfc9aa",
+      "edges": 1641,
+      "isolates": 0
+    },
+    {
+      "subject": "0025905",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025905_ses-2_connectome.csv",
+      "bytes": 17863,
+      "md5": "7bf08caa396ab808091232e1f2b14a9d",
+      "sha256": "426cd5d1886851990d27f9cf5c897eef272049e380591e54be53afd2e495b89b",
+      "edges": 1589,
+      "isolates": 0
+    },
+    {
+      "subject": "0025906",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025906_ses-1_connectome.csv",
+      "bytes": 19811,
+      "md5": "b56933d1dff7374f11af0027af25c896",
+      "sha256": "296bfc0ef80e4675dcf9ddf5f1f90e46fbea191452e6b3202b70c2783433fb68",
+      "edges": 1759,
+      "isolates": 0
+    },
+    {
+      "subject": "0025906",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025906_ses-2_connectome.csv",
+      "bytes": 17959,
+      "md5": "d0c580834aef602ac3a83b0ad50e605c",
+      "sha256": "65e7a23af9f6c51290ce7fb3753bbea6f816f0498469b100e4752e39a138b427",
+      "edges": 1605,
+      "isolates": 0
+    },
+    {
+      "subject": "0025907",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025907_ses-1_connectome.csv",
+      "bytes": 17513,
+      "md5": "760f7b998c646b539509a4c120d29f2b",
+      "sha256": "1a63e82ca55c3081a7f6775c0d76a09dfbd4532ad11a5f1e5ec1d5e907443984",
+      "edges": 1547,
+      "isolates": 0
+    },
+    {
+      "subject": "0025907",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025907_ses-2_connectome.csv",
+      "bytes": 16475,
+      "md5": "adbf0b7b5f6f876e32c658e90e7e7f08",
+      "sha256": "c76b71987eccdf79c7e0d22d9dc37a295f4578140d6a4680556df736afb03b86",
+      "edges": 1451,
+      "isolates": 1
+    },
+    {
+      "subject": "0025908",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025908_ses-1_connectome.csv",
+      "bytes": 19954,
+      "md5": "2055a7f3f039ffb5fc619180001de38a",
+      "sha256": "4e22e263048cedd46a55cdd60a93fbda3d5a11e6aa3ed6644048c222066245d4",
+      "edges": 1774,
+      "isolates": 1
+    },
+    {
+      "subject": "0025908",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025908_ses-2_connectome.csv",
+      "bytes": 20540,
+      "md5": "b44c013f6a5982804da409752b62b381",
+      "sha256": "c8dd031e4b219d133916ebfee31cdfa878169c297c40af3d1bb382610c535180",
+      "edges": 1816,
+      "isolates": 1
+    },
+    {
+      "subject": "0025909",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025909_ses-1_connectome.csv",
+      "bytes": 17343,
+      "md5": "452173aae0d382a50b911103f3b7db48",
+      "sha256": "68922fa97a3a0681cb0c9eea7cd55d7b1a8b71b997b8dfb6e732b2fae1fdd3e9",
+      "edges": 1542,
+      "isolates": 0
+    },
+    {
+      "subject": "0025909",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025909_ses-2_connectome.csv",
+      "bytes": 17737,
+      "md5": "ad9e4701e1b1857bdf696de0e25ab6f2",
+      "sha256": "ae053738ad77d1e8ddb629e2f87adc23bb6691104275ce57ab5eaa775031623f",
+      "edges": 1560,
+      "isolates": 1
+    },
+    {
+      "subject": "0025910",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025910_ses-1_connectome.csv",
+      "bytes": 19536,
+      "md5": "5a0df24617495d1b1f4b12b2a6d52d30",
+      "sha256": "1bc38d969fd234ff0d3cd4c4e52f3e87cce8aeb037bd02e15acdd57e38346ac8",
+      "edges": 1738,
+      "isolates": 0
+    },
+    {
+      "subject": "0025910",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025910_ses-2_connectome.csv",
+      "bytes": 18238,
+      "md5": "47961582b8f9cdfd891315448e080b3a",
+      "sha256": "c14a8ae726283c05edf5284bef868b2a508b8d6e764cf847b73cb5176a7fbaac",
+      "edges": 1623,
+      "isolates": 0
+    },
+    {
+      "subject": "0025911",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025911_ses-1_connectome.csv",
+      "bytes": 18707,
+      "md5": "f07d9564bbdaf009e20ac62885ad3973",
+      "sha256": "7546be5a19559793da70010a6b1599ed6ec75fc9e7dcf1543745047f9c61b684",
+      "edges": 1661,
+      "isolates": 1
+    },
+    {
+      "subject": "0025911",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025911_ses-2_connectome.csv",
+      "bytes": 17436,
+      "md5": "31be428eb9a92efb0931a30ec2eb180b",
+      "sha256": "b7cf9379d9c25f36d802a7e54d16fd45eff38d2c22591d0422cc654a180c303a",
+      "edges": 1546,
+      "isolates": 1
+    },
+    {
+      "subject": "0025912",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025912_ses-1_connectome.csv",
+      "bytes": 18369,
+      "md5": "c575b30a911903f249f16ccf935cd424",
+      "sha256": "315823f6e70b22876e6d29b57da6ebbf13e824c200ba6f2e34ec4ea66ef63227",
+      "edges": 1625,
+      "isolates": 0
+    },
+    {
+      "subject": "0025912",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025912_ses-2_connectome.csv",
+      "bytes": 17058,
+      "md5": "b525d908585d17f559f8d33a313e7bd0",
+      "sha256": "f03faffc514d88d787e0e7393f0fd91946c005c3ec342c1637e1d8cb278ebb32",
+      "edges": 1506,
+      "isolates": 0
+    },
+    {
+      "subject": "0025913",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025913_ses-1_connectome.csv",
+      "bytes": 18563,
+      "md5": "b2eb48143a9c11b8fccd9f1bb8e12fbf",
+      "sha256": "600e5c1800a5063aee74aeb15bd5d22d5f396053fdbd3c50bcf0a980e57806fd",
+      "edges": 1664,
+      "isolates": 0
+    },
+    {
+      "subject": "0025913",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025913_ses-2_connectome.csv",
+      "bytes": 15091,
+      "md5": "b6e5ed0a901af05ba9890b9bc3b218bd",
+      "sha256": "9d9d23205a8240199c2d2377fab3911940e0580f0623f06cc07946e664688b1f",
+      "edges": 1326,
+      "isolates": 13
+    },
+    {
+      "subject": "0025914",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025914_ses-1_connectome.csv",
+      "bytes": 22970,
+      "md5": "e3a00dd7fb1dd140b1b7fbec04adc02c",
+      "sha256": "e24eb0a1673712e720369004b75255588520b437becd00482a3afaa666f6bc88",
+      "edges": 2030,
+      "isolates": 0
+    },
+    {
+      "subject": "0025914",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025914_ses-2_connectome.csv",
+      "bytes": 23706,
+      "md5": "f61768cad060228f5694f19d3e8a57ec",
+      "sha256": "0bd0c3399f80ba6ae4b1eda6af6a10a8e3221f7a09dcc9757a71e4fde49f1570",
+      "edges": 2102,
+      "isolates": 0
+    },
+    {
+      "subject": "0025915",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025915_ses-1_connectome.csv",
+      "bytes": 15622,
+      "md5": "595eaf93847f94e738f522c66ff5c1e8",
+      "sha256": "adc1e47cc3792da137d5577d6ed7e4936e6044a207511160ae679dac65405f18",
+      "edges": 1396,
+      "isolates": 2
+    },
+    {
+      "subject": "0025915",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025915_ses-2_connectome.csv",
+      "bytes": 16793,
+      "md5": "f14b012d26fb39d2c2108fbb79179c14",
+      "sha256": "44f2c148017e98e8dacf624929e63850d37566bfad873e68ce2033661f0bbde2",
+      "edges": 1492,
+      "isolates": 1
+    },
+    {
+      "subject": "0025916",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025916_ses-1_connectome.csv",
+      "bytes": 17941,
+      "md5": "660d19803927dc6371b45c51785f7927",
+      "sha256": "1abef212921cfc829c20b7cc03106476db586f343ca106822d73545b58f5a967",
+      "edges": 1599,
+      "isolates": 1
+    },
+    {
+      "subject": "0025916",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025916_ses-2_connectome.csv",
+      "bytes": 17246,
+      "md5": "1853707b8ad8e452222b73f04c52f821",
+      "sha256": "2c94498d434af2bae8ac97e53f81d66557b156da599d64cf855496a080edda64",
+      "edges": 1533,
+      "isolates": 1
+    },
+    {
+      "subject": "0025917",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025917_ses-1_connectome.csv",
+      "bytes": 21620,
+      "md5": "1a457f35380c7fe085a803217231aff1",
+      "sha256": "7217d438467ea7795071116e72a351992a2ad85787818ed8e4dbffdb5308eec5",
+      "edges": 1915,
+      "isolates": 0
+    },
+    {
+      "subject": "0025917",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025917_ses-2_connectome.csv",
+      "bytes": 23547,
+      "md5": "d4dfc2b1d49252987e1f2c9311f287c7",
+      "sha256": "3465f2b1e7d40b4147a7b54bf6846c2e7930a48d71293862999e81131585566a",
+      "edges": 2085,
+      "isolates": 0
+    },
+    {
+      "subject": "0025918",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025918_ses-1_connectome.csv",
+      "bytes": 16118,
+      "md5": "ef97a285d272e6124c5f36980ac0dee0",
+      "sha256": "53629daaf6bf65a79b95189fa32dcec9a09f09d0f1c4be269b27672f6d31d35f",
+      "edges": 1436,
+      "isolates": 0
+    },
+    {
+      "subject": "0025918",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025918_ses-2_connectome.csv",
+      "bytes": 16583,
+      "md5": "ee246a5cd7d8c99fb60f4b06bb0910b5",
+      "sha256": "512fb2a3756c73f9a2d939a9f35edca1862db9c5cc380a73a1ecd732842d3407",
+      "edges": 1476,
+      "isolates": 0
+    },
+    {
+      "subject": "0025919",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025919_ses-1_connectome.csv",
+      "bytes": 15869,
+      "md5": "71061741d96a45afeb22530dd9c98757",
+      "sha256": "7459d51cf957dc7c9b7039ee3b0c954a79d8c3935353a3d1a937c3abaf18304a",
+      "edges": 1406,
+      "isolates": 0
+    },
+    {
+      "subject": "0025919",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025919_ses-2_connectome.csv",
+      "bytes": 16229,
+      "md5": "2b860b03596c0649cec6fa97af331320",
+      "sha256": "e122a3264960826a24dadfa014cdac9a0e4c5d53a0f4530e3359eba630b84c55",
+      "edges": 1431,
+      "isolates": 0
+    },
+    {
+      "subject": "0025920",
+      "session": "1",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025920_ses-1_connectome.csv",
+      "bytes": 18405,
+      "md5": "cddcc64918c2126723cde79cc535d03c",
+      "sha256": "b2d23aeaede67c9e920252b0a5d3f1fec4a4aaee231e93779988adab539a6bbd",
+      "edges": 1638,
+      "isolates": 0
+    },
+    {
+      "subject": "0025920",
+      "session": "2",
+      "key": "m2g/Diffusion/BNU1-8-27-20-m2g-native-csa-det/Connectomes/DKT_space-MNI152NLin6_res-2x2x2/sub-0025920_ses-2_connectome.csv",
+      "bytes": 17546,
+      "md5": "3eb91571a78566e1513817deaa483334",
+      "sha256": "7e54b8a4ea23ba86dcb1e0c9cb557af4cfc0d80abdd3b2e25401e41c0353c1b5",
+      "edges": 1547,
+      "isolates": 0
+    }
+  ]
+}

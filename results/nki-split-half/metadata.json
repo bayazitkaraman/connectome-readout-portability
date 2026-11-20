@@ -1,0 +1,23 @@
+{
+  "input_sha256": "47625de2e0f2c430b7236b8dcc0c69bf36c039ad5be04a949b4e2f91336e880e",
+  "n_subjects": 25,
+  "ordered_cells": 12,
+  "pairs_per_condition": 600,
+  "source_training_steps": 2352,
+  "donor_penalty_validation_steps_per_identity": 1176,
+  "target_transfer_labels": 0,
+  "test_steps": 2048,
+  "reference_training_steps": 2352,
+  "reference_validation_steps": 1176,
+  "source_role": 0,
+  "validation_role": 1,
+  "test_role": 61,
+  "stream_id": "10000+(visit-1)*25+subject_index",
+  "regularization": "Transfer selected on remaining 23 own source-to-target validation pairs; same penalty applied to both tested decoders",
+  "alt_regularization": "Same target and source half, cross-visit donors as tuning comparison for within-visit scores",
+  "bootstrap": "Paired resamples of targets within condition with fixed trained fits, full foil bank, and streams",
+  "bootstrap_reps": 10000,
+  "bootstrap_seed": 20261120,
+  "tolerance_anatomical_ties": 1e-12,
+  "archived_pair_replay_max_abs_error": 9.8879238130678e-17
+}

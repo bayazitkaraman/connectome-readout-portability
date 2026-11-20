@@ -1,0 +1,180 @@
+{
+  "raw_hdf_graphs_checked": 100,
+  "crosswalk_unmapped_codes": 1,
+  "condition_audits": [
+    {
+      "source_visit": 1,
+      "source_half": "even",
+      "target_visit": 1,
+      "target_half": "odd",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 25
+    },
+    {
+      "source_visit": 1,
+      "source_half": "even",
+      "target_visit": 2,
+      "target_half": "even",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 11
+    },
+    {
+      "source_visit": 1,
+      "source_half": "even",
+      "target_visit": 2,
+      "target_half": "odd",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 10
+    },
+    {
+      "source_visit": 1,
+      "source_half": "odd",
+      "target_visit": 1,
+      "target_half": "even",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 25
+    },
+    {
+      "source_visit": 1,
+      "source_half": "odd",
+      "target_visit": 2,
+      "target_half": "even",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 10
+    },
+    {
+      "source_visit": 1,
+      "source_half": "odd",
+      "target_visit": 2,
+      "target_half": "odd",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 10
+    },
+    {
+      "source_visit": 2,
+      "source_half": "even",
+      "target_visit": 1,
+      "target_half": "even",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 11
+    },
+    {
+      "source_visit": 2,
+      "source_half": "even",
+      "target_visit": 1,
+      "target_half": "odd",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 11
+    },
+    {
+      "source_visit": 2,
+      "source_half": "even",
+      "target_visit": 2,
+      "target_half": "odd",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 25
+    },
+    {
+      "source_visit": 2,
+      "source_half": "odd",
+      "target_visit": 1,
+      "target_half": "even",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 11
+    },
+    {
+      "source_visit": 2,
+      "source_half": "odd",
+      "target_visit": 1,
+      "target_half": "odd",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 10
+    },
+    {
+      "source_visit": 2,
+      "source_half": "odd",
+      "target_visit": 2,
+      "target_half": "even",
+      "anatomical_ranks_checked": 25,
+      "penalties_checked": 600,
+      "direct_decoder_score_pairs": 9,
+      "anatomical_top1": 25
+    }
+  ],
+  "max_direct_score_error": 1.7486012637846216e-15,
+  "max_direct_within_target_reference_error": 2.94320123828129e-12,
+  "three_control_weak_second_visits": {
+    "BAS2": 5,
+    "TRT": 3,
+    "FLU1": 2
+  },
+  "flagged_participant": "A00063383",
+  "flagged_legacy_visit_codes": [
+    "CLGA",
+    "CLG2R"
+  ],
+  "flagged_standard_visit_codes": [
+    "BAS1",
+    "TRT"
+  ],
+  "flagged_graph_order": [
+    "baseline_odd",
+    "repeat_odd",
+    "baseline_even",
+    "repeat_even"
+  ],
+  "flagged_graph_correlations": [
+    [
+      0.9999999999999999,
+      0.0014160937159773221,
+      0.9723932255413402,
+      0.0012548987937307688
+    ],
+    [
+      0.0014160937159773223,
+      1.0,
+      0.003370311115197085,
+      0.9739688709837322
+    ],
+    [
+      0.9723932255413402,
+      0.0033703111151970853,
+      1.0,
+      0.003015034089107927
+    ],
+    [
+      0.0012548987937307686,
+      0.973968870983732,
+      0.003015034089107927,
+      1.0
+    ]
+  ],
+  "flagged_edge_counts": [
+    243,
+    177,
+    244,
+    183
+  ]
+}

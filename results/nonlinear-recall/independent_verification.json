@@ -1,0 +1,16 @@
+{
+  "nki": {
+    "people": 25,
+    "selection_replays": 600,
+    "own_and_stranger_score_pairs_replayed": 72,
+    "local_and_pooled_examples": 3,
+    "max_absolute_r2_difference": 1.4744538923139316e-11
+  },
+  "bnu1": {
+    "people": 57,
+    "selection_replays": 3192,
+    "own_and_stranger_score_pairs_replayed": 168,
+    "local_and_pooled_examples": 3,
+    "max_absolute_r2_difference": 7.197242801737502e-12
+  }
+}

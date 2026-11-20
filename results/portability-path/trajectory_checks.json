@@ -1,0 +1,19 @@
+{
+  "ordered_visit_pairs_checked": 3874,
+  "archived_displacements_checked": 607,
+  "max_archived_error_percentage_points": 8.526512829121202e-14,
+  "max_training_normalized_energy_error": 4.8364418992475874e-15,
+  "source_to_target": "First to second visit (NKI odd, Beijing all); NKI technical comparisons start from first-visit odd.",
+  "seed": 20261119,
+  "map_key": 10,
+  "train_role": 0,
+  "test_role": 61,
+  "test_streams": 4,
+  "displacement_pct": "100 times raw RMS difference on aligned test states divided by the source's centered training RMS.",
+  "pattern_r": "Subtract the temporal mean of each parcel separately in each graph over the concatenated test streams. Compute the cosine of the two flattened centered arrays, retaining parcel and sample alignment.",
+  "amplitude_ratio": "Target centered test RMS divided by source centered test RMS, with each parcel centered over time.",
+  "mean_shift_pct": "RMS across parcels of the difference in their test means, as a percentage of centered source training RMS.",
+  "aggregation": "Average pairs within target and rung, then average target means. Correlations are ordinary arithmetic means of pair-level coefficients.",
+  "interval": "Paired target bootstrap of mean own minus within-target mean stranger, conditional on observed donor panel and streams, 10,000 draws, percentile 95% intervals.",
+  "bootstrap_seed": 20261120
+}

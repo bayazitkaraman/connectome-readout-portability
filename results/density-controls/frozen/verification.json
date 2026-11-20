@@ -1,0 +1,14 @@
+{
+  "max_difference_from_prior_leave_one_own_scores": {
+    "nki": 1.5265566588595902e-16,
+    "bnu1": 2.220446049250313e-16
+  },
+  "primary_source_role": 0,
+  "matched_input_sensitivity_role": 80,
+  "target_role": 61,
+  "tuning_validation_role": 1,
+  "source_rows": 2352,
+  "target_labels": 0,
+  "target_test_steps": 2048,
+  "bootstrap": "10,000 target participants; full donor bank fixed"
+}

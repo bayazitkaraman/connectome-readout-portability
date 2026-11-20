@@ -1,0 +1,10 @@
+# Run from the repository root, on Python 3.10.19.
+-r ../requirements-benchmark.txt
+pandas==2.3.3
+matplotlib==3.10.8
+tables==3.10.1
+numexpr==2.14.1
+python-dateutil==2.9.0.post0
+pytz==2025.2
+tzdata==2025.2
+six==1.17.0

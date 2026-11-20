@@ -1,0 +1,14 @@
+{
+  "verified_people": 82,
+  "seed": 20261119,
+  "calibration_role": 219,
+  "calibration_rows": 2352,
+  "test_role": 61,
+  "source_training_role": 0,
+  "bootstrap_seed": 20261120,
+  "bootstrap_samples": 10000,
+  "max_archived_source_error": 1.0547118733938987e-15,
+  "max_archived_untouched_error": 9.749145934989656e-16,
+  "source_constant_count": 77,
+  "target_constant_count": 189
+}

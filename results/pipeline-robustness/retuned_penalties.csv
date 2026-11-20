@@ -1,0 +1,6 @@
+scenario,relative_penalty,pairs
+log1p,10.0,3192
+native,1.0,3192
+schaefer_200,10.0,412
+schaefer_200,100.0,2780
+schaefer_300,100.0,3192
