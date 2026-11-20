@@ -209,5 +209,17 @@
     "target_calibration_rows_per_participant": 2352,
     "previous_source_max_abs_r2_error": 1.0547118733938987e-15,
     "previous_untouched_max_abs_r2_error": 9.749145934989656e-16
+  },
+  "manuscript_figure_1": {
+    "source": "scripts/plot_manuscript_figure.py",
+    "inputs": [
+      "results/portability-path/shift_people.csv",
+      "results/portability-path/shift_summary.csv"
+    ],
+    "verification": "Regenerated the PDF and 600-dpi PNG in the isolated replay from its own archived participant and summary tables. Both files matched the manuscript figure exports byte for byte.",
+    "sha256": {
+      "Figure_1.pdf": "29a0eb2e735553887df33895d36b0ad7611d257d3863dabf7ae322952030bfd5",
+      "Figure_1.png": "23d3ed314c83f64fc9998cff03e56eb4fa9aa1242ba4b19500227e621821589a"
+    }
   }
 }

@@ -117,7 +117,7 @@ def replay(out):
                    "summarize_portability_path", "verify_portability_path", "check_matched_retention",
                    "robust_portability_path", "source_state_noise", "retention_uncertainty",
                    "state_shift_visits", "state_shift_technical", "summarize_state_shifts",
-                   "describe_trajectory_pairs", "unlabeled_parcel_alignment"):
+                   "describe_trajectory_pairs", "unlabeled_parcel_alignment", "plot_manuscript_figure"):
         execute(out, f"scripts/{script}.py")
 
 

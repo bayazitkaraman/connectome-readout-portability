@@ -21,6 +21,7 @@ REQUIRED = (
     "results/portability-path/shares_summary.csv","results/portability-path/shift_summary.csv",
     "results/portability-path/shift_technical_pairs.csv.gz","results/portability-path/shift_visit_pairs.csv.gz",
     "results/portability-path/shift_matched_noise.pdf",
+    "scripts/plot_manuscript_figure.py","results/portability-path/Figure_1.pdf","results/portability-path/Figure_1.png",
     "scripts/describe_trajectory_pairs.py","results/portability-path/trajectory_summary.csv",
     "results/portability-path/trajectory_contrasts.csv","results/portability-path/trajectory_people.csv",
     "results/portability-path/trajectory_pairs.csv.gz","results/portability-path/trajectory_checks.json",

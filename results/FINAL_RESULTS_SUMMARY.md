@@ -4,6 +4,8 @@ The main study asks how well a linear readout survives substitution of a second 
 
 ## Main comparison
 
+Figure 1 shows each participant’s state displacement and repeat-scan performance under weak and transfer-selected regularization. Rebuild it from the archived participant and cohort tables with `python scripts/plot_manuscript_figure.py`. [Figure 1 PDF](portability-path/Figure_1.pdf) · [Figure 1 PNG](portability-path/Figure_1.png) · [Plotting script](../scripts/plot_manuscript_figure.py)
+
 At the cohort transfer penalties (10 in NKI, 1 in Beijing), independent state noise matched to the size of each repeat-scan displacement gave higher mean recall than substituting the measured repeat graph. The paired additional loss on the repeat scan was 0.138 R² in NKI (95% interval 0.092 to 0.192) and 0.069 in Beijing (0.053 to 0.088). The expectation under isotropic noise is computed separately for each frozen decoder and displacement. [Analysis and figure](portability-path/README.md) · [Cohort estimates](portability-path/shift_summary.csv) · [Participant estimates](portability-path/shift_people.csv)
 
 | Study question | Figures, tables and verification |
