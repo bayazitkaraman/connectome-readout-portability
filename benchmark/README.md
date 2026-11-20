@@ -36,6 +36,19 @@ An independent scalar uniform signal drives eight parcels by default, four with 
 
 ## Outputs
 
+To reproduce the main comparison for another cohort, run
+`python -m benchmark my-study.npz my-results --state-comparisons`.
+For each participant and visit direction, the readout is fitted on the source, and the
+relative penalty is chosen on paired validation signals from the remaining participants.
+The same fresh input drives both graphs. The tool reports source and repeat R², the
+RMS state change as a percentage of source training fluctuation, the expected score under
+independent isotropic noise of equal size, and the expected score under zero-mean noise
+whose spatial covariance equals the displacement’s uncentered second moment. The latter
+two are analytical expectations conditional on the observed scan pair. A separate alignment
+uses `--alignment-steps` unlabeled target observations (default 2,352, stream role 219).
+Each comparison uses all requested output lags, or the single product output. Supply one
+value with `--penalties` to evaluate a fixed operating point.
+
 | File | Interpretation |
 | --- | --- |
 | `matrix_seed*_visit*_to_*.npz` | Rows are source people, columns target people. `wiring` contains Pearson correlations of upper-triangle edge weights including zeros. `fixed_r2[i,j,k]` scores source i on target j at penalty k. `source_local_r2` and `transfer_tuned_r2` use their corresponding selection matrices. File names use zero-based visit indices. The file includes both actual visit labels and participant IDs. |
@@ -45,6 +58,8 @@ An independent scalar uniform signal drives eight parcels by default, four with 
 | `summary.csv` | Participant means of the main comparisons, including identification rates. Participants are the units of averaging. |
 | `similarity_curve.csv` | Descriptive mean R² and fractions reaching R² of 0.10 and 0.50 in each anatomical-similarity bin, separately for own and stranger. Includes counts of pairs and distinct targets. Intervals include their lower endpoint, and the last bin includes 1. |
 | `run.json` | Input checksum, settings, random seeds, parcel maps, task targets and package versions. |
+| `state_pairs.csv` | With `--state-comparisons`, matched-input displacement and R² comparisons for each own repeat, including the projected spatial loss and residual cross term. Their sum is the measured source-to-repeat loss. |
+| `state_summary.csv` | Participant means for each seed and visit direction. Paired 95% percentile bootstrap intervals for noise minus repeat and aligned minus repeat use 10,000 participant draws at the selected penalties. |
 
 For transfer tuning, the diagonal uses all remaining identities for tuning. The paired own-minus-other column in `targets.csv` gives the personal readout each stranger’s matched penalty before taking the difference. `source_local_r2`, `source_r2` and `frozen_wiring_drop` use the target’s held-out input on the source network, keeping stimulation identical when a fitted readout is tested on both wirings. A seed is an analysis setting. Pooling its output rows as additional participants would inflate precision.
 

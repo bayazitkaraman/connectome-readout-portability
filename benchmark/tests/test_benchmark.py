@@ -6,12 +6,37 @@ import unittest
 
 import numpy as np
 import run_feasibility as pilot
-from benchmark.analysis import Evaluation, load_data, make_map, simulate, transfer_indices
+from benchmark.analysis import Evaluation, load_data, make_map, simulate, state_comparison, transfer_indices
 from benchmark.example import create
 from benchmark.metrics import bin_curve, identify, reliability, wiring_similarity
 
 
 class BenchmarkTest(unittest.TestCase):
+    def test_direction_matched_noise_and_constant_parcel(self):
+        from types import SimpleNamespace
+        rng = np.random.default_rng(31)
+        xs, xt = rng.normal(size=(2, 37, 3))
+        y = rng.normal(size=(37, 2))
+        weights = rng.normal(size=(1, 4, 2))
+        scan = SimpleNamespace(weights=weights, train_mean=xs.mean(axis=0), train_sd=xs.std(axis=0),
+                               train_varied=np.array([True]*3), train_rms=np.sqrt(xs.var(axis=0).mean()))
+        for target in (xs, xt):
+            calibrated = target.copy()
+            calibrated[:, 0] = 1.
+            row = state_comparison(xs,target,y,scan,0,calibrated)
+            self.assertTrue(np.isfinite(row["aligned_r2"]))
+            self.assertAlmostEqual(row["source_r2"] - row["repeat_r2"], row["spatial_loss"] + row["error_cross_term"])
+            if target is xs:
+                self.assertEqual(row["displacement_pct"], 0.)
+                self.assertEqual(row["isotropic_r2"],row["repeat_r2"])
+            # Enumerate independent signs for whole displacement vectors: averaging
+            # both signs cancels the residual cross term, retaining spatial structure.
+            scores = []
+            for sign in (-1, 1):
+                residual = (xs + sign*(target-xs)) @ weights[0,:-1] + weights[0,-1] - y
+                scores.append((1 - (residual**2).mean(axis=0)/y.var(axis=0)).mean())
+            self.assertAlmostEqual(np.mean(scores),row["spatial_noise_r2"])
+
     def test_qr_matches_explicit_r2_and_source_stream(self):
         from types import SimpleNamespace
         cfg = SimpleNamespace(lags=list(range(1,11)),task="recall",warmup=200)
@@ -88,13 +113,15 @@ class BenchmarkTest(unittest.TestCase):
                     load_data(root/"bad.npz",None)
             cmd = [sys.executable,"-m","benchmark",str(src),str(root/"result"),"--task","product",
                    "--seeds","42","43","--penalties",".001","10","--train-steps","48","--validation-steps","30",
-                   "--test-steps","32","--test-streams","2","--warmup","15"]
+                   "--test-steps","32","--test-streams","2","--warmup","15","--state-comparisons",
+                   "--alignment-steps","16"]
             subprocess.run(cmd,check=True,capture_output=True)
             with np.load(root/"result/matrix_seed42_visit0_to_1.npz") as f:
                 self.assertEqual(f["fixed_r2"].shape,(5,5,2))
                 self.assertTrue(np.isfinite(f["transfer_tuned_r2"]).all())
                 self.assertEqual(set(np.unique(f["transfer_tuned_penalties"])).difference([.001,10]),set())
             self.assertTrue((root/"result/matrix_seed43_visit1_to_0.npz").exists())
+            self.assertEqual(len((root/"result/state_pairs.csv").read_text().splitlines()), 21)
             self.assertNotEqual(subprocess.run(cmd,capture_output=True).returncode,0)
 
 

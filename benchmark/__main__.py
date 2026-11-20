@@ -23,6 +23,10 @@ def main():
     cli.add_argument("--validation-steps", type=int, default=1176)
     cli.add_argument("--test-steps", type=int, default=512, help="steps per independent test stream")
     cli.add_argument("--test-streams", type=int, default=4)
+    cli.add_argument("--state-comparisons", action="store_true",
+                     help="measure own-repeat displacement, matched-noise loss and unlabeled alignment")
+    cli.add_argument("--alignment-steps", type=int, default=2352,
+                     help="independent unlabeled target steps for parcelwise alignment")
     cli.add_argument("--bin-edges", nargs="+", type=float, default=[.45,.6,.75,.85,.92],
                      help="internal cut points between -1 and 1")
     cfg = cli.parse_args()

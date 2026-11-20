@@ -72,6 +72,8 @@ def validate_config(cfg, n_regions):
         raise ValueError("Supply distinct, finite, positive relative penalties.")
     if min(cfg.train_steps, cfg.validation_steps, cfg.test_steps) < 2 or cfg.test_streams < 1:
         raise ValueError("Use at least two steps for each split and at least one test stream.")
+    if cfg.state_comparisons and cfg.alignment_steps < 2:
+        raise ValueError("Parcelwise alignment needs at least two independent target steps.")
     edges = np.asarray(cfg.bin_edges)
     if not np.all(np.diff(edges)>0) or not np.isfinite(edges).all() or edges[0]<=-1 or edges[-1]>=1:
         raise ValueError("Bin edges must increase strictly inside (-1, 1).")
@@ -131,12 +133,20 @@ class Scan:
     local: int
     validation: Evaluation
     test: Evaluation
+    train_mean: np.ndarray
+    train_sd: np.ndarray
+    train_varied: np.ndarray
+    train_rms: float
+
+
+def test_data(net, mapping, cfg, seed, stream_id):
+    streams = [simulate(net, mapping, cfg, seed, stream_id, 61, cfg.test_steps, k)
+               for k in range(cfg.test_streams)]
+    return pilot.combine(streams)
 
 
 def observe_test(net, mapping, cfg, seed, stream_id):
-    streams = [simulate(net, mapping, cfg, seed, stream_id, 61, cfg.test_steps, k)
-               for k in range(cfg.test_streams)]
-    return Evaluation.from_data(pilot.combine(streams))
+    return Evaluation.from_data(test_data(net, mapping, cfg, seed, stream_id))
 
 
 def fit_scan(net, mapping, cfg, seed, stream_id):
@@ -151,7 +161,8 @@ def fit_scan(net, mapping, cfg, seed, stream_id):
         bank.append(np.vstack((w, model.my - model.mx @ w)))
     bank = np.stack(bank)
     local = int(np.argmin(val.mse(bank).mean(axis=1)))
-    return Scan(bank, local, val, observe_test(net, mapping, cfg, seed, stream_id))
+    return Scan(bank, local, val, observe_test(net, mapping, cfg, seed, stream_id),
+                model.mx, data[0].std(axis=0), np.ptp(data[0], axis=0) > 0, np.sqrt(model.scale))
 
 
 def transfer_indices(loss):
@@ -236,10 +247,61 @@ def summarize_direction(subjects, wiring, all_r2, matched_source, validations, s
     return matrices
 
 
+def state_comparison(xs, xt, y, scan, alpha_index, calibration):
+    """Score the same readout on identical signals and an independent target calibration stream."""
+    slopes = scan.weights[alpha_index, :-1]
+    intercept = scan.weights[alpha_index, -1]
+    variance = y.var(axis=0)
+    delta = xt - xs
+    delta_power = np.mean(delta**2)
+    source_error = xs @ slopes + intercept - y
+    prediction_change = delta @ slopes
+    source = 1 - np.mean(source_error**2, axis=0) / variance
+    target = 1 - np.mean((xt @ slopes + intercept - y)**2, axis=0) / variance
+    isotropic_loss = delta_power * np.sum(slopes**2, axis=0) / variance
+    spatial_loss = np.mean(prediction_change**2, axis=0) / variance
+    cross = 2 * np.mean(source_error * prediction_change, axis=0) / variance
+    varied = scan.train_varied & (np.ptp(calibration, axis=0) > 0)
+    scale = np.divide(scan.train_sd, calibration.std(axis=0), where=varied,
+                      out=np.zeros_like(scan.train_sd))
+    aligned = (xt - calibration.mean(axis=0)) * scale + scan.train_mean
+    aligned_score = 1 - np.mean((aligned @ slopes + intercept - y)**2, axis=0) / variance
+    return dict(displacement_pct=100 * np.sqrt(delta_power) / scan.train_rms,
+                source_r2=source.mean(), repeat_r2=target.mean(),
+                isotropic_r2=(source-isotropic_loss).mean(), spatial_noise_r2=(source-spatial_loss).mean(),
+                aligned_r2=aligned_score.mean(), isotropic_loss=isotropic_loss.mean(),
+                spatial_loss=spatial_loss.mean(), error_cross_term=cross.mean(),
+                noise_minus_repeat=(source-isotropic_loss-target).mean(),
+                aligned_minus_repeat=(aligned_score-target).mean())
+
+
+def compare_own_states(subjects, nets, fitted, losses, mapping, cfg, seed, sv, tv, info, tables):
+    rows = []
+    for i, subject in enumerate(subjects):
+        choice = int(np.argmin(losses[np.arange(len(subjects)) != i].mean(axis=0)))
+        stream = 10000 + tv*len(subjects) + i
+        xs, y = test_data(nets[sv][i], mapping, cfg, seed, stream)
+        xt, target_labels = test_data(nets[tv][i], mapping, cfg, seed, stream)
+        np.testing.assert_array_equal(y, target_labels)
+        calibration, _ = simulate(nets[tv][i], mapping, cfg, seed, stream, 219, cfg.alignment_steps)
+        metrics = state_comparison(xs, xt, y, fitted[i], choice, calibration)
+        rows.append(metrics)
+        tables["state_pairs"].append(dict(**info, subject=subject, penalty=cfg.penalties[choice], **metrics))
+    summary = {key:np.mean([row[key] for row in rows]) for key in rows[0]}
+    # Resample participants within each direction and seed. The fitted penalties stay fixed.
+    sample = get_rng(seed, 247, sv, tv).integers(len(rows), size=(10000,len(rows)))
+    for key in ("noise_minus_repeat", "aligned_minus_repeat"):
+        means = np.asarray([row[key] for row in rows])[sample].mean(axis=1)
+        summary[key+"_lo"], summary[key+"_hi"] = np.quantile(means,[.025,.975])
+    tables["state_summary"].append(dict(**info, n_people=len(rows), **summary))
+
+
 def run(data, cfg, out):
     graphs, subjects, visits, regions = data
     n = len(subjects)
     tables = {key:[] for key in ("individual","reliability","targets","summary","similarity_curve")}
+    if cfg.state_comparisons:
+        tables.update(state_pairs=[], state_summary=[])
     maps = {}
     with threadpool_limits(limits=1):
         nets = [[pilot.reservoir(graph, cfg.gain) for graph in cohort] for cohort in graphs]
@@ -264,6 +326,8 @@ def run(data, cfg, out):
                 wiring = wiring_similarity(graphs[sv], graphs[tv])
                 all_r2, same_input, val = score_direction(scans[sv],scans[tv],nets[sv],mapping,cfg,seed,tv)
                 extra = summarize_direction(subjects,wiring,all_r2,same_input,val,scans[sv],scans[tv],cfg,info,tables)
+                if cfg.state_comparisons:
+                    compare_own_states(subjects,nets,scans[sv],val,mapping,cfg,seed,sv,tv,info,tables)
                 np.savez_compressed(out/f"matrix_seed{seed}_visit{sv}_to_{tv}.npz", subjects=subjects,
                                     visits=visits[[sv,tv]], penalties=cfg.penalties, wiring=wiring, fixed_r2=all_r2, **extra)
                 if sv<tv:

@@ -1,0 +1,40 @@
+[
+  {
+    "cohort": "nki",
+    "model": "raw",
+    "max_absolute_slope_difference": 1.0054633403783209e-06,
+    "alternate_software": "statsmodels MixedLM REML Powell",
+    "fit_converged": true,
+    "independent_partial_rank": 0.6801225153783846,
+    "warnings": []
+  },
+  {
+    "cohort": "nki",
+    "model": "raw_plus_density",
+    "max_absolute_slope_difference": 1.3253720003818248e-06,
+    "alternate_software": "statsmodels MixedLM REML Powell",
+    "fit_converged": true,
+    "independent_partial_rank": 0.6801225153783846,
+    "warnings": []
+  },
+  {
+    "cohort": "bnu1",
+    "model": "raw",
+    "max_absolute_slope_difference": 3.6180695265480844e-07,
+    "alternate_software": "statsmodels MixedLM REML Powell",
+    "fit_converged": true,
+    "independent_partial_rank": 0.1547566634149394,
+    "warnings": [
+      "The MLE may be on the boundary of the parameter space."
+    ]
+  },
+  {
+    "cohort": "bnu1",
+    "model": "raw_plus_density",
+    "max_absolute_slope_difference": 9.220129231456153e-08,
+    "alternate_software": "statsmodels MixedLM REML Powell",
+    "fit_converged": true,
+    "independent_partial_rank": 0.1547566634149394,
+    "warnings": []
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "participants": 82,
+  "total_participant_budgets": 820,
+  "fresh_stream_roles": {
+    "source_train": 0,
+    "calibration": 219,
+    "validation_other_people": 1,
+    "test": 61
+  },
+  "zero_budget_arms_equal": true,
+  "maximum_absolute_archived_errors": {
+    "source_r2": 8.326672684688674e-17,
+    "frozen_r2": 9.71445146547012e-17,
+    "aligned_r2": 1.1102230246251565e-16
+  },
+  "augmented_least_squares_checks": 48,
+  "max_independent_absolute_score_or_mse_error": 1.6200374375330284e-11,
+  "donor_validation_excludes_target": true,
+  "bootstrap_seed": 20261120,
+  "bootstrap_draws": 10000
+}

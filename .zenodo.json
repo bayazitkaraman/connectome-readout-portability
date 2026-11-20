@@ -1,0 +1,15 @@
+{
+  "title": "Readout transfer across repeat structural connectomes",
+  "description": "Benchmark and derived study results for transferring frozen readouts of simulated signals across repeat measurements of structural connectomes. See CITATION.cff and README.md. Original software is distributed under MIT. Original derived tables and figures are distributed under CC BY 4.0. Third-party software and study inputs retain their source terms.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Karaman, Bayazit",
+      "affiliation": "Florida Polytechnic University",
+      "orcid": "0000-0001-5175-5671"
+    }
+  ],
+  "version": "0.2.0",
+  "license": "mit",
+  "keywords": ["structural connectomes", "reservoir computing", "repeat scans", "decoder transfer"]
+}

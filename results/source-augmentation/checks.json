@@ -1,0 +1,21 @@
+{
+  "verified_participants": 25,
+  "rows": 75,
+  "hdf_md5": "f457d4a860d79654672143c1ace95ee1",
+  "numerical_reruns": 500,
+  "numerical_reruns_identical_to_reference": 246,
+  "row_seed_entropy": [
+    20261119,
+    220,
+    "participant_index",
+    "graph_count"
+  ],
+  "train_role": 0,
+  "test_role": 61,
+  "bootstrap_seed": 20261120,
+  "bootstrap_draws": 10000,
+  "max_archived_source_r2_error": 1.1102230246251565e-16,
+  "max_archived_repeat_r2_error": 1.3877787807814457e-16,
+  "max_identical_augmentation_r2_error": 0.0,
+  "max_direct_prediction_error": 2.020605904817785e-14
+}

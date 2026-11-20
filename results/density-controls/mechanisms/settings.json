@@ -1,0 +1,9 @@
+{
+  "fixed_gain": 0.9,
+  "input_map_key": 10,
+  "ident": 29000,
+  "role": 80,
+  "after_warmup_steps": 2352,
+  "resamples": 10000,
+  "seed": 620624
+}

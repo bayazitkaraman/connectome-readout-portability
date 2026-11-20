@@ -29,7 +29,7 @@ The command checks the inputs, copies the analysis programs and writes estimates
 
 ## Check the results
 
-On success, `replay/replay_verification.json` reports numerical differences from the shipped study tables. The release validation used verified local data. Its record includes the synthetic example, independent checks against original donor-pair scores, and replay discrepancies. [Validation record](../benchmark/validation.json) · [Study results index](../results/FINAL_RESULTS_SUMMARY.md)
+On success, `replay/replay_verification.json` reports numerical differences from the shipped study tables. The study analyses were checked using checksum-verified local inputs. The input-preparation route was also tested in an empty directory against the original public providers, including all 342 Beijing edge lists at the three atlas scales. The validation record covers the synthetic example, native-cohort comparisons and numerical replays. [Validation record](../benchmark/validation.json) · [Study results index](../results/FINAL_RESULTS_SUMMARY.md)
 
 To verify the reusable CLI against the native-resolution linear study, run
 
@@ -42,6 +42,10 @@ python -m benchmark.verify_archive beijing-results bnu1
 
 The archive comparison matched all 600 forward stranger pairs in NKI and all 3,192 in Beijing, with maximum absolute R² differences below 2.4 × 10⁻¹⁵. The study and generic CLI use identical input streams for both graphs of a source–target comparison. [Generic analysis and matrix conventions](../benchmark/README.md)
 
-## Versioned archive
+## Additional comparisons in version 0.2.0
 
-The repository includes a metadata template for a later public release. The creator list, project license and version await confirmation by the authors. When the public version is archived, its tag and version DOI can identify the exact study files. [Draft release metadata](../benchmark/zenodo-metadata.example.json)
+The full replay also fits the source-augmentation strategies, estimates retention intervals, compares graph settings and input maps, runs the target-budget analysis and regenerates the four main figures. It invokes the reusable CLI with `--state-comparisons` for both native cohorts and compares every forward participant's displacement, matched-noise and alignment scores to the independent study implementation. The archived CLI outputs include both visit directions. [Scoring comparison](../scripts/verify_cli_state_comparisons.py) · [Input-map and graph protocol](../results/headline-robustness/protocol.md) · [Budget protocol](../results/calibration-budget-curve/protocol.md)
+
+To reproduce the descriptive ages, obtain the official public imaging index from the data guide. In the prepared replay directory run `python scripts/reviewer_context.py --nki-age-index /path/to/aws_links.csv`. The script verifies the provider hash and cross-checks baseline diffusion and T1 ages. Only cohort aggregates are exported. [Age sources and checksum](../results/density-controls/age_sources.md) · [Cohort and donor checks](../results/reviewer-context/README.md)
+
+The snapshot carries versioned creator, citation and license metadata. The distributed manifest identifies the bytes in this version. [Citation](../CITATION.cff) · [Metadata](../.zenodo.json) · [Checksums](../manifest-sha256.json)

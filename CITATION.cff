@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite this software and the original datasets listed in docs/DATA.md."
+title: "Readout transfer across repeat structural connectomes"
+version: "0.2.0"
+type: software
+authors:
+  - given-names: Bayazit
+    family-names: Karaman
+    affiliation: Florida Polytechnic University
+    orcid: "https://orcid.org/0000-0001-5175-5671"
+repository-code: "https://github.com/bayazitkaraman/connectome-readout-portability"
+license:
+  - MIT
+  - CC-BY-4.0
+abstract: >-
+  Benchmark and derived study results for frozen readouts of simulated
+  signals on repeat structural connectomes. The MIT license covers original
+  code and its documentation. CC BY 4.0 covers original tables and figures.
+  Upstream software and datasets retain their original terms.

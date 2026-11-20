@@ -33,7 +33,22 @@ REQUIRED = (
     "results/pipeline-robustness/retuned_summary.csv",
     "results/pipeline-robustness/fitted_score_reliability.csv",
     "results/pipeline-robustness/README.md",
-    "benchmark/zenodo-metadata.example.json",
+    "CITATION.cff","LICENSE","LICENSE-data.txt",".zenodo.json",
+    "scripts/plot_manuscript_extension.py","scripts/source_augmentation.py","scripts/summarize_alignment_retention.py",
+    "scripts/headline_robustness.py","scripts/calibration_budget_curve.py","scripts/reviewer_context.py",
+    "scripts/verify_cli_state_comparisons.py","scripts/plot_calibration_budget.py",
+    "results/source-augmentation/summary.csv","results/portability-baseline/retention_intervals.csv",
+    "results/headline-robustness/checks.json","results/headline-robustness/summary.csv",
+    "results/calibration-budget-curve/checks.json","results/calibration-budget-curve/summary.csv",
+    "results/reviewer-context/age_aggregate.csv","results/reviewer-context/spatial_decomposition.csv",
+    "results/anatomy-advantage/statistics.csv",
+    *(f"results/portability-path/Figure_{i}.{extension}" for i in (2,3) for extension in ("pdf","png")),
+    *(f"results/calibration-budget-curve/Figure_4.{extension}" for extension in ("pdf","png")),
+    *(f"results/supplementary-tables/S{i}.csv" for i in range(1,9)),
+    *(f"results/cli-state-{cohort}/{name}" for cohort in ("nki","beijing")
+      for name in ("state_pairs.csv","state_summary.csv","run.json")),
+    *(f"results/{cohort}-augmentation/{name}.csv" for cohort in ("nki","bnu1")
+      for name in ("contrasts","curves","thresholds")),
     "docs/DATA.md","docs/REPRODUCIBILITY.md","results/FINAL_RESULTS_SUMMARY.md",
     "scripts/unlabeled_parcel_alignment.py","results/portability-baseline/protocol.md",
     "results/portability-baseline/README.md","results/portability-baseline/people.csv",
@@ -61,7 +76,8 @@ def members():
             if p.is_file() and (p.suffix in extensions or p.name=="LICENSE") and p.name!="RELEASE_README.md":
                 add(p.relative_to(ROOT))
     for folder in ("nonlinear-recall","numerical-repeat","pipeline-robustness","transfer-similarity","portability-path",
-                   "nki-split-half","density-controls/frozen","density-controls/positive-control"):
+                   "nki-split-half","density-controls","source-augmentation","portability-baseline",
+                   "headline-robustness","reviewer-context","calibration-budget-curve","supplementary-tables"):
         for p in (ROOT/"results"/folder).rglob("*"):
             if p.is_file() and p.suffix in ALLOWED_RESULT:
                 add(p.relative_to(ROOT))

@@ -1,0 +1,7 @@
+cohort,mix_rule,analysis,statistic,estimate,ci_low,ci_high,participants,bootstrap_draws,valid_bootstrap_draws
+nki,equal_donor,between_participants,spearman,0.72,0.38442838434849363,0.9203718554130778,25,10000,10000
+nki,fixed_025,between_participants,spearman,0.6146153846153846,0.23469724012153684,0.8593569384197315,25,10000,10000
+nki,fixed_025,within_participant,within_target_centered_pearson,0.4209494853856543,-0.024174218778712682,0.7348058639546005,25,10000,10000
+bnu1,equal_donor,between_participants,spearman,0.15134819808141042,-0.13292861180892018,0.4295784715094089,57,10000,10000
+bnu1,fixed_025,between_participants,spearman,0.24539797770287788,-0.019700723865224652,0.4966206647866148,57,10000,10000
+bnu1,fixed_025,within_participant,within_target_centered_pearson,0.15410598032117417,0.014098818222422422,0.2991206948678068,57,10000,10000

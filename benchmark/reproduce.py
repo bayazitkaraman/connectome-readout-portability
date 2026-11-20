@@ -55,6 +55,8 @@ def prepare(out,local):
         shutil.copytree(ROOT/name,out/name,ignore=shutil.ignore_patterns("__pycache__","*.pyc"))
     copy(ROOT/"run_feasibility.py",out/"run_feasibility.py")
     for rel in CALIBRATION+SCALE_MANIFESTS+["results/numerical-repeat/PROTOCOL.md","results/portability-baseline/protocol.md",
+                                            "results/source-augmentation/protocol.md","results/calibration-budget-curve/protocol.md",
+                                            "results/headline-robustness/protocol.md",
                                             "results/pipeline-robustness/PROTOCOL.md","NONLINEAR_RECALL_PROTOCOL.md"]:
         copy(ROOT/rel,out/rel)
     if local:
@@ -119,12 +121,32 @@ def replay(out):
                    "state_shift_visits", "state_shift_technical", "summarize_state_shifts",
                    "describe_trajectory_pairs", "unlabeled_parcel_alignment", "plot_manuscript_figure"):
         execute(out, f"scripts/{script}.py")
+    replay_extensions(out)
+
+
+def replay_extensions(out):
+    for script in ("source_augmentation", "summarize_alignment_retention", "plot_manuscript_extension",
+                   "headline_robustness", "calibration_budget_curve", "plot_calibration_budget", "reviewer_context"):
+        execute(out, f"scripts/{script}.py")
+    execute(out, "-m", "benchmark", "data/nki/nki_reference.npz", "results/cli-state-nki",
+            "--half", "odd", "--state-comparisons")
+    execute(out, "-m", "benchmark", "data/replication_candidates/corr/bnu1_dkt_retest.npz",
+            "results/cli-state-beijing", "--state-comparisons")
+    execute(out, "scripts/verify_cli_state_comparisons.py")
 
 
 def verify(out):
     import pandas as pd
     import numpy as np
     checks = {"results/portability-path/path_summary.csv":["source_r2","target_r2","gap_r2"],
+              "results/source-augmentation/summary.csv":["source_r2","repeat_r2","gain_r2","gain_r2_lo","gain_r2_hi"],
+              "results/portability-baseline/retention_intervals.csv":["untouched_pct","aligned_pct","gain_pp_low","gain_pp_high"],
+              "results/headline-robustness/summary.csv":["noise_r2","repeat_r2","excess_r2","excess_r2_low","excess_r2_high"],
+              "results/calibration-budget-curve/summary.csv":["frozen_r2","aligned_r2","labeled_r2","labeled_minus_aligned_lo","labeled_minus_aligned_hi"],
+              "results/reviewer-context/donor_context.csv":["people","closest_is_own","target_aware_gain","restricted_target_aware_gain"],
+              "results/reviewer-context/spatial_decomposition.csv":["estimate","lo","hi"],
+              **{f"results/cli-state-{cohort}/state_summary.csv":["displacement_pct","repeat_r2","isotropic_r2","spatial_noise_r2","aligned_r2"]
+                 for cohort in ("nki","beijing")},
               "results/portability-path/shares_summary.csv":["own_share_pct","stranger_share_pct",
                   "own_minus_stranger_pp","own_minus_stranger_pp_lo","own_minus_stranger_pp_hi"],
               "results/portability-path/shift_summary.csv":["shift_pct","target_r2","isotropic_r2",
@@ -156,9 +178,9 @@ def verify(out):
         expected=pd.read_csv(ROOT/rel)
         if list(new.columns)!=list(expected.columns) or len(new)!=len(expected):
             raise ValueError(f"Unexpected dimensions during replay of {rel}")
-        if rel.startswith(("results/portability-path/","results/portability-baseline/")):
-            keys = [col for col in ("cohort","source_set","task","rung","alpha","matrix_status","noise_fraction","metric") if col in expected]
-            pd.testing.assert_frame_equal(new[keys], expected[keys])
+        keys = [col for col in ("cohort","source_set","task","rung","alpha","matrix_status","noise_fraction","metric",
+                                "setting","rule","budget","arm","statistic","seed","source_visit","target_visit") if col in expected]
+        pd.testing.assert_frame_equal(new[keys], expected[keys])
         for col in columns:
             np.testing.assert_allclose(new[col],expected[col],atol=2e-8,rtol=2e-8,equal_nan=True)
         errors[rel]={c:float(np.max(np.abs(new[c]-expected[c]))) for c in columns}

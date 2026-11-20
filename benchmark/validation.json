@@ -1,5 +1,5 @@
 {
-  "study_replay_source": "Local copies of checksum-verified public inputs. The online download route was not rerun for this release check.",
+  "study_replay_source": "Base analyses were replayed on checksum-verified local source inputs. Version 0.2.0 extensions were rerun in an isolated copy of that verified replay. The public download and input preparation route was independently rerun in empty directories.",
   "generic_cli_forward_comparison": [
     {
       "cohort": "nki",
@@ -20,6 +20,58 @@
       "target_r2": 0.0,
       "gap_r2": 0.0
     },
+    "results/source-augmentation/summary.csv": {
+      "source_r2": 0.0,
+      "repeat_r2": 0.0,
+      "gain_r2": 0.0,
+      "gain_r2_lo": 0.0,
+      "gain_r2_hi": 0.0
+    },
+    "results/portability-baseline/retention_intervals.csv": {
+      "untouched_pct": 0.0,
+      "aligned_pct": 0.0,
+      "gain_pp_low": 0.0,
+      "gain_pp_high": 0.0
+    },
+    "results/headline-robustness/summary.csv": {
+      "noise_r2": 0.0,
+      "repeat_r2": 0.0,
+      "excess_r2": 0.0,
+      "excess_r2_low": 0.0,
+      "excess_r2_high": 0.0
+    },
+    "results/calibration-budget-curve/summary.csv": {
+      "frozen_r2": 0.0,
+      "aligned_r2": 0.0,
+      "labeled_r2": 0.0,
+      "labeled_minus_aligned_lo": 0.0,
+      "labeled_minus_aligned_hi": 0.0
+    },
+    "results/reviewer-context/donor_context.csv": {
+      "people": 0.0,
+      "closest_is_own": 0.0,
+      "target_aware_gain": 0.0,
+      "restricted_target_aware_gain": 0.0
+    },
+    "results/reviewer-context/spatial_decomposition.csv": {
+      "estimate": 0.0,
+      "lo": 0.0,
+      "hi": 0.0
+    },
+    "results/cli-state-nki/state_summary.csv": {
+      "displacement_pct": 0.0,
+      "repeat_r2": 0.0,
+      "isotropic_r2": 0.0,
+      "spatial_noise_r2": 0.0,
+      "aligned_r2": 0.0
+    },
+    "results/cli-state-beijing/state_summary.csv": {
+      "displacement_pct": 0.0,
+      "repeat_r2": 0.0,
+      "isotropic_r2": 0.0,
+      "spatial_noise_r2": 0.0,
+      "aligned_r2": 0.0
+    },
     "results/portability-path/shares_summary.csv": {
       "own_share_pct": 0.0,
       "stranger_share_pct": 0.0,
@@ -36,6 +88,34 @@
       "graph_minus_iso_hi": 0.0,
       "n_isotropic_positive": 0.0,
       "n_graph_positive": 0.0
+    },
+    "results/portability-path/trajectory_summary.csv": {
+      "displacement_pct": 0.0,
+      "pattern_r": 0.0,
+      "amplitude_ratio": 0.0,
+      "mean_shift_pct": 0.0,
+      "people": 0.0,
+      "pairs": 0.0
+    },
+    "results/portability-path/trajectory_contrasts.csv": {
+      "targets": 0.0,
+      "own_minus_stranger": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "results/portability-baseline/summary.csv": {
+      "n_people": 0.0,
+      "source_r2": 0.0,
+      "untouched_r2": 0.0,
+      "aligned_r2": 0.0,
+      "delta_r2": 0.0,
+      "delta_lo": 0.0,
+      "delta_hi": 0.0,
+      "untouched_retention": 0.0,
+      "aligned_retention": 0.0,
+      "n_untouched_positive": 0.0,
+      "n_aligned_positive": 0.0,
+      "n_improved": 0.0
     },
     "results/portability-path/matched_retention_summary.csv": {
       "source_r2": 0.0,
@@ -95,34 +175,6 @@
     },
     "results/nonlinear-recall/boundary_summary.csv": {
       "mean": 0.0
-    },
-    "results/portability-path/trajectory_summary.csv": {
-      "displacement_pct": 0.0,
-      "pattern_r": 0.0,
-      "amplitude_ratio": 0.0,
-      "mean_shift_pct": 0.0,
-      "people": 0.0,
-      "pairs": 0.0
-    },
-    "results/portability-path/trajectory_contrasts.csv": {
-      "targets": 0.0,
-      "own_minus_stranger": 0.0,
-      "ci_low": 0.0,
-      "ci_high": 0.0
-    },
-    "results/portability-baseline/summary.csv": {
-      "n_people": 0.0,
-      "source_r2": 0.0,
-      "untouched_r2": 0.0,
-      "aligned_r2": 0.0,
-      "delta_r2": 0.0,
-      "delta_lo": 0.0,
-      "delta_hi": 0.0,
-      "untouched_retention": 0.0,
-      "aligned_retention": 0.0,
-      "n_untouched_positive": 0.0,
-      "n_aligned_positive": 0.0,
-      "n_improved": 0.0
     }
   },
   "matched_penalty_follow_up": {
@@ -220,6 +272,103 @@
     "sha256": {
       "Figure_1.pdf": "29a0eb2e735553887df33895d36b0ad7611d257d3863dabf7ae322952030bfd5",
       "Figure_1.png": "23d3ed314c83f64fc9998cff03e56eb4fa9aa1242ba4b19500227e621821589a"
+    }
+  },
+  "revision_v020": {
+    "version": "0.2.0",
+    "validation_date": "2026-11-20",
+    "uncached_provider_inputs": {
+      "nki_archive_bytes": 233049104,
+      "nki_archive_sha256": "9e084ace6509de76e35adba79319ce5aa2b53f299e1d9898fb6e7fd84ec28e8f",
+      "nki_crosswalk_sha256": "f9181517bac7dc899dc5aeeda050158396dbcbecc1fd2c04716fa5ae987cdd25",
+      "nki_weight_shape": [
+        2,
+        2,
+        25,
+        83,
+        83
+      ],
+      "beijing_people": 57,
+      "beijing_visits": 2,
+      "beijing_source_edge_lists_verified": {
+        "DKT": 114,
+        "Schaefer200": 114,
+        "Schaefer300": 114
+      },
+      "scope": "Both public preparation and local replay were checked. The NITRC public crosswalk's HTTP endpoint was used with the pinned SHA-256."
+    },
+    "isolated_extension_scope": "Recomputed source-augmentation, alignment intervals, Figures 2\u20134, the multi-map and graph settings, all target-state budgets, nongraphic cohort summaries, and both native CLI state comparisons from verified source matrices and the previous replay's required base analyses. The optional aggregate age check uses its separately verified imaging-index hash.",
+    "native_cli_state_comparisons": {
+      "nki": {
+        "people": 25,
+        "input_sha256": "47625de2e0f2c430b7236b8dcc0c69bf36c039ad5be04a949b4e2f91336e880e",
+        "max_absolute_error": {
+          "displacement_pct": 5.684341886080802e-14,
+          "source_r2": 1.1102230246251565e-16,
+          "repeat_r2": 1.1102230246251565e-16,
+          "isotropic_r2": 1.1102230246251565e-16,
+          "spatial_loss": 0.0,
+          "error_cross_term": 1.1102230246251565e-16,
+          "aligned_r2": 1.0001765041178778e-16
+        }
+      },
+      "bnu1": {
+        "people": 57,
+        "input_sha256": "5da9aebacf192f379baa974c824454e569d9e32a6df252e1647f8d5daa882d0e",
+        "max_absolute_error": {
+          "displacement_pct": 2.842170943040401e-14,
+          "source_r2": 1.1102230246251565e-16,
+          "repeat_r2": 1.942890293094024e-16,
+          "isotropic_r2": 1.1102230246251565e-16,
+          "spatial_loss": 0.0,
+          "error_cross_term": 9.996344030316351e-17,
+          "aligned_r2": 1.1102230246251565e-16
+        }
+      }
+    },
+    "packaged_synthetic_demo": {
+      "steps": [
+        "python -m benchmark.example demo.npz",
+        "python -m benchmark demo.npz demo-results --penalties 0.01 1 10 --state-comparisons"
+      ],
+      "total_seconds": 2.85,
+      "outputs": 10,
+      "unit_tests_passed": 4,
+      "environment": "Windows AMD64, Python 3.10.19; dependencies preinstalled"
+    },
+    "byte_identical_extension_outputs": {
+      "results/source-augmentation/checks.json": true,
+      "results/source-augmentation/people.csv": true,
+      "results/source-augmentation/summary.csv": true,
+      "results/headline-robustness/checks.json": true,
+      "results/headline-robustness/input_maps.csv": true,
+      "results/headline-robustness/penalties.csv": true,
+      "results/headline-robustness/people.csv": true,
+      "results/headline-robustness/summary.csv": true,
+      "results/headline-robustness/validation.csv.gz": true,
+      "results/calibration-budget-curve/checks.json": true,
+      "results/calibration-budget-curve/Figure_4.pdf": true,
+      "results/calibration-budget-curve/Figure_4.png": true,
+      "results/calibration-budget-curve/penalty_selection.csv": true,
+      "results/calibration-budget-curve/people.csv": true,
+      "results/calibration-budget-curve/summary.csv": true,
+      "results/calibration-budget-curve/validation_losses.csv.gz": true,
+      "results/reviewer-context/direction_half_augmentation.csv": true,
+      "results/reviewer-context/donor_context.csv": true,
+      "results/reviewer-context/edge_density.csv": true,
+      "results/reviewer-context/numerical_context.csv": true,
+      "results/reviewer-context/spatial_decomposition.csv": true,
+      "results/cli-state-nki/state_pairs.csv": true,
+      "results/cli-state-nki/state_summary.csv": true,
+      "results/cli-state-nki/run.json": true,
+      "results/cli-state-beijing/state_pairs.csv": true,
+      "results/cli-state-beijing/state_summary.csv": true,
+      "results/cli-state-beijing/run.json": true,
+      "results/portability-path/Figure_2.pdf": true,
+      "results/portability-path/Figure_2.png": true,
+      "results/portability-path/Figure_3.pdf": true,
+      "results/portability-path/Figure_3.png": true,
+      "results/portability-baseline/retention_intervals.csv": true
     }
   }
 }
