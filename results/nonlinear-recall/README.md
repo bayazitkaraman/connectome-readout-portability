@@ -18,7 +18,7 @@ Every participant had positive target-local R². The transfer-tuned personal rea
 
 The nearest foreign decoder was selected using anatomical correlation with the target connectome before scoring. All 82 choices matched the previous linear analysis, with unique maxima. The mean foreign score averages the 24 or 56 donor scores within each target. The intervals use 10,000 paired resamples of target people, conditional on the fitted donor bank and input signals.
 
-[Locked protocol](../../NONLINEAR_RECALL_PROTOCOL.md) · [Full estimates and intervals](summary.csv) · [Participant scores](participant_scores.csv) · [All donor comparisons](pair_scores.csv) · [Validation curves](validation_penalties.csv) · [Pooled training and validation assignments](pool_allocations.json) · [Seeds and settings](metadata.json)
+[Locked protocol](../../protocols/NONLINEAR_RECALL_PROTOCOL.md) · [Full estimates and intervals](summary.csv) · [Participant scores](participant_scores.csv) · [All donor comparisons](pair_scores.csv) · [Validation curves](validation_penalties.csv) · [Pooled training and validation assignments](pool_allocations.json) · [Seeds and settings](metadata.json)
 
 ## Post hoc regularization diagnostic
 

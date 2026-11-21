@@ -371,6 +371,26 @@
       "results/portability-baseline/retention_intervals.csv": true
     }
   },
+  "submission_replay": {
+    "version": "0.2.1",
+    "validation_date": "2026-11-20",
+    "python": "3.10.19",
+    "inputs": "Checksum-verified local NKI and Beijing source inputs.",
+    "verified_summary_tables": 33,
+    "verified_summary_columns": 125,
+    "largest_absolute_summary_difference": 1.3642420526593924e-12,
+    "identical_manuscript_pngs": 4,
+    "regional_noise_participant_map_pairs": 820,
+    "regional_noise_cohorts": ["NKI", "Beijing"],
+    "additional_checks": ["NKI visit-label exclusion", "Beijing one-map Schaefer-200 repeat"],
+    "fresh_install": {
+      "environment": "Python 3.10.19 virtual environment with the published study requirements installed from PyPI.",
+      "unit_tests_passed": 4,
+      "synthetic_demo_passed": true,
+      "forward_other_person_pairs": {"nki": 600, "bnu1": 3192},
+      "max_absolute_donor_r2_difference": {"nki": 3.1086244689504383e-15, "bnu1": 4.1744385725905886e-14}
+    }
+  },
   "revision_v021": {
     "version": "0.2.1",
     "validation_date": "2026-11-20",

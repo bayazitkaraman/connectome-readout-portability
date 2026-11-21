@@ -1,5 +1,5 @@
 {
-  "protocol": "NONLINEAR_RECALL_PROTOCOL.md",
+  "protocol": "protocols/NONLINEAR_RECALL_PROTOCOL.md",
   "task": "u[t-1]*u[t-2]*u[t-3]",
   "variance_theoretical": 0.03703703703703703,
   "score": "1 - test MSE / empirical test variance",

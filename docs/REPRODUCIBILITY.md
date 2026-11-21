@@ -1,53 +1,47 @@
 # Reproduce the repeat-connectome study
 
-The reusable benchmark runs a fixture with five fictional participants. The study replay uses the original NKI–Rockland and Beijing matrices and regenerates the main paper analyses in a separate directory. Run all commands below from the repository root. [Synthetic quick start](../README.md) · [Input sources](DATA.md)
+The study replay starts from the NKI and Beijing structural connectomes and regenerates the reported analyses in a new directory. To inspect the numbers immediately, open the archived tables. To try the method on fictional participants, use the short example on the repository home page. [Figure and table index](../results/README.md) · [Synthetic example](../README.md#run-the-synthetic-example)
 
-## Set up the study environment
+## Set up Python
 
-Use Python 3.10.19 to match the verified environment. Create a virtual environment with `python -m venv .venv`, then activate it with `.\.venv\Scripts\Activate.ps1` in PowerShell or `source .venv/bin/activate` on macOS/Linux.
+The verified interpreter is Python 3.10.19. From the repository root, create an environment with `python -m venv .venv`. Activate it with `.\.venv\Scripts\Activate.ps1` in PowerShell or `source .venv/bin/activate` on macOS/Linux. Then install the study dependencies and run the tests.
 
 ```sh
 python -m pip install -r benchmark/requirements-study.txt
 python -m unittest discover -s benchmark/tests -v
 ```
 
-## Replay the analyses
+## Run the full replay
 
-Choose a new working directory name. To retrieve the study inputs from their providers and reproduce the tables, run
+Choose a new output directory. To fetch the study inputs from the providers and run the analyses, use
 
 ```sh
 python -m benchmark.reproduce replay --fetch
 ```
 
-For an existing local collection of verified study inputs, run the following command using the directory containing `nki/` and `replication_candidates/`.
+If you already have the verified inputs, use this command instead. Replace `/path/to/data` with the directory containing `nki/` and `replication_candidates/`. The data guide lists the necessary files and their sources. [Input files and checksums](DATA.md)
 
 ```sh
 python -m benchmark.reproduce replay --data-root /path/to/data
 ```
 
-The command checks the inputs, copies the analysis programs and writes estimates under `replay/results/`. The replay covers linear and product recall, the source–target penalty paths, fixed-graph noise, NKI numerical reruns and direction halves, the donor and pipeline comparisons, trajectory agreement and the unlabeled alignment baseline. It fits the budget-matched linear pooled decoder independently and compares it to shipped calibration scores. The earlier calibration tables serve as references for that comparison. [Replay implementation](../benchmark/reproduce.py)
+Both routes check the graph inputs, fit and score the readouts, and write outputs under `replay/results/`. The replay includes the ten input maps, the regional-noise control, the NKI visit-label sensitivity, the one-map Beijing Schaefer-200 comparison and the four manuscript figures. It also reproduces the penalty paths, nonlinear recall, technical comparisons, alignment and calibration analyses. The earlier calibration scores are supplied as references for the budget-matched linear pooled decoder. [Scripts by study question](../scripts/README.md) · [Exact sequence of analysis calls](../benchmark/reproduce.py)
 
-## Check the results
+## Check the output
 
-On success, `replay/replay_verification.json` reports numerical differences from the shipped study tables. The study analyses were checked using checksum-verified local inputs. The input-preparation route was also tested in an empty directory against the original public providers, including all 342 Beijing edge lists at the three atlas scales. The validation record covers the synthetic example, native-cohort comparisons and numerical replays. [Validation record](../benchmark/validation.json) · [Study results index](../results/FINAL_RESULTS_SUMMARY.md)
+A successful run writes `replay/replay_verification.json`, which compares regenerated summary columns with the shipped tables. In the verified run, all 33 tables passed, the largest absolute difference across 125 checked columns was below 1.4 × 10⁻¹², and all four manuscript PNGs matched pixel for pixel. The public-source input route was separately checked against the NKI source and all 342 Beijing edge lists at three atlas scales. [Validation record](../benchmark/validation.json) · [Numerical results](../results/FINAL_RESULTS_SUMMARY.md)
 
-To verify the reusable CLI against the native-resolution linear study, run
+For a separate test of the general-purpose command, use the prepared native matrices from the replay. The verification commands compare forward other-person transfer scores with the study archive.
 
 ```sh
-python -m benchmark replay/data/nki/nki_reference.npz nki-results --half odd
+python -m benchmark replay/data/nki/nki_reference.npz nki-results --half odd --state-comparisons
 python -m benchmark.verify_archive nki-results nki
-python -m benchmark replay/data/replication_candidates/corr/bnu1_dkt_retest.npz beijing-results
+python -m benchmark replay/data/replication_candidates/corr/bnu1_dkt_retest.npz beijing-results --state-comparisons
 python -m benchmark.verify_archive beijing-results bnu1
 ```
 
-The archive comparison matched all 600 forward stranger pairs in NKI and all 3,192 in Beijing, with maximum absolute R² differences below 2.4 × 10⁻¹⁵. The study and generic CLI use identical input streams for both graphs of a source–target comparison. [Generic analysis and matrix conventions](../benchmark/README.md)
+The fresh-install check covered all 600 NKI and 3,192 Beijing forward other-person scores. Both source and target graphs received the same test inputs. The full replay also compares the state scores against the separate study implementation for the 82 forward same-person comparisons. [Benchmark output definitions](../benchmark/README.md) · [State comparison check](../scripts/verify_cli_state_comparisons.py)
 
-## Additional comparisons in version 0.2.0
+## Cohort age summary
 
-The full replay also fits the source-augmentation strategies, estimates retention intervals, compares graph settings and input maps, runs the target-budget analysis and regenerates the four main figures. It invokes the reusable CLI with `--state-comparisons` for both native cohorts and compares every forward participant's displacement, matched-noise and alignment scores to the independent study implementation. The archived CLI outputs include both visit directions. [Scoring comparison](../scripts/verify_cli_state_comparisons.py) · [Input-map and graph protocol](../results/headline-robustness/protocol.md) · [Budget protocol](../results/calibration-budget-curve/protocol.md)
-
-To reproduce the descriptive ages, obtain the official public imaging index from the data guide. In the prepared replay directory run `python scripts/reviewer_context.py --nki-age-index /path/to/aws_links.csv`. The script verifies the provider hash and cross-checks baseline diffusion and T1 ages. Only cohort aggregates are exported. [Age sources and checksum](../results/density-controls/age_sources.md) · [Cohort and donor checks](../results/reviewer-context/README.md)
-
-Version 0.2.1 adds `python scripts/summarize_map_portability.py` after the native CLI evaluations. The script uses the archived participant and penalty tables to reproduce the ten-map estimate, retention and spatial shares, the original-map rankings and the reverse-visit check. It writes `results/headline-robustness/map_portability.csv` and `reporting_checks.json`.
-
-The snapshot carries versioned creator, citation and license metadata. The distributed manifest identifies the bytes in this version. [Citation](../CITATION.cff) · [Metadata](../.zenodo.json) · [Checksums](../manifest-sha256.json)
+To regenerate the NKI age summary, obtain the public Rockland imaging index from the linked sources. From the prepared replay directory, run `python scripts/reviewer_context.py --nki-age-index /path/to/aws_links.csv`. The script checks the provider hash, matches the baseline diffusion and T1 ages, and exports cohort aggregates. [Age sources and checksum](../results/density-controls/age_sources.md) · [Cohort and donor summaries](../results/reviewer-context/README.md)

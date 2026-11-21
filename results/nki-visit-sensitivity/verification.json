@@ -1,0 +1,29 @@
+{
+  "source_hdf_md5": "f457d4a860d79654672143c1ace95ee1",
+  "source_hdf_sha256": "9e084ace6509de76e35adba79319ce5aa2b53f299e1d9898fb6e7fd84ec28e8f",
+  "visit_crosswalk_sha256": "f9181517bac7dc899dc5aeeda050158396dbcbecc1fd2c04716fa5ae987cdd25",
+  "prepared_npz_sha256": "47625de2e0f2c430b7236b8dcc0c69bf36c039ad5be04a949b4e2f91336e880e",
+  "recorded_npz_sha256": "47625de2e0f2c430b7236b8dcc0c69bf36c039ad5be04a949b4e2f91336e880e",
+  "prepared_npz_matches_recorded_file": true,
+  "prepared_weights_sha256": "af0a4e46a1f60348250dc0b683cde30cdb28c7e2b18b23da717b9368e1c53510",
+  "checked_source_matrices": 100,
+  "crosswalk_visit_rows": 50,
+  "visit_pairs": 25,
+  "excluded_id": "A00034854",
+  "low_similarity_id": "A00063383",
+  "archived_choices_verified": 250,
+  "exclusion_choices_verified": 240,
+  "exclusion_tuning_people_per_target": 23,
+  "changed_choices": 0,
+  "reference_error_per_metric": {
+    "source_r2": 0.0,
+    "noise_r2": 0.0,
+    "repeat_r2": 6.938893903907228e-17,
+    "excess_r2": 4.163336342344337e-17,
+    "shift_pct": 0.0,
+    "excess_r2_low": 6.938893903907228e-17,
+    "excess_r2_high": 0.0
+  },
+  "participant_bootstrap_draws": 10000,
+  "bootstrap_seed": 20261120
+}

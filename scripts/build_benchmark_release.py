@@ -46,12 +46,14 @@ REQUIRED = (
     "results/anatomy-advantage/statistics.csv",
     *(f"results/portability-path/Figure_{i}.{extension}" for i in (2,3) for extension in ("pdf","png")),
     *(f"results/calibration-budget-curve/Figure_4.{extension}" for extension in ("pdf","png")),
-    *(f"results/supplementary-tables/S{i}.csv" for i in range(1,9)),
+    "scripts/regional_noise.py", "scripts/nki_visit_sensitivity.py", "scripts/schaefer200_repeat.py",
+    *(f"results/supplementary-tables/S{i}.csv" for i in range(1,10)),
     *(f"results/cli-state-{cohort}/{name}" for cohort in ("nki","beijing")
       for name in ("state_pairs.csv","state_summary.csv","run.json")),
     *(f"results/{cohort}-augmentation/{name}.csv" for cohort in ("nki","bnu1")
       for name in ("contrasts","curves","thresholds")),
     "docs/DATA.md","docs/REPRODUCIBILITY.md","results/FINAL_RESULTS_SUMMARY.md",
+    "results/README.md","scripts/README.md","protocols/README.md","protocols/NONLINEAR_RECALL_PROTOCOL.md",
     "scripts/unlabeled_parcel_alignment.py","results/portability-baseline/protocol.md",
     "results/portability-baseline/README.md","results/portability-baseline/people.csv",
     "results/portability-baseline/summary.csv","results/portability-baseline/checks.json",
@@ -65,13 +67,13 @@ def members():
         if not p.is_file():
             raise FileNotFoundError(p)
         result[p.relative_to(ROOT).as_posix()]=p
-    for rel in ("run_feasibility.py","requirements-benchmark.txt","NONLINEAR_RECALL_PROTOCOL.md",
+    for rel in ("run_feasibility.py","requirements-benchmark.txt",
                 "benchmark/validation.json",
                 "data/nki/provenance.json","data/replication_candidates/corr/bnu1_source_manifest.json",
                 "results/nki-calibration/scores.csv","results/bnu1-calibration/scores.csv",
                 "results/anatomy-advantage/participants.csv",*REQUIRED):
         add(rel)
-    for p in ROOT.glob("*PROTOCOL.md"):
+    for p in (ROOT/"protocols").glob("*PROTOCOL.md"):
         add(p.relative_to(ROOT))
     for d,extensions in [("benchmark",{".py",".md",".txt"}),("vendor",{".py",".md"}),("scripts",{".py"})]:
         for p in (ROOT/d).rglob("*"):
@@ -79,7 +81,8 @@ def members():
                 add(p.relative_to(ROOT))
     for folder in ("nonlinear-recall","numerical-repeat","pipeline-robustness","transfer-similarity","portability-path",
                    "nki-split-half","density-controls","source-augmentation","portability-baseline",
-                   "headline-robustness","reviewer-context","calibration-budget-curve","supplementary-tables"):
+                   "headline-robustness","reviewer-context","calibration-budget-curve","supplementary-tables",
+                   "regional-noise","nki-visit-sensitivity","schaefer200-repeat"):
         for p in (ROOT/"results"/folder).rglob("*"):
             if p.is_file() and p.suffix in ALLOWED_RESULT:
                 add(p.relative_to(ROOT))
@@ -106,7 +109,7 @@ def build(destination):
             out.parent.mkdir(parents=True,exist_ok=True)
             shutil.copyfile(src,out)
             hashes[name]=hashlib.sha256(out.read_bytes()).hexdigest()
-        (stage/"manifest-sha256.json").write_text(json.dumps(hashes,indent=2)+"\n",encoding="utf-8")
+        (stage/"manifest-sha256.json").write_bytes((json.dumps(hashes,indent=2)+"\n").encode("utf-8"))
         tmpzip=Path(temp)/archive.name
         with ZipFile(tmpzip,"x",compression=ZIP_DEFLATED) as compressed:
             for p in sorted(stage.rglob("*")):

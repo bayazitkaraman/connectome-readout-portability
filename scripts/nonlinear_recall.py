@@ -200,7 +200,7 @@ def main():
     participants.to_csv(OUT / "participant_scores.csv", index=False)
     pd.concat(validations, ignore_index=True).to_csv(OUT / "validation_penalties.csv", index=False)
     (OUT / "pool_allocations.json").write_text(json.dumps(pools, indent=2) + "\n", encoding="utf-8")
-    metadata = dict(protocol="NONLINEAR_RECALL_PROTOCOL.md", task="u[t-1]*u[t-2]*u[t-3]",
+    metadata = dict(protocol="protocols/NONLINEAR_RECALL_PROTOCOL.md", task="u[t-1]*u[t-2]*u[t-3]",
                     variance_theoretical=TARGET_VARIANCE, score="1 - test MSE / empirical test variance",
                     simulation_seed=pilot.SEED, seed_keys="pilot.rng(11, stream_id, role, repeat)",
                     mapping_key=10, radius=transfer.GAIN, warmup=pilot.WARMUP, training_role=0,

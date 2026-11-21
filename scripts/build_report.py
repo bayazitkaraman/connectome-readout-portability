@@ -243,7 +243,7 @@ def report(figure, scores, summary, sensitivity):
     y=paragraph(doc,"Data and software. "+link("Griffa, Alemán-Gómez and Hagmann, Lausanne release",
                     "https://zenodo.org/records/2872624")+" · "+link("conn2res toolbox",
                     "https://doi.org/10.1038/s41467-024-44900-4")
-                    +f". See PROTOCOL.md, DIAGNOSTICS.md and run_feasibility.py. Tables in results/ "
+                    +f". See protocols/PROTOCOL.md, DIAGNOSTICS.md and run_feasibility.py. Tables in results/ "
                     f"include summary.csv and sensitivity_summary.csv. Split and map seed "
                     f"{runinfo['seed']}.",y+9,9.0,12.6,color=MUTED)
     assert y<741,y

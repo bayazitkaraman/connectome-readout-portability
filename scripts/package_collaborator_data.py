@@ -50,17 +50,17 @@ if __name__ == "__main__":
         bundle.write(RESULTS / "README.md", "README.md")
         for name in ("participants.csv", "statistics.csv", "descriptives.csv", "verification.json"):
             bundle.write(RESULTS / name, name)
-        bundle.write(ROOT / "ANATOMY_ADVANTAGE_PROTOCOL.md", "ANATOMY_ADVANTAGE_PROTOCOL.md")
-        bundle.write(ROOT / "POOL_AUGMENTATION_PROTOCOL.md", "POOL_AUGMENTATION_PROTOCOL.md")
-        bundle.write(ROOT / "NKI_CALIBRATION_PROTOCOL.md", "NKI_CALIBRATION_PROTOCOL.md")
+        bundle.write(ROOT / "protocols" / "ANATOMY_ADVANTAGE_PROTOCOL.md", "ANATOMY_ADVANTAGE_PROTOCOL.md")
+        bundle.write(ROOT / "protocols" / "POOL_AUGMENTATION_PROTOCOL.md", "POOL_AUGMENTATION_PROTOCOL.md")
+        bundle.write(ROOT / "protocols" / "NKI_CALIBRATION_PROTOCOL.md", "NKI_CALIBRATION_PROTOCOL.md")
         bundle.writestr("matched_pairs.csv", matches_for_handoff())
         for folder in ("density-controls", "nki-split-half", "transfer-similarity"):
             base = ROOT / "results" / folder
             for file in sorted(base.rglob("*")):
                 if file.is_file() and file.suffix in {".csv", ".md", ".json"}:
                     bundle.write(file, folder + "/" + file.relative_to(base).as_posix())
-        bundle.write(ROOT / "DENSITY_CHECK_PROTOCOL.md", "DENSITY_CHECK_PROTOCOL.md")
-        bundle.write(ROOT / "NKI_SPLIT_HALF_PROTOCOL.md", "NKI_SPLIT_HALF_PROTOCOL.md")
+        bundle.write(ROOT / "protocols" / "DENSITY_CHECK_PROTOCOL.md", "DENSITY_CHECK_PROTOCOL.md")
+        bundle.write(ROOT / "protocols" / "NKI_SPLIT_HALF_PROTOCOL.md", "NKI_SPLIT_HALF_PROTOCOL.md")
     with ZipFile(out) as bundle:
         assert bundle.testzip() is None
         assert set(bundle.namelist()) >= {

@@ -1,0 +1,24 @@
+{
+  "total_rows": 820,
+  "n_people": 82,
+  "n_maps": 10,
+  "seed": 20261120,
+  "draws": 10000,
+  "tags": [
+    "native",
+    "forward",
+    "retuned",
+    "linear recall"
+  ],
+  "max_difference_from_archived": {
+    "source_r2": 8.326672684688674e-17,
+    "noise_r2": 8.326672684688674e-17,
+    "repeat_r2": 2.220446049250313e-16,
+    "excess_r2": 9.974659986866641e-17,
+    "shift_pct": 2.842170943040401e-14,
+    "noise_loss": 9.93129189996722e-17,
+    "projected_loss": 2.220446049250313e-16,
+    "residual_cross_term": 9.93129189996722e-17
+  },
+  "note": "Intervals are paired percentiles over people, conditional on fixed maps, streams and selected penalties."
+}

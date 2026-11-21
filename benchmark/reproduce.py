@@ -57,11 +57,12 @@ def prepare(out,local):
     for rel in CALIBRATION+SCALE_MANIFESTS+["results/numerical-repeat/PROTOCOL.md","results/portability-baseline/protocol.md",
                                             "results/source-augmentation/protocol.md","results/calibration-budget-curve/protocol.md",
                                             "results/headline-robustness/protocol.md",
-                                            "results/pipeline-robustness/PROTOCOL.md","NONLINEAR_RECALL_PROTOCOL.md"]:
+                                            "results/pipeline-robustness/PROTOCOL.md","protocols/NONLINEAR_RECALL_PROTOCOL.md"]:
         copy(ROOT/rel,out/rel)
     if local:
         for rel in BASE_INPUTS:
             copy(local/rel,out/"data"/rel)
+        copy(ROOT/"data/nki/provenance.json", out/"data/nki/provenance.json")
     else:
         sys.path.insert(0,str(SCRIPTS))
         import prepare_nki as nki
@@ -119,7 +120,7 @@ def replay(out):
                    "summarize_portability_path", "verify_portability_path", "check_matched_retention",
                    "robust_portability_path", "source_state_noise", "retention_uncertainty",
                    "state_shift_visits", "state_shift_technical", "summarize_state_shifts",
-                   "describe_trajectory_pairs", "unlabeled_parcel_alignment", "plot_manuscript_figure"):
+                   "describe_trajectory_pairs", "unlabeled_parcel_alignment"):
         execute(out, f"scripts/{script}.py")
     replay_extensions(out)
 
@@ -134,6 +135,8 @@ def replay_extensions(out):
             "results/cli-state-beijing", "--state-comparisons")
     execute(out, "scripts/verify_cli_state_comparisons.py")
     execute(out, "scripts/summarize_map_portability.py")
+    for script in ("plot_manuscript_figure", "regional_noise", "nki_visit_sensitivity", "schaefer200_repeat"):
+        execute(out, f"scripts/{script}.py")
 
 
 def verify(out):
@@ -143,6 +146,9 @@ def verify(out):
               "results/source-augmentation/summary.csv":["source_r2","repeat_r2","gain_r2","gain_r2_lo","gain_r2_hi"],
               "results/portability-baseline/retention_intervals.csv":["untouched_pct","aligned_pct","gain_pp_low","gain_pp_high"],
               "results/headline-robustness/summary.csv":["noise_r2","repeat_r2","excess_r2","excess_r2_low","excess_r2_high"],
+              "results/regional-noise/summary.csv":["estimate","lower","upper"],
+              "results/nki-visit-sensitivity/summary.csv":["source_r2","noise_r2","repeat_r2","excess_r2","excess_r2_low","excess_r2_high"],
+              "results/schaefer200-repeat/summary.csv":["source_r2","noise_r2","repeat_r2","excess_r2","excess_r2_low","excess_r2_high"],
               "results/headline-robustness/map_portability.csv":["excess_r2","excess_r2_low","excess_r2_high",
                     "retention_pct","spatial_share_pct","spatial_share_pct_low","spatial_share_pct_high"],
               "results/calibration-budget-curve/summary.csv":["frozen_r2","aligned_r2","labeled_r2","labeled_minus_aligned_lo","labeled_minus_aligned_hi"],
@@ -182,7 +188,7 @@ def verify(out):
         if list(new.columns)!=list(expected.columns) or len(new)!=len(expected):
             raise ValueError(f"Unexpected dimensions during replay of {rel}")
         keys = [col for col in ("cohort","source_set","task","rung","alpha","matrix_status","noise_fraction","metric",
-                                "setting","rule","budget","arm","statistic","seed","source_visit","target_visit") if col in expected]
+                                "setting","maps","sample","rule","budget","arm","statistic","seed","source_visit","target_visit") if col in expected]
         pd.testing.assert_frame_equal(new[keys], expected[keys])
         for col in columns:
             np.testing.assert_allclose(new[col],expected[col],atol=2e-8,rtol=2e-8,equal_nan=True)

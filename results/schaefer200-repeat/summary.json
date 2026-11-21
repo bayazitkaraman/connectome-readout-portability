@@ -1,0 +1,63 @@
+{
+  "weights_sha256": "01a7c281ba04f204fc3f03ff6af76918f634c7fb3a2caf249ba83540cdb25069",
+  "input_parcels_one_based": [
+    5,
+    69,
+    105,
+    114,
+    142,
+    172,
+    191,
+    195
+  ],
+  "input_weights": [
+    0.5,
+    -0.5,
+    -0.5,
+    0.5,
+    0.5,
+    -0.5,
+    0.5,
+    -0.5
+  ],
+  "all_57_loo_choices_verified": true,
+  "n_validation_scores": 1083,
+  "fixed_repeat_max_abs_error": 1.4654943925052066e-14,
+  "validation_max_scaled_error": 3.1400492082537458e-09,
+  "selected_counts": {
+    "100.0": 52,
+    "10.0": 5
+  },
+  "retention_percent": 41.6387363856988,
+  "primary": {
+    "n_people": 57,
+    "n_positive_excess": 53,
+    "n_positive_repeat": 52,
+    "n_positive_noise": 57,
+    "n_displacement_defined": 57,
+    "source_r2": 0.126247593478171,
+    "source_r2_low": 0.119180539392918,
+    "source_r2_high": 0.13434574547035938,
+    "noise_r2": 0.12413248521152187,
+    "noise_r2_low": 0.11825595803092716,
+    "noise_r2_high": 0.13078572275601424,
+    "repeat_r2": 0.05256790264166429,
+    "repeat_r2_low": 0.02715074549217788,
+    "repeat_r2_high": 0.07316841219716567,
+    "excess_r2": 0.07156458256985757,
+    "excess_r2_low": 0.04612470953032417,
+    "excess_r2_high": 0.10247736968280821,
+    "shift_pct": 109.5980880047878,
+    "shift_pct_low": 96.2760602369105,
+    "shift_pct_high": 123.87002570957209,
+    "noise_loss": 0.002115108266649111,
+    "noise_loss_low": 0.0007756745702356297,
+    "noise_loss_high": 0.0037927090447739537,
+    "projected_loss": 0.04556018865943844,
+    "projected_loss_low": 0.01784271933302982,
+    "projected_loss_high": 0.08073143743767808,
+    "residual_cross_term": 0.028119502177068274,
+    "residual_cross_term_low": 0.019751067286095814,
+    "residual_cross_term_high": 0.036291718244680686
+  }
+}

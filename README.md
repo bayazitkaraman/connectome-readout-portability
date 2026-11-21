@@ -1,62 +1,49 @@
-# Readout transfer across repeat structural connectomes
+# Size-matched isotropic noise overestimates decoder portability across repeat structural connectomes
 
-How much of a decoder’s accuracy survives when the same person’s structural connectome is measured a second time? We drove reservoirs built from diffusion MRI with identical simulated inputs and tested the same frozen linear readout on the original and replacement graphs. The study includes 25 NKI–Rockland and 57 Beijing participants.
+Can noise added to a simulated brain network predict how well a trained decoder will work when the same person is scanned again? This benchmark drives a person's first and repeat structural connectomes with the same simulated input. A linear decoder trained on the first graph recovers past inputs from the regional states. Its weights stay fixed when it is tested on the repeat graph and when its expected recall is calculated under matched noise on the first graph.
 
-## Study results
+[Run the synthetic example](#run-the-synthetic-example) · [Use your own scans](benchmark/README.md) · [Paper figures and tables](results/README.md) · [Analysis scripts](scripts/README.md) · [Reproduce the study](docs/REPRODUCIBILITY.md)
 
-Across ten signed input maps, size-matched isotropic noise overestimated mean repeat-scan recall by 0.103 R² in NKI (95% interval 0.084 to 0.122) and 0.065 in Beijing (0.054 to 0.078). The measured repeats retained 42.7% and 63.0% of mean source accuracy. The original NKI map had the largest excess and displacement and the lowest repeat score. [Ten-map and individual-map estimates](results/headline-robustness/map_portability.csv) The comparison holds the input, decoder weights and cohort transfer penalty fixed. R² measures recall of ten previous simulated inputs. [Full analysis](results/portability-path/README.md) · [Estimates and paired intervals](results/portability-path/shift_summary.csv)
+## What the repeat scans showed
 
-| Original input map, first visit to second visit | NKI | Beijing |
-|---|---:|---:|
-| Mean state displacement, % of source training RMS | 132.3% | 56.9% |
-| Source R² | 0.191 | 0.237 |
-| Expected R² under size-matched isotropic noise | 0.181 | 0.222 |
-| R² on the measured repeat scan | 0.043 | 0.153 |
-| Additional loss on the repeat scan, paired 95% interval | 0.138 [0.092, 0.192] | 0.069 [0.053, 0.088] |
+The study used 25 participants from the Nathan Kline Institute–Rockland Sample (NKI) and 57 from Beijing Normal University (Beijing). On each of ten input maps, isotropic noise matched to the size of the measured state change overestimated mean repeat-scan recall in both cohorts.
 
-The same comparison is available for ten signed input maps, alternate edge representations and two additional spectral radii. A separate experiment measures how the benefit of parcel alignment and supervised correction changes with the number of observed target states. [Input maps and graph settings](results/headline-robustness/README.md) · [Target calibration budgets](results/calibration-budget-curve/README.md) · [Reruns, donor concentration and spatial decomposition](results/reviewer-context/README.md)
+| Cohort | First-scan R² | Expected R² under matched noise | Measured repeat R² | Mean overestimate (95% interval) |
+| --- | ---: | ---: | ---: | ---: |
+| NKI | 0.192 | 0.185 | 0.082 | 0.103 (0.084 to 0.122) |
+| Beijing | 0.201 | 0.192 | 0.127 | 0.065 (0.054 to 0.078) |
 
-When 2,352 additional **unlabeled target states** were available for parcelwise alignment, Beijing repeat-scan R² rose to 0.209 and NKI repeat-scan R² reached 0.051. The NKI interval for the alignment gain included zero. [Alignment results and protocol](results/portability-baseline/README.md)
+Recall is the mean held-out R² across ten input delays. For each participant and map, the ridge penalty was chosen using other participants. The table averages the ten maps within each participant. Intervals resample participants and retain the pairing between the two test conditions. [Participant scores](results/headline-robustness/people.csv) · [Map and cohort estimates](results/headline-robustness/map_portability.csv) · [Figure 1 as a PDF](results/portability-path/Figure_1.pdf)
 
-| Question | Where to look |
-|---|---|
-| How do a numerical rerun, the opposite direction half, a repeat visit and a stranger compare? | [Trajectory agreement](results/portability-path/trajectory_summary.csv) |
-| What happens when the decoder penalty or recall task changes? | [Accuracy and portability curves](results/portability-path/path_summary.csv) · [Task comparison](results/pipeline-robustness/task_comparison_summary.csv) |
-| Where are the individual comparisons, figures and sensitivity analyses? | [Study results index](results/FINAL_RESULTS_SUMMARY.md) |
+![Figure 1. Isotropic noise overestimates mean repeat-scan recall on all ten maps in both cohorts. The other panels show state displacement and compare expected and measured recall on the original map at two ridge penalties.](results/portability-path/Figure_1.png)
 
-## Try the benchmark without participant data
+### Sensitivity checks
 
-From the repository root in a Python 3.10 environment, run
+- **Regional noise.** Matching the noise level in each region separately reduced the ten-map mean overestimate to 0.078 R² in NKI and 0.032 in Beijing. On one Beijing map this control underestimated repeat-scan recall. [Results](results/regional-noise/README.md) · [Analysis script](scripts/regional_noise.py)
+- **Beijing parcellation.** On one Schaefer-200 input map in the same 57 Beijing participants, isotropic noise overestimated mean repeat-scan R² by 0.072 (95% interval 0.046 to 0.102). [Results](results/schaefer200-repeat/README.md) · [Analysis script](scripts/schaefer200_repeat.py)
+- **NKI visit labels.** Excluding the participant whose second-visit code could not be matched left 24 participants. The ten-map isotropic overestimate was 0.106 R² (95% interval 0.086 to 0.124), compared with 0.103 for all 25. [Results](results/nki-visit-sensitivity/README.md) · [Analysis script](scripts/nki_visit_sensitivity.py)
+
+## Run the synthetic example
+
+From the repository root with Python 3.10.19, run the following commands. The example generates two scans each for five fictional participants.
 
 ```sh
 python -m pip install -r requirements-benchmark.txt
 python -m benchmark.example demo.npz
 python -m benchmark demo.npz demo-results --penalties 0.01 1 10 --state-comparisons
-python -m unittest discover -s benchmark/tests -v
 ```
 
-The example generates two visits for five fictional people. Open `demo-results/state_pairs.csv` for each participant's state displacement, matched-noise control, frozen recall and unlabeled alignment. The paired intervals are in `state_summary.csv`. Open `targets.csv` for own versus stranger scores. The same command accepts aligned matrices from another repeat-scan dataset. [Input format, commands and output definitions](benchmark/README.md) · [Verification](benchmark/validation.json)
+Open `demo-results/state_summary.csv` for the cohort comparison and `demo-results/state_pairs.csv` for each participant’s source, noise and repeat scores. To run the same comparison on your own scans, supply aligned connectivity matrices, participant IDs and visit labels in a NumPy archive. [Input format and output columns](benchmark/README.md)
 
-## Reproduce the study
+## Data and reproduction
 
-The [data guide](docs/DATA.md) identifies the original public NKI and Beijing sources and the exact inputs expected by the replay. The [reproduction guide](docs/REPRODUCIBILITY.md) gives the commands for a verified local data tree or a fresh download and explains how to check the numerical outputs. The published-source participant identifiers in the study tables support paired reanalysis.
+- The results index links each paper figure and table to its underlying files. [Study results](results/README.md)
+- The data guide identifies the NKI and Beijing matrices and the checksums used to verify them. [Source data](docs/DATA.md)
+- The reproduction guide gives the full replay commands for downloaded or locally stored inputs. [Reproduction guide](docs/REPRODUCIBILITY.md)
+- The protocols document the designs and analysis choices for individual comparisons. [Study protocols](protocols/README.md)
 
-## Repository layout
+## Citation and licenses
 
-| Path | Contents |
-|---|---|
-| `benchmark/` | Reusable analysis code, command-line entry points, pinned study environment and validation record |
-| `benchmark/tests/` | Tests for the reusable analysis |
-| `docs/` | Data access and study reproduction guides |
-| `scripts/` | Study-specific analysis, data preparation and verification programs |
-| `results/` | Study tables, figures, protocols and numerical checks |
-| `data/` | Source provenance and file manifests |
-| `vendor/` | conn2res simulator files, upstream license and version record |
+Bayazit Karaman, *Readout transfer across repeat structural connectomes*, benchmark version 0.2.1. Please also cite the datasets you use. [Software citation](CITATION.cff) · [Data and software sources](benchmark/SOURCES.md)
 
-The source providers and their data-use terms are listed with the numerical environment and simulator provenance. [Sources and software](benchmark/SOURCES.md) · [File checksums](manifest-sha256.json)
-
-## Citation and reuse
-
-Version 0.2.1. Please cite Bayazit Karaman, *Readout transfer across repeat structural connectomes*, and acknowledge each source dataset you use. [Machine-readable citation](CITATION.cff) · [Source datasets and software](benchmark/SOURCES.md)
-
-Copyright © 2026 Bayazit Karaman. The MIT License covers the author's original software and its documentation. CC BY 4.0 covers the author's original derived tables and figures. The vendored conn2res files retain their BSD license. The providers' terms govern the upstream matrices, manifests and public visit crosswalk. [MIT License](LICENSE) · [CC BY 4.0 legal code](LICENSE-data.txt) · [conn2res license](vendor/LICENSE)
+Original code and documentation are licensed under MIT. Original derived tables and figures are licensed under CC BY 4.0. The bundled conn2res code retains its BSD 3-Clause license. [MIT](LICENSE) · [CC BY 4.0](LICENSE-data.txt) · [conn2res license](vendor/LICENSE)
