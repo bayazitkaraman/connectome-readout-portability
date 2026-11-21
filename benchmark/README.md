@@ -1,11 +1,57 @@
 # Apply the benchmark to another repeat-scan dataset
 
-Run commands from the repository root. The tested interpreter is Python 3.10.19.
+Start with one structural connectivity matrix per participant per visit. The benchmark generates the input signals and recall labels. Run the commands below from the repository root using Python 3.10.19.
+
+## Run your own repeat-scan data
+
+**1. Export the matrices.** Use the same atlas, parcel definitions, and edge-weight convention at every visit. The importer reads square CSV matrices with parcel IDs in the first row and first column. It aligns rows and columns by those IDs, so different file orderings are fine. Each scan must have the same parcel set and finite, nonnegative, symmetric weights. The simulation drops the diagonal. Here is a three-parcel example of the file layout:
+
+```csv
+parcel,Left_A,Right_A,Left_B
+Left_A,0,4,1
+Right_A,4,0,2
+Left_B,1,2,0
+```
+
+**2. List the scans.** Put a file named `scans.csv` beside your matrices. Use the same participant ID at every visit and give each participant exactly one matrix per visit. Paths in this example are relative to `scans.csv`; subject IDs such as `001` are kept as text.
+
+```csv
+subject,session,path
+001,baseline,matrices/001_baseline.csv
+001,followup,matrices/001_followup.csv
+002,baseline,matrices/002_baseline.csv
+002,followup,matrices/002_followup.csv
+003,baseline,matrices/003_baseline.csv
+003,followup,matrices/003_followup.csv
+```
+
+**3. Convert and run.** In these commands, the `my-cohort` directory containing `scans.csv` is beside the repository. Choose a new NPZ filename and a new output directory. The importer checks participant–visit pairs and parcel labels before it writes the archive.
+
+```sh
+python -m pip install -r requirements-benchmark.txt
+python -m benchmark.prepare_csv ../my-cohort/scans.csv ../my-cohort/connectomes.npz
+python -m benchmark ../my-cohort/connectomes.npz ../my-cohort/results --state-comparisons
+```
+
+The default configuration drives eight parcels and requires at least nine. For the three-parcel layout above, append `--input-count 2` to the **last** command. With two participants, you can run the same-person state comparison. Transfer-tuned other-person comparisons require at least three. If you already have a correctly formatted NPZ, begin with the last command. [NPZ array layout](#input)
+
+**4. Read the result.** Open `results/state_summary.csv` inside your cohort directory and select the row with `source_visit=baseline` and `target_visit=followup`. The program also reports the reverse direction. In the selected row:
+
+| Column | What it tells you |
+| --- | --- |
+| `source_r2` | How accurately the frozen decoder recalled the simulated input on its training graph, using fresh test signals. |
+| `repeat_r2` | How accurately those same weights recalled the same input on the follow-up graph. |
+| `isotropic_r2` | Expected recall on the first graph under noise matched to the size of the change in states. |
+| `noise_minus_repeat` | Expected noise R² minus measured repeat R². A positive value means the noise control overestimated portability. The paired participant-bootstrap bounds are `noise_minus_repeat_lo` and `noise_minus_repeat_hi`. |
+
+Open `state_pairs.csv` for each participant’s scores and chosen penalty. For example, in the five-person synthetic run below, expected recall under noise was 0.3083 and measured repeat recall was 0.2908 on the first-to-repeat comparison. The overestimate was **0.0175 R²**, with a 95% interval of 0.0044 to 0.0287. Your cohort will have its own values. A standard run evaluates one input map; the paper's headline averages ten maps within each participant. [Paper estimates](../results/headline-robustness/map_portability.csv)
+
+## Try the synthetic example
 
 ```shell
 python -m pip install -r requirements-benchmark.txt
 python -m benchmark.example demo.npz
-python -m benchmark demo.npz demo-results --penalties 0.01 1 10
+python -m benchmark demo.npz demo-results --penalties 0.01 1 10 --state-comparisons
 python -m benchmark demo.npz demo-product --task product --seeds 20261119 20261120
 python -m unittest discover -s benchmark/tests -v
 ```

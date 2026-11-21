@@ -39,12 +39,18 @@ def load_data(path, half):
         v, n, p, _ = raw.shape
         if min(v, n) < 2 or p < 3:
             raise ValueError("Provide at least two distinct visits, two subjects and three regions.")
-        if raw.dtype.kind not in "iuf" or not np.isfinite(raw).all() or (raw < 0).any():
-            raise ValueError("Weights must be finite, nonnegative, real numbers.")
         subjects = ids(src["subjects"], n, "subjects")
         sessions = ids(src["sessions"], v, "sessions")
         regions = ids(src["region_ids"], p, "region_ids") if "region_ids" in src else np.arange(p).astype(str)
+    return validated_weights(raw), subjects, sessions, regions
+
+
+def validated_weights(raw):
+    """Validate and normalize a stack of square structural matrices for simulation."""
+    if raw.dtype.kind not in "iuf" or not np.isfinite(raw).all() or (raw < 0).any():
+        raise ValueError("Weights must be finite, nonnegative, real numbers.")
     weights = raw.astype(float)
+    p = weights.shape[-1]
     weights[..., np.arange(p), np.arange(p)] = 0
     magnitude = weights.max(axis=(-1,-2))
     if np.any(magnitude == 0):
@@ -56,7 +62,7 @@ def load_data(path, half):
     if not np.allclose(weights, weights.swapaxes(-1,-2), rtol=1.e-10, atol=1.e-14):
         raise ValueError("Every structural matrix must be symmetric within floating-point tolerance.")
     weights = .5 * weights + .5 * weights.swapaxes(-1, -2)
-    return weights, subjects, sessions, regions
+    return weights
 
 
 def validate_config(cfg, n_regions):

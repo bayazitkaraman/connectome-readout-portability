@@ -2,7 +2,9 @@
 
 Can noise added to a simulated brain network predict how well a trained decoder will work when the same person is scanned again? This benchmark drives a person's first and repeat structural connectomes with the same simulated input. A linear decoder trained on the first graph recovers past inputs from the regional states. Its weights stay fixed when it is tested on the repeat graph and when its expected recall is calculated under matched noise on the first graph.
 
-[Run the synthetic example](#run-the-synthetic-example) · [Use your own scans](benchmark/README.md) · [Paper figures and tables](results/README.md) · [Analysis scripts](scripts/README.md) · [Reproduce the study](docs/REPRODUCIBILITY.md)
+The reservoir dynamics come from conn2res. This benchmark adds the repeat-scan experiment, including participant-held-out penalty selection, a matched-noise control and paired estimates of the loss in recall. [conn2res paper](https://doi.org/10.1038/s41467-024-44900-4) · [Bundled simulator and upstream version](vendor/README.md)
+
+[Run the synthetic example](#run-the-synthetic-example) · [Use your own repeat scans](benchmark/README.md#run-your-own-repeat-scan-data) · [Paper figures and tables](results/README.md) · [Analysis scripts](scripts/README.md) · [Reproduce the study](docs/REPRODUCIBILITY.md)
 
 ## What the repeat scans showed
 
@@ -33,7 +35,11 @@ python -m benchmark.example demo.npz
 python -m benchmark demo.npz demo-results --penalties 0.01 1 10 --state-comparisons
 ```
 
-Open `demo-results/state_summary.csv` for the cohort comparison and `demo-results/state_pairs.csv` for each participant’s source, noise and repeat scores. To run the same comparison on your own scans, supply aligned connectivity matrices, participant IDs and visit labels in a NumPy archive. [Input format and output columns](benchmark/README.md)
+Open `demo-results/state_summary.csv` for the cohort comparison and `demo-results/state_pairs.csv` for each participant’s source, noise and repeat scores.
+
+## Use your own repeat scans
+
+If your lab has one labeled connectivity matrix per person per visit, list the CSV files in a scan manifest and convert it with `python -m benchmark.prepare_csv scans.csv connectomes.npz`. Then run `python -m benchmark connectomes.npz my-results --state-comparisons`. The walkthrough shows both file layouts, how to align parcel labels, and which output row gives the baseline-to-follow-up change. [Own-data walkthrough](benchmark/README.md#run-your-own-repeat-scan-data)
 
 ## Data and reproduction
 
